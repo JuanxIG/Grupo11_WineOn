@@ -11,7 +11,7 @@ Se define como mercado de referencia a "clientes jóvenes pertenecientes al merc
 
 INTEGRANTES
 
--Mendieta, Juan Ignacio: Tengo 18 años, soy studiante de la carrera Licenciatura en Sistemas, estoy aprendiendo a programar y quiero volverme profesional en este rubro. Juego al basket y entreno de forma personal (saliendo a correr, etc.
+-Mendieta, Juan Ignacio: Tengo 18 años, soy studiante de la carrera Licenciatura en Sistemas, estoy aprendiendo a programar y quiero volverme profesional en este rubro. Juego al basket y entreno de forma personal (saliendo a correr, etc.)
 -Del Valle, Sol
 -Odriozola, Damian
 -Odriozola, Fernando: ingeniero en alimentos, DT en una planta de panificados, master en marketing y futuro Full Stack Developer =D. Soy un lector impulsivo y panadero de hobby. Hago crossfit y a veces salgo a correr. No me gustan las formalidades excesivas.
