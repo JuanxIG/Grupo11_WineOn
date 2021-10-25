@@ -13,7 +13,7 @@ INTEGRANTES
 
 -Mendieta, Juan Ignacio: Tengo 18 años, soy studiante de la carrera Licenciatura en Sistemas, estoy aprendiendo a programar y quiero volverme profesional en este rubro. Juego al basket y entreno de forma personal (saliendo a correr, etc.)
 -Del Valle, Sol: Tengo 26 años, soy Lic. en Sistemas pero nunca trabaje en desarrollo. Trabajo en sistemas como analista de gestion de incidentes. Me gusta entrenar y soy fan de los michis.
--Odriozola, Damian
+-Odriozola, Damian: Tengo 31 años, soy Analista Programador Universitario y actualmente trabajo en el Poder Judicial de la Provincia de Corrientes. Me encanta el futbol, mi pasión por este deporte me llevó a estudiar la carrera de Director Técnico Nacional de Futbol en 2016. Soy baterista y en mis tiempos libres hago ejercicio y me dedico a mi jardín.
 -Odriozola, Fernando: ingeniero en alimentos, DT en una planta de panificados, master en marketing y futuro Full Stack Developer =D. Soy un lector impulsivo y panadero de hobby. Hago crossfit y a veces salgo a correr. No me gustan las formalidades excesivas.
 
 CONSIGNA 3-
@@ -23,3 +23,5 @@ espacio vino: https://www.espaciovino.com.ar/. Primero en posicionamiento orgán
 vinosyspirits: https://www.vinosyspirits.com/ Una de las mejores referencias que encontre en cuanto a la desarrollo de la seccion "Carrito", ya que constituye una muy buena estetica, que es clara y precisa, ademas de que la navbar es muy facil de usar dado que esta todo muy bien ordenado. A la hora elegir los productos con un solo click ya te lo estaria añadiendo al carrito, y tambien te permite modificar la cantidad correspondiente de los vinos que se quisieran comprar. Asimismo la misma pagina tiene recomendaciones sobre que producto comprar, para no solo tener tu opinion propia sino que la de alguien mas.
 
 Ligier: https://vinotecaligier.com/ es uno de los primeros al buscar en google "tienda de vinos". en cuanto al diseño de la página no tiene mucha diferencia con el resto de los marketplaces en general. Lo que destaco de esta página es el mensaje que destaco de este sitio es la forma en la que ordena las categorías y no sólo ofrece bebidas sino acompañamientos y utensilios lo que agrega valor a los usuarios a la hora de realizar un pedido. 
+
+simplychocolate: https://simplychocolate.dk/ Una página que en principio tiene un diseño poco común a lo que estamos habituados a ver. En el home se visualiza un menu de navegación o navbar girado hacia la derecha, y la interacción con los productos mostrados puede hacer que los visitantes se mantengan en el sitio por más tiempo. Ya al ingresar al "Shop" se observa un diseño web mas simple y prolijo sin perder esa interacción característica con cada producto ofrecido. Siguiendo con la idea de negocio planteada, motiva el estilo "moderno" de esta página que parece estar dirigido generalmente a un público joven.
