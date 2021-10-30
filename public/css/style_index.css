@@ -1,0 +1,47 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    background-color: #E3D4C5;
+    padding: 20px;
+}
+
+#menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.fa-bars {
+    border-radius: 10px;
+}
+
+.fa-bars, .fa-shopping-cart {
+    width: 14px;
+    height: 16px;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 20px;
+}
+
+#searchForm {
+    text-align: center;
+    border-radius: 5px; 
+    padding-top: 20px;
+}
+
+#searchForm input{
+    border-color: black;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.fa-search {
+    
+    font-size: 17px;
+}
+
