@@ -3,6 +3,8 @@
     margin: 0;
 }
 
+
+
 header{
     background-color: #E3D4C5;
     padding: 20px;
@@ -45,3 +47,48 @@ header{
     font-size: 17px;
 }
 
+/* seccion MAIN */
+main{
+    background-color: white;
+}
+
+.banner {
+    background-color: white;
+    border: solid 1px #4F1964;
+    height: 50px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+.info {
+    background-color: #E3D4C5;
+    height: 50px;
+    border: solid 1px #4F1964;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    display: flex;
+}
+.info div {
+    
+    font-size: 14px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+/*FOOTER*/
+
+footer{
+    background-color: #E3D4C5;
+}
+
+footer p{
+    font-size: 10px;
+}
+
+footer ul{
+    padding-bottom: 10px;
+}
