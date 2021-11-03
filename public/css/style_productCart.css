@@ -89,23 +89,40 @@ main {
 }
 
 .center-precio{
-    padding-left: 6%;
+    padding-left: 9%;
 }
 
 .center-cant{
-    padding-right: 20%;
-    padding-left: 21%;
+    padding-right: 0%;
+    padding-left: 0%;
+}
+
+.center-mas{
+    margin-left: 20%;
+    font-size: 15px;
+}
+
+.center-menos {
+    margin-right: 21%;
+    font-size: 15px;
+}
+
+.center-subtotal{
+    padding-right: 3%;
 }
 
 .linea {
     border-top: 1px solid black;
     height: 2px;
     width: 300px;
-    padding: 0;
     margin: 20px auto 0 auto;
   }
 
-#BloqueCompra {
+#BloqueCompra-padre{
+    padding-bottom: 5px;
+}
+
+#BloqueCompra-hijo {
     margin-top: 20px;
     border: solid 1px black;
     margin-left: 10px;
@@ -188,18 +205,22 @@ main {
 #Destacados {
     text-align: center;
     padding-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
 }
 
 #conjunto-circle {
-    align-items: center;
+    margin-left: 43%;
 }
 
 .fa-circle {
     font-size: 10px;
-    display: inline-block;
+    display: flex;
 }
 
-/* seccion FOOTER*/
+/* seccion FOOTER */
 
 footer{
     background-color: #E3D4C5;
