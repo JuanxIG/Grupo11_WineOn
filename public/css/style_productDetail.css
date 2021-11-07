@@ -1,0 +1,167 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* seccion HEADER */
+header{
+    background-color: #E3D4C5;
+    padding: 20px;
+}
+
+#menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.fa-bars {
+    border-radius: 10px;
+}
+
+.fa-bars, .fa-shopping-cart {
+    width: 14px;
+    height: 17px;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 20px;
+}
+
+#searchForm {
+    text-align: center;
+    border-radius: 5px; 
+    padding-top: 20px;
+}
+
+#searchForm input{
+    border-color: black;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.fa-search {
+    font-size: 17px;
+}
+
+.fa-search {
+    font-size: 17px;
+}
+
+
+/* seccion MAIN */
+
+main{
+    text-align: center;
+} 
+
+.vip_item {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+    text-align: center;
+    font-size: 25px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+
+} 
+.price{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+    font-weight: 300;
+    line-height: 1.35;
+    text-align: center;
+    font-size: 35px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color:#000050;
+
+}
+
+
+.detalle_item{
+    font-size: 15px;
+    padding: 5px;
+}
+
+
+.quantity{
+    font-size: 18px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.checkout {
+    size: 25px;
+    font-family: Arial,sans-serif; 
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+.boton {
+    font-family: Arial,sans-serif; 
+    margin: 5px;
+    padding: 5px;
+    font-size: 15px;
+    background-color: #000050;
+    color: white;
+    text-decoration: none;
+    border: 2px solid #000050;
+    border-radius: 6px;
+}
+
+.sugerencias{
+    padding-top: 35px;
+
+}
+
+/* seccion FOOTER */
+
+footer{
+    background-color: #E3D4C5;
+    margin-top: 40px;
+}
+
+footer p{
+    font-size: 10px;
+}
+
+footer ul{
+    padding-bottom: 10px;
+}
+
+.Suscripcion{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: solid 1px black;
+    border-bottom: solid 1px black;
+}
+
+#Suscribirse{
+    color: black;
+    text-decoration: none;
+}
+
+#footer-arriba {
+    padding-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#footer-abajo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 10px;
+}
