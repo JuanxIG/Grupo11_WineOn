@@ -1,4 +1,4 @@
-
+/*seccion main*/
 main {
     text-align: center;
     
@@ -31,4 +31,64 @@ text-align: center;
     background-color: #4f1964;
     width: 90%;
     color: white;
+}
+
+/*seccion footer*/
+
+footer{
+    background-color: #E3D4C5;
+    margin-top: 40px;
+}
+
+footer p{
+    font-size: 10px;
+}
+
+footer ul{
+    padding-bottom: 10px;
+    list-style: none;
+}
+
+.Suscripcion{
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    border-top: solid 1px #E3D4C5;
+    border-bottom: solid 1px black;
+    background-color: white;
+}
+
+#Suscribirse{
+    color:white;
+    text-decoration: none;
+}
+
+#footer-arriba {
+    padding-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#footer-abajo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.input-suscribir {
+    height: 30px;
+    border-radius: 5px;
+    border:solid  0.5px #E3D4C5;
+}
+
+.button-suscribir {
+    height: 30px;
+    border-radius: 5px;
+    border:solid  0.5px #E3D4C5;
+    background-color: #4f1964;
+    width: 100px;
 }
