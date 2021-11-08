@@ -46,17 +46,29 @@ main h1{
     text-align: center;
 }
 
-main h1 section{
-    justify-content: center;
+section{
+    text-align: center;
 }
 
-.login-form > *{
-    margin-bottom: 1rem;
-    display: block;
+section button[type="submit"]{
+    border-radius: 5px;
+    border:solid  0.5px #E3D4C5;
+    background-color: #4f1964;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
 }
 
+section input[type="password"],
+section input[type="email"]{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.login-form > *,
 .login-create > *{
     margin-bottom: 1rem;
+    display: block;
 }
 
 /* seccion FOOTER */
@@ -115,14 +127,12 @@ footer ul{
     .form-left,
     .form-right{
         display: flex;
-        width: 45%;
         border: solid thin black;
     }
-
-    .login-form > *,
-    .login-create > *{
-        width: 100%;
+    
+    .login-create button[type="submit"]{
+        width: 50%;
         margin-left: auto;
-        margin-left: auto;
+        margin-right: auto;
     }
 }
