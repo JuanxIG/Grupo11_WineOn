@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 /* seccion HEADER */
@@ -19,6 +20,7 @@ header{
 
 .fa-bars {
     border-radius: 10px;
+    margin-bottom: 15px;
 }
 
 .fa-bars, .fa-shopping-cart {
@@ -89,7 +91,7 @@ main {
 }
 
 .center-precio{
-    padding-left: 9%;
+    margin-left: 11%;
 }
 
 .center-cant{
@@ -114,12 +116,12 @@ main {
 .linea {
     border-top: 1px solid black;
     height: 2px;
-    width: 300px;
+    width: 70%;
     margin: 20px auto 0 auto;
   }
 
 #BloqueCompra-padre{
-    padding-bottom: 5px;
+    margin-bottom: 5px;
 }
 
 #BloqueCompra-hijo {
@@ -233,18 +235,20 @@ footer p{
 
 footer ul{
     padding-bottom: 10px;
+    list-style: none;
 }
 
 .Suscripcion{
     text-align: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-top: solid 1px black;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    border-top: solid 1px #E3D4C5;
     border-bottom: solid 1px black;
+    background-color: white;
 }
 
 #Suscribirse{
-    color: black;
+    color:white;
     text-decoration: none;
 }
 
@@ -262,4 +266,75 @@ footer ul{
     justify-content: space-around;
     align-items: center;
     padding-left: 10px;
+}
+
+.input-suscribir {
+    height: 30px;
+    border-radius: 5px;
+    border:solid  0.5px #E3D4C5;
+}
+
+.button-suscribir {
+    height: 30px;
+    border-radius: 5px;
+    border:solid  0.5px #E3D4C5;
+    background-color: #4f1964;
+    width: 100px;
+}
+
+
+@media (min-width: 768px) {
+
+    .imagen {
+        margin-left: 1%;
+    }
+
+    .fa-trash{
+        border: solid 1px black;
+        padding: 1px;
+        margin-right: 2%;
+    }
+
+    .center-precio{
+        margin-left: 14%;
+    }
+    
+    .center-cant{
+        margin-right: 0%;
+        margin-left: 0%;
+    }
+    
+    .center-mas{
+        margin-left: 27%;
+        font-size: 15px;
+    }
+    
+    .center-menos {
+        margin-right: 28%;
+        font-size: 15px;
+    }
+    
+    .center-subtotal{
+        margin-right: 2%;
+    }
+
+    .linea {
+        width: 62%;
+    }
+
+    #BloqueCompra-padre {
+        width: 60%;
+        margin-left: 20%;
+        margin-top: 20px;
+    }
+    
+    #conjunto-circle {
+        margin-left: 46.6%;
+    }
+    
+}
+
+@media (min-width: 1024px) {
+
+
 }
