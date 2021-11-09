@@ -2,16 +2,21 @@
     padding: 0;
     margin: 0;
 }
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* seccion HEADER*/
 
 header{
     background-color: #E3D4C5;
-    padding: 20px;
+    padding: 20px 10px;
 }
 
 #menu {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
 }
@@ -21,11 +26,12 @@ header{
 }
 
 .fa-bars, .fa-shopping-cart {
-    width: 14px;
+    width: 50px;
     height: 16px;
     text-align: center;
     padding-top: 20px;
-    font-size: 20px;
+    font-size: 25px;
+    color:#4F1964;
 }
 
 #searchForm {
@@ -35,14 +41,31 @@ header{
 }
 
 #searchForm input{
-    border-color: black;
-    border-radius: 10px;
-    text-align: center;
+    height: 30px;
+    width: 85%;
+    border-radius: 5px;
+    border:solid  0.5px #E3D4C5;
+    
+}
+
+.navbar-div{
+    display: none;
 }
 
 .fa-search {
-    
-    font-size: 17px;
+    color:#4F1964;
+    font-size: 25px;
+}
+
+
+
+nav ul {
+    list-style: none;
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
 }
 
 /* seccion MAIN */
@@ -89,4 +112,42 @@ footer p{
 
 footer ul{
     padding-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+    #searchForm{
+        padding: 0px;
+        display:flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        width: 90%;
+    }
+    #searchForm input{
+        width: 400px;
+    }
+
+    header i{
+        display:none;
+    }
+    
+    .icono-escondido {
+        visibility: hidden;
+    }
+
+    .navbar {
+        font-size: 12px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        align-items: flex-end;
+        flex-direction: column;
+    }
+    .navbar-div{
+        display: flex;
+        
+    }
+    .navbar-div ul{
+        display: flex;
+        }
+
 }

@@ -6,19 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style_index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 </head>
 <body>
     <header>
         <div id="menu">
-            <i class="fas fa-bars"></i>
+            <i class="fas fa-bars icono-escondido"></i>
             <img src="/images/WineOn.png" alt="" width="170" height="70">
-            <a href="/views/productCart.html"><i class="fas fa-shopping-cart"></i></a>
+            <a href="/views/productCart.html"><i class="fas fa-shopping-cart icono-escondido"></i></a>
         </div>
-        <div id="searchForm">
-            <input type="text" name="" id="" placeholder="Buscar vinos...">
-            <i class="fas fa-search"></i>
-        </div>
+
+        <nav class="navbar">
+            <div id="searchForm">
+                <input type="text" name="" id="" placeholder="¿Qué estás buscando?">
+                <i class="fas fa-search"></i>
+                <ul class="navbar-div">
+                    <li><a href="/register">Contacto</a> <i class="far fa-address-card"></i></li>
+                    <li><a href="/login">Mi cuenta</a> <i class="fas fa-sign-in-alt"></i></li>
+                    <li><a href="">Mi carrito</a> <i class="fas fa-shopping-basket"></i></li> 
+                </ul>
+            </div>
+                <div class="navbar-div">
+                    <ul>
+                        <li><a href="">Vino tinto</a></li>
+                        <li><a href="">Vino blanco </a></li>
+                        <li><a href="">Aperitivos</a></li>
+                        <li><a href="">Espumantes</a></li>
+                        <li><a href="">Whiskys</a></li>
+                        <li><a href="">Cervezas</a></li>
+                    </ul>
+                </div>
+                
+            </nav>
+
     </header>
 
     <main>
