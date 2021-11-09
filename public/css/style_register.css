@@ -1,4 +1,7 @@
 /*seccion main*/
+body {
+    font-family: 'Open Sans', sans-serif;
+}
 main {
     text-align: center;
     
