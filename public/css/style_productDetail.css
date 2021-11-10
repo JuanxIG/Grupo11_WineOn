@@ -8,7 +8,8 @@ html {
   *:after {
     box-sizing: inherit;
   }
-body{
+
+  body{
     margin: 0px;
     font-family: 'Open Sans', sans-serif;
 }
@@ -16,15 +17,33 @@ body{
 /* seccion HEADER */
 header{
     background-color: #E3D4C5;
-    padding: 20px;
+    padding-bottom: 0.5rem;
 }
 
-#menu {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    box-sizing: border-box;
+.header-div-one{
+    display:flex;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+}
+
+.image{
+    width: 60%;
+    text-align: left;
+    margin: 0px;
+    padding-left: 0.5rem;
+}
+.product-cart{
+    width: 20%;
+    margin: 0px;
+}
+.burger{
+    width: 20%;
+    margin: 0px;
+}
+
+.image img{
+    width: 150px;
+    margin: 0;
 }
 
 .fa-bars {
@@ -32,31 +51,25 @@ header{
 }
 
 .fa-bars, .fa-shopping-cart {
-    width: 14px;
-    height: 17px;
+    width: 50px;
+    height: 16px;
     text-align: center;
     padding-top: 20px;
-    font-size: 20px;
+    font-size: 25px;
+    color:#4F1964;
 }
 
-#searchForm {
-    text-align: center;
-    border-radius: 5px; 
-    padding-top: 20px;
-}
-
-#searchForm input{
-    border-color: black;
-    border-radius: 10px;
+.header-div-two{
     text-align: center;
 }
 
 .fa-search {
-    font-size: 17px;
+    color:#4F1964;
+    font-size: 25px;
 }
 
-.fa-search {
-    font-size: 17px;
+.nav-bar ul{
+    display: none;
 }
 
 
@@ -156,6 +169,39 @@ footer p{
 }
 
 /* QUERIES */
+
+@media (min-width: 375px){
+   
+    /* HEADER*/
+    
+    .nav-bar ul{
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+
+    /* HEADER*/
+        
+    .burger{
+        display: none;
+    }
+    
+    .header-div-one{
+        justify-content: space-between;
+    }
+    
+    .nav-bar ul{
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+        text-decoration: none;
+        font-weight: bold;
+        border: thin white solid;
+    }
+
+}
+
 
 @media (min-width: 1024px){
     

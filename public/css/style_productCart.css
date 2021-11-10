@@ -70,6 +70,9 @@ header{
     font-size: 25px;
 }
 
+.nav-bar ul{
+    display: none;
+}
 
 /* seccion MAIN */
 main {
@@ -292,6 +295,20 @@ footer p{
 
 }
 
+@media (min-width: 375px){
+   
+    /* HEADER*/
+    
+    .nav-bar ul{
+        display: none;
+    }
+    
+    /* MAIN*/
+    .info{
+        display: none;
+    }
+}
+
 
 
 @media (min-width: 768px) {
@@ -299,11 +316,11 @@ footer p{
     .burger{
         display: none;
     }
-    
+
     .header-div-one{
         justify-content: space-between;
     }
-    
+
     .nav-bar ul{
         display: flex;
         justify-content: space-around;
@@ -311,12 +328,10 @@ footer p{
         text-decoration: none;
         font-weight: bold;
         border: thin white solid;
-        padding-left: 0px;
-        margin-right: 5%;
+        padding-left: 1%;
         padding-top: 1%;
         padding-bottom: 1%;
     }
-
     .imagen {
         margin-left: 1%;
     }
