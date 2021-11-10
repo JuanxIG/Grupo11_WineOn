@@ -13,47 +13,61 @@ body{
     font-family: 'Open Sans', sans-serif;
 }
 
+
+
 /* seccion HEADER */
+
 header{
     background-color: #E3D4C5;
-    padding: 20px;
+    padding-bottom: 0.5rem;
 }
 
-#menu {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    box-sizing: border-box;
+.header-div-one{
+    display:flex;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+}
+
+.image{
+    width: 60%;
+    text-align: left;
+    margin: 0px;
+    padding-left: 0.5rem;
+}
+.product-cart{
+    width: 20%;
+    margin: 0px;
+}
+.burger{
+    width: 20%;
+    margin: 0px;
+}
+
+.image img{
+    width: 150px;
+    margin: 0;
 }
 
 .fa-bars {
     border-radius: 10px;
-    margin-bottom: 15px;
 }
 
 .fa-bars, .fa-shopping-cart {
-    width: 14px;
+    width: 50px;
     height: 16px;
     text-align: center;
     padding-top: 20px;
-    font-size: 20px;
+    font-size: 25px;
+    color:#4F1964;
 }
 
-#searchForm {
-    text-align: center;
-    border-radius: 5px; 
-    padding-top: 20px;
-}
-
-#searchForm input{
-    border-color: black;
-    border-radius: 10px;
+.header-div-two{
     text-align: center;
 }
 
 .fa-search {
-    font-size: 17px;
+    color:#4F1964;
+    font-size: 25px;
 }
 
 
@@ -70,7 +84,7 @@ main {
 
 #main {
     padding-right: 20px;
-    padding-top: 20px;
+    margin-top: 3%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -78,7 +92,8 @@ main {
 }
 
 .sub-main {
-    padding-top: 20px;
+    height: 30px;
+    margin-top: 1%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -91,8 +106,8 @@ main {
 }
 
 .detalles {
+    height: 74px;
     padding-right: 10%;
-    padding-top: 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -100,6 +115,7 @@ main {
 }
 
 .center-precio{
+    height: 4px;
     margin-left: 11%;
 }
 
@@ -126,7 +142,7 @@ main {
     border-top: 1px solid black;
     height: 2px;
     width: 70%;
-    margin: 20px auto 0 auto;
+    margin: 1% auto 1% auto;
   }
 
 #BloqueCompra-padre{
@@ -256,12 +272,50 @@ footer p{
     font-size: 0.5rem;
 }
 
+
+
 /* QUERIES */
 
+@media (min-width: 375px){
+   
+    /* HEADER*/
+    
+    .nav-bar ul{
+        display: none;
+    }
+    
+    /* MAIN*/
+    .info{
+        display: none;
+    }
+
+
+}
 
 
 
 @media (min-width: 768px) {
+
+    .burger{
+        display: none;
+    }
+    
+    .header-div-one{
+        justify-content: space-between;
+    }
+    
+    .nav-bar ul{
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+        text-decoration: none;
+        font-weight: bold;
+        border: thin white solid;
+        padding-left: 0px;
+        margin-right: 5%;
+        padding-top: 1%;
+        padding-bottom: 1%;
+    }
 
     .imagen {
         margin-left: 1%;
