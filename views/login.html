@@ -1,79 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style_login.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap" rel="stylesheet">
-</head>
-<body>
-    <header>
-        <a href="/home"><img src="/images/WineOn.png" alt="logo-wineon"></a>
-    </header>
-    <main>
-        <h1>INGRESAR</h1>
-             <section>
-                <div class="form-left">
-                    <form action="/home" method="POST" class="login-form">
-                        <h2>INGRESÁ CON TU CUENTA</h2>
-                            <input id="usuario" type="email" name="usuario" placeholder="Ingresá tu e-mail" required>
-                            <input id="password" type="password" placeholder="Ingresá tu contraseña" name="password" required>
-                            <a href="">¿Olvidaste tu contraseña?</a>
-                            <label for="remember-me">
-                            <input type="checkbox" name="remember-me" value="remember-me">Recordarme
-                            </label>
-                            <button type="submit" title="Ingresar" name="Ingresar">INGRESÁ</button>
-                        </div>
-                    </form>
-                </div>
-                <div class=form-right>
-                    <form action="/registro" method= "GET" class="login-create">
-                        <h2>SI NO TENES UNA CUENTA, TE INVITAMOS A QUE CREES UNA</h2>
-                        <button type="submit" title="login-create" name="login-create">CREAR CUENTA</button>
-                    </form>
-                </div>
-            </section>
-    </main>
-    <footer>
-        <div class="Suscripcion">
-            <h3>¡ Suscribite y enterate las mejores ofertas !</h3>
-            <input type="text" name="" id="" placeholder="Mail...">
-            <a href="" id="Suscribirse">Suscribirse</a>
-        </div>
-        <div id="footer-arriba">
-            <ul>
-                <li>AYUDA</li>
-                <li>Cómo comprar</li>
-                <li>Envíos</li>
-                <li>Preguntas frecuentes</li>
-             </ul>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,  initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="css/style_login.css">
+        <link href="https://fonts.googleapis.com/css2?  family=Open+Sans&family=Roboto&display=swap"  rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <a href="/home"><img src="/images/WineOn.png"   alt="logo-wineon"></a>
+        </header>
+        <main>
+            <h1>INGRESAR</h1>
+                 <section>
+                    <div class="form-left">
+                        <form action="/home" method="POST"  class="login-form">
+                            <h2>INGRESÁ CON TU CUENTA</h2>
+                                <input id="usuario"     type="email" name="usuario"     placeholder="Ingresá tu     e-mail" required>
+                                <input id="password"    type="password"    placeholder="Ingresá tu    contraseña" name="password"    required>
+                                <a href="">¿Olvidaste tu    contraseña?</a>
+                                <label for="remember-me">
+                                <input type="checkbox"  name="remember-me"   value="remember-me">Recordarme
+                                </label>
+                                <button type="submit"   title="Ingresar"  name="Ingresar" style=cursor:pointer>INGRESÁ</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class=form-right>
+                        <form action="/registro" method=    "GET" class="login-create">
+                            <h2>SI NO TENES UNA CUENTA, TE  INVITAMOS A QUE CREES UNA</h2>
+                            <button type="submit"   title="login-create"  name="login-create" style=cursor:pointer>CREAR CUENTA</button>
+                        </form>
+                    </div>
+                </section>
+        </main>
+        <footer>
+            <div class="suscription">
+                <h3>¡ Suscribite y enterate de las mejores     ofertas !</h3>
+                <input type="text" name="" id=""    placeholder="Ingresá tu e-mail">
+                <a href="" id="Suscribirse">Suscribirse</a>
+            </div>
+            <div class="lists"> 
+                <ul>
+                    <li>AYUDA</li>
+                    <li>Cómo comprar</li>
+                    <li>Envíos</li>
+                    <li>Preguntas frecuentes</li>
+                </ul>
+                <ul>
+                    <li>MAS INFORMACION</li>
+                    <li>Nosotros</li>
+                    <li>Términos y condiciones</li>
+                    <li>Todas las tarjetas</li>
+                </ul>
+                <ul>
+                    <li>CONTACTANOS</li>
+                    <li>11-6164-2556 (Whatsapp)</li>
+                    <li>info@wineon.com.ar</li>
+                    <li>Lunes a Viernes de 10 a 18 hs</li>
+                </ul>
+                <ul>
+                    <li>SEGUINOS</li>
+                    <li>Cómo comprar</li>
+                    <li>Envíos</li>
+                    <li>Preguntas frecuentes</li>
+                 </ul>
+            </div>
+             <div> 
+                 <p>Copyright 2021. Wine On. Beber con  moderación. Prohibida la venta a menores de  18 años.</p>  
+            </div>
+        </footer>
+    </body>
+</html>
 
-            <ul>
-                <li>MAS INFORMACION</li>
-                <li>Nosotros</li>
-                <li>Términos y condiciones</li>
-                <li>Todas las tarjetas</li>
-            </ul>
-        </div>
-        <div id="footer-abajo">
-            <ul>
-                <li>CONTACTANOS</li>
-                <li>11-6164-2556 (Whatsapp)</li>
-                <li>info@wineon.com.ar</li>
-                <li>Lunes a Viernes de 10 a 18 hs</li>
-            </ul>
-            <ul id="ajustar-abajo">
-                <li>SEGUINOS</li>
-                <li>Cómo comprar</li>
-                <li>Envíos</li>
-                <li>Preguntas frecuentes</li>
-             </ul>
-        </div>
-        <p>Copyright 2021. Wine On. Beber con moderación. Prohibida la venta a menores de 18 años.</p>  
-    </footer>
+        
+        
+        
 
     
-</body>
-</html>

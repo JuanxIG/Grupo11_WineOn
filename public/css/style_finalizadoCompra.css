@@ -1,7 +1,17 @@
-* {
-    padding: 0;
-    margin: 0;
+html {
     box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
+body{
+    margin: 0px;
+    font-family: 'Open Sans', sans-serif;
 }
 
 /* seccion HEADER */
@@ -67,67 +77,48 @@ header{
     text-decoration: none;
 }
 
+.div-button{
+    text-align: center;
+}
+
+.back-home button[type="submit"]{
+    font-size: 2rem;
+    border-radius: 5px;
+    border:solid  0.5px #E3D4C5;
+    background-color: #4f1964;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
 /* seccion FOOTER */
 
 footer{
     background-color: #E3D4C5;
-    margin-top: 30%;
+    margin-top: 2.5rem;
+}
+
+.suscription{
+    text-align: center;
+    padding-top: 0.5rem;
+}
+
+footer >* ul{
+    list-style: none;
+    margin-top: 1.5rem;
+}
+
+ul > li:first-child{
+    font-weight: bold;
 }
 
 footer p{
-    font-size: 10px;
+    font-size: 0.5rem;
 }
 
-footer ul{
-    padding-bottom: 15px;
-    list-style: none;
-}
 
-.Suscripcion{
-    text-align: center;
-    padding-top: 30px;
-    padding-bottom: 40px;
-    border-top: solid 1px #E3D4C5;
-    border-bottom: solid 1px black;
-    background-color: white;
-}
-
-#Suscribirse{
-    color:white;
-    text-decoration: none;
-}
-
-#footer-arriba {
-    padding-top: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-}
-
-#footer-abajo {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    padding-left: 10px;
-}
-
-.input-suscribir {
-    height: 30px;
-    border-radius: 5px;
-    border:solid  0.5px #E3D4C5;
-}
-
-.button-suscribir {
-    height: 30px;
-    border-radius: 5px;
-    border:solid  0.5px #E3D4C5;
-    background-color: #4f1964;
-    width: 100px;
-}
-
+/* QUERIES */
 
 @media (min-width: 768px) {
     .imagen {
@@ -139,8 +130,14 @@ footer ul{
     }
 
 }
-
+/* FOOTER */
 @media (min-width: 1024px) {
+
+    .lists{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
 
 
 }
