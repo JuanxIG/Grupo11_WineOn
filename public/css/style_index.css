@@ -83,9 +83,21 @@ main{
     padding:0.5rem;
 }
 
+section{
+    margin: auto;
+}
+
 article{
     background-color: #E3D4C5;
     border:thin #4F1964 solid;
+    width: 40%;
+    text-align: center;
+    margin: auto;   
+
+}
+
+article img{
+    width: 90%
 
 }
 
