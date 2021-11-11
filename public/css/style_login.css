@@ -73,6 +73,21 @@ section input[type="email"]{
     margin-right: auto;
 }
 
+.main-input{
+    height: 40px;
+    width: 300px;
+    border-radius: 5px;
+    border:solid  0.5px #E3D4C5;
+}
+
+.main-button{
+    height: 40px;
+    border-radius: 5px;
+    border:solid  0.5px #E3D4C5;
+    background-color: #4f1964;
+    width: 300px;
+    color: white;
+}
 
 /* seccion FOOTER */
 

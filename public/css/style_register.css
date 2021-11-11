@@ -8,9 +8,94 @@ html {
   *:after {
     box-sizing: inherit;
   }
+
 body{
-    margin: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
     font-family: 'Open Sans', sans-serif;
+}
+
+
+img{
+    width: 100%;
+}
+
+
+/* sección HEADER*/
+
+header{
+    background-color: #E3D4C5;
+    padding-bottom: 0.5rem;
+}
+
+.header-div-one{
+    display:flex;
+    align-items: center;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+}
+
+.image{
+    width: 60%;
+    text-align: left;
+    margin: 0px;
+    padding-left: 0.5rem;
+}
+.product-cart{
+    text-align: right;
+    width: 20%;
+    margin: 0px;
+}
+.burger{
+    text-align: center;
+    width: 20%;
+    margin: 0px;
+}
+
+.image img{
+    width: 150px;
+    margin: 0;
+}
+
+.fa-bars {
+    border-radius: 10px;
+}
+
+.fa-bars, .fa-shopping-cart {
+    width: 50px;
+    height: 16px;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 25px;
+    color:#4F1964;
+}
+
+.header-div-two{
+    text-align: center;
+}
+
+.fa-search {
+    color:#4F1964;
+    font-size: 25px;
+}
+
+#posicion-i {
+    position:relative;
+    right: 30px;
+    top: 5px;
+}
+
+.header-input{
+    height: 40px;
+    width: 85%;
+    border-radius: 5px;
+    border:solid  0.5px #E3D4C5;
+    margin-left: 25px;
+}
+
+.nav-bar {
+    display:none;
 }
 
 /*seccion MAIN*/
@@ -25,8 +110,13 @@ main {
 padding: 10px 0px;
 }
 
+.form1-div p {
+    margin: 0px;
+    text-align:center;
+    }
+
 .main-input{
-    height: 30px;
+    height: 40px;
     width: 90%;
     border-radius: 5px;
     border:solid  0.5px #E3D4C5;
@@ -42,7 +132,7 @@ text-align: center;
 }
 
 .main-button{
-    height: 30px;
+    height: 40px;
     border-radius: 5px;
     border:solid  0.5px #E3D4C5;
     background-color: #4f1964;
@@ -67,7 +157,7 @@ footer >* ul{
     margin-top: 1.5rem;
 }
 
-ul > li:first-child{
+footer ul > li:first-child{
     font-weight: bold;
 }
 

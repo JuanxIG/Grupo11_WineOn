@@ -24,6 +24,7 @@ header{
 
 .header-div-one{
     display:flex;
+    align-items: center;
     padding-bottom: 0.5rem;
     padding-top: 0.5rem;
 }
@@ -35,10 +36,12 @@ header{
     padding-left: 0.5rem;
 }
 .product-cart{
+    text-align: right;
     width: 20%;
     margin: 0px;
 }
 .burger{
+    text-align: center;
     width: 20%;
     margin: 0px;
 }
@@ -70,11 +73,32 @@ header{
     font-size: 25px;
 }
 
-.nav-bar ul{
-    display: none;
+#posicion-i {
+    position:relative;
+    right: 30px;
+    top: 5px;
+}
+
+.header-input{
+    height: 40px;
+    width: 85%;
+    border-radius: 5px;
+    border:solid  0.5px #E3D4C5;
+    margin-left: 25px;
+}
+
+.nav-bar {
+    display:none;
 }
 
 /* seccion MAIN */
+.main-input{
+    height: 40px;
+    width: 90%;
+    border-radius: 5px;
+    border:solid  0.5px #E3D4C5;
+}
+
 main {
     padding-top: 10px;
 }
