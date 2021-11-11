@@ -86,6 +86,11 @@ header{
     top: 5px;
 }
 
+.nav-bar,
+.info{
+    display: none;
+}
+
 /* seccion MAIN */
 main{
     background-color: white;
