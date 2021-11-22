@@ -17,13 +17,24 @@ body{
 
 /* seccion HEADER */
 
+.logo {
+    font-size: 40px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #E91E63;
+}
+
+
 header{
-    background-color: #E3D4C5;
+    background-color: #14192d;
     padding-bottom: 0.5rem;
 }
 
 .header-div-one{
     display:flex;
+    justify-content: space-around;
     align-items: center;
     padding-bottom: 0.5rem;
     padding-top: 0.5rem;
@@ -61,7 +72,7 @@ header{
     text-align: center;
     padding-top: 20px;
     font-size: 25px;
-    color:#4F1964;
+    color: #E91E63;
 }
 
 .header-div-two{
@@ -69,7 +80,7 @@ header{
 }
 
 .fa-search {
-    color:#4F1964;
+    color: #E91E63;
     font-size: 25px;
 }
 
@@ -87,9 +98,6 @@ header{
     margin-left: 25px;
 }
 
-.nav-bar {
-    display:none;
-}
 
 /* seccion MAIN */
 .main-input{
@@ -118,8 +126,6 @@ main {
     background-color: black;
     margin-bottom: 10px;
 }
-
-
 
 #main {
     margin-top: 3%;
@@ -290,18 +296,23 @@ main {
 /* seccion FOOTER */
 
 footer{
-    background-color: #E3D4C5;
+    background-color: #14192d;
     margin-top: 2.5rem;
     position: relative;
     left: 0;
     bottom: 0;
     width: 100%;
+    color: white;
 }
 
 
 .suscription{
     text-align: center;
     padding-top: 0.5rem;
+}
+
+#Suscribirse {
+    color: #E91E63;
 }
 
 footer >* ul{
@@ -360,6 +371,12 @@ footer p{
         padding-top: 1%;
         padding-bottom: 1%;
     }
+
+    .nav-bar a {
+        color: white;
+        text-decoration: none;
+    }
+
     .imagen {
         margin-left: 1%;
     }
