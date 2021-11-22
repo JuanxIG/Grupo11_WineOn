@@ -1,20 +1,54 @@
-* {
-    padding: 0;
-    margin: 0;
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+body{
+    margin: 0px;
+    font-family: 'Open Sans', sans-serif;
 }
+
+
 
 /* seccion HEADER */
+
 header{
     background-color: #E3D4C5;
-    padding: 20px;
+    padding-bottom: 0.5rem;
 }
 
-#menu {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+.header-div-one{
+    display:flex;
     align-items: center;
-    box-sizing: border-box;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+}
+
+.image{
+    width: 60%;
+    text-align: left;
+    margin: 0px;
+    padding-left: 0.5rem;
+}
+.product-cart{
+    text-align: right;
+    width: 20%;
+    margin: 0px;
+}
+.burger{
+    text-align: center;
+    width: 20%;
+    margin: 0px;
+}
+
+.image img{
+    width: 150px;
+    margin: 0;
 }
 
 .fa-bars {
@@ -22,31 +56,49 @@ header{
 }
 
 .fa-bars, .fa-shopping-cart {
-    width: 14px;
+    width: 50px;
     height: 16px;
     text-align: center;
     padding-top: 20px;
-    font-size: 20px;
+    font-size: 25px;
+    color:#4F1964;
 }
 
-#searchForm {
-    text-align: center;
-    border-radius: 5px; 
-    padding-top: 20px;
-}
-
-#searchForm input{
-    border-color: black;
-    border-radius: 10px;
+.header-div-two{
     text-align: center;
 }
 
 .fa-search {
-    font-size: 17px;
+    color:#4F1964;
+    font-size: 25px;
 }
 
+#posicion-i {
+    position:relative;
+    right: 30px;
+    top: 5px;
+}
+
+.header-input{
+    height: 40px;
+    width: 85%;
+    border-radius: 5px;
+    border:solid  0.5px #E3D4C5;
+    margin-left: 25px;
+}
+
+.nav-bar {
+    display:none;
+}
 
 /* seccion MAIN */
+.main-input{
+    height: 40px;
+    width: 90%;
+    border-radius: 5px;
+    border:solid  0.5px #E3D4C5;
+}
+
 main {
     padding-top: 10px;
 }
@@ -59,7 +111,7 @@ main {
 
 #main {
     padding-right: 20px;
-    padding-top: 20px;
+    margin-top: 3%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -67,7 +119,8 @@ main {
 }
 
 .sub-main {
-    padding-top: 20px;
+    height: 30px;
+    margin-top: 1%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -80,8 +133,8 @@ main {
 }
 
 .detalles {
+    height: 74px;
     padding-right: 10%;
-    padding-top: 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -89,7 +142,8 @@ main {
 }
 
 .center-precio{
-    padding-left: 9%;
+    height: 4px;
+    margin-left: 11%;
 }
 
 .center-cant{
@@ -114,12 +168,12 @@ main {
 .linea {
     border-top: 1px solid black;
     height: 2px;
-    width: 300px;
-    margin: 20px auto 0 auto;
+    width: 70%;
+    margin: 1% auto 1% auto;
   }
 
 #BloqueCompra-padre{
-    padding-bottom: 5px;
+    margin-bottom: 5px;
 }
 
 #BloqueCompra-hijo {
@@ -224,42 +278,141 @@ main {
 
 footer{
     background-color: #E3D4C5;
-    margin-top: 40px;
+    margin-top: 2.5rem;
+}
+
+.suscription{
+    text-align: center;
+    padding-top: 0.5rem;
+}
+
+footer >* ul{
+    list-style: none;
+    margin-top: 1.5rem;
+}
+
+ul > li:first-child{
+    font-weight: bold;
 }
 
 footer p{
-    font-size: 10px;
+    font-size: 0.5rem;
 }
 
-footer ul{
-    padding-bottom: 10px;
+
+
+/* QUERIES */
+
+@media (min-width: 375px){
+   
+    /* HEADER*/
+    
+    .nav-bar ul{
+        display: none;
+    }
+    
+    /* MAIN*/
+    .info{
+        display: none;
+    }
+
+
 }
 
-.Suscripcion{
-    text-align: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-top: solid 1px black;
-    border-bottom: solid 1px black;
+@media (min-width: 375px){
+   
+    /* HEADER*/
+    
+    .nav-bar ul{
+        display: none;
+    }
+    
+    /* MAIN*/
+    .info{
+        display: none;
+    }
 }
 
-#Suscribirse{
-    color: black;
-    text-decoration: none;
+
+
+@media (min-width: 768px) {
+
+    .burger{
+        display: none;
+    }
+
+    .header-div-one{
+        justify-content: space-between;
+    }
+
+    .nav-bar ul{
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+        text-decoration: none;
+        font-weight: bold;
+        border: thin white solid;
+        padding-left: 1%;
+        padding-top: 1%;
+        padding-bottom: 1%;
+    }
+    .imagen {
+        margin-left: 1%;
+    }
+
+    .fa-trash{
+        border: solid 1px black;
+        padding: 1px;
+        margin-right: 2%;
+    }
+
+    .center-precio{
+        margin-left: 14%;
+    }
+    
+    .center-cant{
+        margin-right: 0%;
+        margin-left: 0%;
+    }
+    
+    .center-mas{
+        margin-left: 27%;
+        font-size: 15px;
+    }
+    
+    .center-menos {
+        margin-right: 28%;
+        font-size: 15px;
+    }
+    
+    .center-subtotal{
+        margin-right: 2%;
+    }
+
+    .linea {
+        width: 62%;
+    }
+
+    #BloqueCompra-padre {
+        width: 60%;
+        margin-left: 20%;
+        margin-top: 20px;
+    }
+    
+    #conjunto-circle {
+        margin-left: 46.6%;
+    }
+    
 }
 
-#footer-arriba {
-    padding-top: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-}
+@media (min-width: 1024px) {
 
-#footer-abajo {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    padding-left: 10px;
+    /* FOOTER */
+    
+    .lists{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
 }

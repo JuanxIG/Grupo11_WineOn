@@ -6,9 +6,7 @@ TABLERO https://trello.com/invite/b/Cf49vO3v/018c114ab901e4073a9c92b45a654eb6/dh
 CONSIGNA 1- URL REPOSITORIO https://github.com/JuanxIG/Grupo11_WineOn.git
 
 CONSIGNA 2-
-
 WineOn es una vinoteca online dedicada a la venta de vinos, licores y bebidas en general.
-
 Se define como mercado de referencia a "clientes jóvenes pertenecientes al mercado de consumo final, que buscan abastecerse de vinos, licores y bebidas en general, por medio de web desde la comodidad de su hogar, de una forma sencilla y rápida". 
 
 INTEGRANTES

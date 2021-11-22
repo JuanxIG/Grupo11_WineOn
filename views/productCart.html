@@ -4,95 +4,116 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style_productCart.css">
+    <title>Productos</title>
+    <link rel="stylesheet" href="css/style_index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <div id="menu">
-            <i class="fas fa-bars"></i>
-            <img src="/images/WineOn.png" alt="" width="170" height="70">
-            <a href="/views/productCart.html"><i class="fas fa-shopping-cart"></i></a>
+        <div class="header-div-one">
+            <figure class="image">
+                <img src="/images/WineOn.png" alt="WineOn"> 
+            </figure>
+            <figure class="product-cart">
+                <a href="/carrito"><i class="fas fa-shopping-cart"></i></a> 
+            </figure>
+            <figure class="burger">
+                <i class="fas fa-bars"></i> 
+            </figure>
         </div>
-        <div id="searchForm">
-            <input type="text" name="" id="" placeholder="Buscar vinos...">
-            <i class="fas fa-search"></i>
+        <div class="header-div-two">
+            <form action="">
+                <input class="main-input" type="text" name="" id="" placeholder="¿Qué estás buscando?">
+                <i id="posicion-i" class="fas fa-search"></i>
+            </form>
         </div>
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="#">VINO TINTO</a></li>
+                <li><a href="#">VINO BLANCO</a></li>
+                <li><a href="#">ESPUMANTES</a></li>
+                <li><a href="#">WHISKYS</a></li>
+                <li><a href="#">ESPIRITUOSAS</a></li>
+                <li><a href="#">CERVEZAS</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
+        
         <section>
             <article>
                 <div id="Titulo">
-                    <h3>CARRITO DE COMPRAS</h3>
-                </div>
-                <div id="main">
-                    <img src="/images/vino-rutini.jpg" alt="" width="50" height="50">
-                    <h4>Nombre del producto</h4>
-                    <i class="fas fa-trash"></i>
-                </div>
-                <div class="sub-main">
-                    <h5>PRECIO</h5>
-                    <h5>CANTIDAD</h5>
-                    <h5>SUBTOTAL</h5>
-                </div>
-                <div class="detalles">
-                    <h6 class="center-precio">$$$$</h6>
-                    <h6 class="center-mas">+</h6>
-                    <h6 class="center-cant">#</h6>
-                    <h6 class="center-menos">-</h6>
-                    <h6 class="center-subtotal">$$$$</h6>
-                </div>
-                <div class="linea">
-                        <!-- LINEA -->
-                </div>
+                <h3>CARRITO DE COMPRAS</h3>
+            </article>
+            <div class="agrupar">
+                <article id="Articulo"> 
+                    </div>
+                    <div id="main">
+                        <img src="/images/vino-rutini.jpg" alt="" width="50" height="50" class="imagen">
+                        <h4>Nombre del producto</h4>
+                        <i class="fas fa-trash"></i>
+                    </div>
+                    <div class="sub-main">
+                        <h5>PRECIO</h5>
+                        <h5>CANTIDAD</h5>
+                        <h5>SUBTOTAL</h5>
+                    </div>
+                    <div class="detalles">
+                        <h6 class="center-precio">$$$$</h6>
+                        <h6 class="center-mas">+</h6>
+                        <h6 class="center-cant">#</h6>
+                        <h6 class="center-menos">-</h6>
+                        <h6 class="center-subtotal">$$$$</h6>
+                    </div>
+                    <div class="linea">
+                            <!-- LINEA -->
+                    </div>
 
-                <div id="main">
-                    <img src="/images/vino-rutini.jpg" alt="" width="50" height="50">
-                    <h4>Nombre del producto</h4>
-                    <i class="fas fa-trash"></i>
-                </div>
-                <div class="sub-main">
-                    <h5>PRECIO</h5>
-                    <h5>CANTIDAD</h5>
-                    <h5>SUBTOTAL</h5>
-                </div>
-                <div class="detalles">
-                    <h6 class="center-precio">$$$$</h6>
-                    <h6 class="center-mas">+</h6>
-                    <h6 class="center-cant">#</h6>
-                    <h6 class="center-menos">-</h6>
-                    <h6 class="center-subtotal">$$$$</h6>
-                </div>
-                <div class="linea">
-                        <!-- LINEA -->
-                </div>
-            </article>
-            <article id="BloqueCompra-padre">
-                <div id="BloqueCompra-hijo">
-                    <div id="Resumen"> Resumen </div>
-                    <div id="subtotal">
-                        <h4>SUBTOTAL</h4>
-                        <h4 id="precio-subtotal">$$$$</h4>
+                    <div id="main">
+                        <img src="/images/vino-rutini.jpg" alt="" width="50" height="50" class="imagen">
+                        <h4>Nombre del producto</h4>
+                        <i class="fas fa-trash"></i>
                     </div>
-                    <div id="envio">
-                        <h4>ENVIO</h4>
-                        <h4>$$$$</h4>
+                    <div class="sub-main">
+                        <h5>PRECIO</h5>
+                        <h5>CANTIDAD</h5>
+                        <h5>SUBTOTAL</h5>
                     </div>
-                    <div id="total">
-                        <h4>TOTAL</h4>
-                        <h4>$$$$</h4>
+                    <div class="detalles">
+                        <h6 class="center-precio">$$$$</h6>
+                        <h6 class="center-mas">+</h6>
+                        <h6 class="center-cant">#</h6>
+                        <h6 class="center-menos">-</h6>
+                        <h6 class="center-subtotal">$$$$</h6>
                     </div>
-                    <div class="finalizar">
-                        <a href="" class="boton">Seguir Comprando</a>
-                        <a href="" class="boton">Finalizar Compra</a>
+                    <div class="linea">
+                            <!-- LINEA -->
                     </div>
-                </div>
-            </article>
+                </article>
+                <article id="BloqueCompra-padre">
+                    <div id="BloqueCompra-hijo">
+                        <div id="Resumen"> Resumen </div>
+                        <div id="subtotal">
+                            <h4>SUBTOTAL</h4>
+                            <h4 id="precio-subtotal">$$$$</h4>
+                        </div>
+                        <div id="envio">
+                            <h4>ENVIO</h4>
+                            <h4>$$$$</h4>
+                        </div>
+                        <div id="total">
+                            <h4>TOTAL</h4>
+                            <h4>$$$$</h4>
+                        </div>
+                        <div class="finalizar">
+                            <a href="home" class="boton">Seguir Comprando</a>
+                            <a href="finalizado" class="boton">Finalizar Compra</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
             <article>
                 <div>
                     <h3 id="novedades">Productos Destacados</h4>
@@ -113,41 +134,40 @@
     </main>
 
     <footer>
-        <div class="Suscripcion">
-            <h3>¡ Suscribite y enterate las mejores ofertas !</h3>
-            <input type="text" name="" id="" placeholder="Mail...">
+        <div class="suscription">
+            <h3>¡ Suscribite y enterate de las mejores     ofertas !</h3>
+            <input type="text" name="" id=""    placeholder="Ingresá tu e-mail">
             <a href="" id="Suscribirse">Suscribirse</a>
         </div>
-        <div id="footer-arriba">
+        <div class="lists"> 
             <ul>
                 <li>AYUDA</li>
                 <li>Cómo comprar</li>
                 <li>Envíos</li>
                 <li>Preguntas frecuentes</li>
-             </ul>
-
+            </ul>
             <ul>
                 <li>MAS INFORMACION</li>
                 <li>Nosotros</li>
                 <li>Términos y condiciones</li>
                 <li>Todas las tarjetas</li>
             </ul>
-        </div>
-        <div id="footer-abajo">
             <ul>
                 <li>CONTACTANOS</li>
                 <li>11-6164-2556 (Whatsapp)</li>
                 <li>info@wineon.com.ar</li>
                 <li>Lunes a Viernes de 10 a 18 hs</li>
             </ul>
-            <ul id="ajustar-abajo">
+            <ul>
                 <li>SEGUINOS</li>
                 <li>Cómo comprar</li>
                 <li>Envíos</li>
                 <li>Preguntas frecuentes</li>
              </ul>
         </div>
-        <p>Copyright 2021. Wine On. Beber con moderación. Prohibida la venta a menores de 18 años.</p>  
+         <div> 
+             <p>Copyright 2021. Wine On. Beber con  moderación. Prohibida la venta a menores de  18 años.</p>  
+        </div>
     </footer>
 
 </body>

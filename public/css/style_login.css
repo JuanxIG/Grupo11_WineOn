@@ -1,0 +1,144 @@
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+body{
+    margin: 0px;
+    font-family: 'Open Sans', sans-serif;
+}
+/* seccion HEADER */
+header{
+    background-color: #E3D4C5;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+}
+
+img {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50vw;
+}
+
+/* seccion MAIN */
+
+main {
+    color: #1b262c;
+    margin: 0;
+    background-color: white;
+    padding: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main h1{
+    text-align: center;
+}
+
+section{
+    text-align: center;
+}
+
+h2{
+    font-size: 0.75rem;
+}
+
+.login-create button,
+.login-form button{
+    border-radius: 5px;
+    border:solid  0.5px #E3D4C5;
+    background-color: #4f1964;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.login-form > *,
+.login-create > *{
+    margin-bottom: 1rem;
+    display: block;
+}
+
+section input[type="password"],
+section input[type="email"]{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-input{
+    height: 40px;
+    width: 300px;
+    border-radius: 5px;
+    border:solid  0.5px #E3D4C5;
+}
+
+.main-button{
+    height: 40px;
+    border-radius: 5px;
+    border:solid  0.5px #E3D4C5;
+    background-color: #4f1964;
+    width: 300px;
+    color: white;
+}
+
+/* seccion FOOTER */
+
+footer{
+    background-color: #E3D4C5;
+    margin-top: 2.5rem;
+}
+
+.suscription{
+    text-align: center;
+    padding-top: 0.5rem;
+}
+
+footer >* ul{
+    list-style: none;
+    margin-top: 1.5rem;
+}
+
+ul > li:first-child{
+    font-weight: bold;
+}
+
+footer p{
+    font-size: 0.5rem;
+}
+
+/* QUERIES */
+
+@media (min-width: 1024px){
+    
+    /* MAIN */
+    
+    section{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;;
+    }
+
+    
+    .login-create button[type="submit"]{
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* FOOTER */
+    
+    .lists{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+}
