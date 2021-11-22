@@ -103,19 +103,35 @@ main {
     padding-top: 10px;
 }
 
-#Titulo{
+.Titulo{
     font-family: 'Open Sans', sans-serif;
-    text-decoration: underline;
-    padding-left: 5px
+    padding-left: 5px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    text-align: center;
 }
 
+.Titulo span{
+    border: solid 3px black;
+    border-radius: 5px;
+    color: white;
+    background-color: black;
+    margin-bottom: 10px;
+}
+
+
+
 #main {
-    padding-right: 20px;
     margin-top: 3%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+}
+
+#main div{
+    font-size: 15px;
+    font-weight: 700;
 }
 
 .sub-main {
@@ -130,68 +146,70 @@ main {
 .fa-trash{
     border: solid 1px black;
     padding: 1px;
+    margin-right: 4px;
+    border-radius: 30px;
+    height: 30px;
+    width: 30px;
+    background-color: black;
+    color: wheat;
+}
+
+.fa-trash:before {
+    content: "\f1f8";
+    position: relative;
+    left: 6px;
+    top: 4px;
 }
 
 .detalles {
-    height: 74px;
-    padding-right: 10%;
+    height: 35px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
 }
 
-.center-precio{
-    height: 4px;
-    margin-left: 11%;
+.center-precio {
+    display: flex;
 }
 
-.center-cant{
-    padding-right: 0%;
-    padding-left: 0%;
+.cantidades{
+    display: flex;
+    justify-content: space-between;
+    width: 60px;
+    margin-right: 19px;
 }
 
-.center-mas{
-    margin-left: 20%;
-    font-size: 15px;
-}
-
-.center-menos {
-    margin-right: 21%;
-    font-size: 15px;
-}
-
-.center-subtotal{
-    padding-right: 3%;
+.subtotal-price {
+    margin-right: 5px;
 }
 
 .linea {
     border-top: 1px solid black;
-    height: 2px;
     width: 70%;
-    margin: 1% auto 1% auto;
+    margin: 3% auto 7% auto;
   }
 
 #BloqueCompra-padre{
     margin-bottom: 5px;
+    text-align: center;
 }
 
 #BloqueCompra-hijo {
     margin-top: 20px;
     border: solid 1px black;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
     padding-bottom: 10px;
     border-radius: 5px;
     background-color: rgb(190, 190, 190);
+    width: 90%;
 }
 
 #Resumen{
     font-family: 'Open Sans', sans-serif;
     background-color: black;
     color: whitesmoke;
-    margin-bottom: 10px;
     font-size: 22px;
     padding-left: 5px;
     padding-bottom: 3px;
@@ -204,7 +222,6 @@ main {
     justify-content: space-around;
     align-items: center;
     border-bottom: 1px solid black;
-    padding-bottom: 10px;
 }
 
 #precio-subtotal {
@@ -217,8 +234,6 @@ main {
     justify-content: space-around;
     align-items: center;
     border-bottom: 1px solid black;
-    padding-bottom: 10px;
-    padding-top: 10px;
 }
 
 #total {
@@ -227,8 +242,6 @@ main {
     justify-content: space-around;
     align-items: center;
     border-bottom: 1px solid black;
-    padding-bottom: 10px;
-    padding-top: 10px;
 }
 
 .finalizar {
@@ -253,7 +266,7 @@ main {
 #novedades {
     font-family: 'Open Sans', sans-serif;
     text-align: center;
-    padding-top: 10px;
+    margin-top: 20px;
 }
 
 #Destacados {
@@ -266,7 +279,7 @@ main {
 }
 
 #conjunto-circle {
-    margin-left: 43%;
+    text-align: center;
 }
 
 .fa-circle {
@@ -279,7 +292,12 @@ main {
 footer{
     background-color: #E3D4C5;
     margin-top: 2.5rem;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }
+
 
 .suscription{
     text-align: center;
@@ -297,6 +315,7 @@ ul > li:first-child{
 
 footer p{
     font-size: 0.5rem;
+    margin: inherit;
 }
 
 
@@ -318,21 +337,6 @@ footer p{
 
 
 }
-
-@media (min-width: 375px){
-   
-    /* HEADER*/
-    
-    .nav-bar ul{
-        display: none;
-    }
-    
-    /* MAIN*/
-    .info{
-        display: none;
-    }
-}
-
 
 
 @media (min-width: 768px) {
@@ -361,31 +365,6 @@ footer p{
     }
 
     .fa-trash{
-        border: solid 1px black;
-        padding: 1px;
-        margin-right: 2%;
-    }
-
-    .center-precio{
-        margin-left: 14%;
-    }
-    
-    .center-cant{
-        margin-right: 0%;
-        margin-left: 0%;
-    }
-    
-    .center-mas{
-        margin-left: 27%;
-        font-size: 15px;
-    }
-    
-    .center-menos {
-        margin-right: 28%;
-        font-size: 15px;
-    }
-    
-    .center-subtotal{
         margin-right: 2%;
     }
 
@@ -395,17 +374,30 @@ footer p{
 
     #BloqueCompra-padre {
         width: 60%;
-        margin-left: 20%;
+        margin-left: auto;
+        margin-right: auto;
         margin-top: 20px;
+        margin-bottom: 30px;
     }
     
-    #conjunto-circle {
-        margin-left: 46.6%;
-    }
     
 }
 
 @media (min-width: 1024px) {
+
+    /* MAIN */
+
+    .agrupar {
+        display: flex;
+    }
+
+    .article-main {
+        width: 90%;
+    }
+
+    #BloqueCompra-padre {
+        margin: 20px 0px auto 0px;
+    }
 
     /* FOOTER */
     

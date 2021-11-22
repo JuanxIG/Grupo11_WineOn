@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productos</title>
-    <link rel="stylesheet" href="css/style_index.css">
+    <link rel="stylesheet" href="css/style_productCart.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 </head>
@@ -13,7 +13,7 @@
     <header>
         <div class="header-div-one">
             <figure class="image">
-                <img src="/images/WineOn.png" alt="WineOn"> 
+                <a href="/home"><img src="/images/WineOn.png"   alt="logo-wineon"></a> 
             </figure>
             <figure class="product-cart">
                 <a href="/carrito"><i class="fas fa-shopping-cart"></i></a> 
@@ -24,7 +24,7 @@
         </div>
         <div class="header-div-two">
             <form action="">
-                <input class="main-input" type="text" name="" id="" placeholder="¿Qué estás buscando?">
+                <input class="header-input" type="text" name="" id="" placeholder="¿Qué estás buscando?">
                 <i id="posicion-i" class="fas fa-search"></i>
             </form>
         </div>
@@ -41,52 +41,56 @@
     </header>
 
     <main>
-        
         <section>
             <article>
-                <div id="Titulo">
-                <h3>CARRITO DE COMPRAS</h3>
+                <div class="Titulo">
+                    <span>CARRITO DE COMPRAS</span>
+                </div>
             </article>
-            <div class="agrupar">
-                <article id="Articulo"> 
-                    </div>
+            <section class="agrupar">
+                <article class="article-main"> 
                     <div id="main">
                         <img src="/images/vino-rutini.jpg" alt="" width="50" height="50" class="imagen">
-                        <h4>Nombre del producto</h4>
+                        <div>Nombre del producto</div>
                         <i class="fas fa-trash"></i>
                     </div>
                     <div class="sub-main">
-                        <h5>PRECIO</h5>
-                        <h5>CANTIDAD</h5>
-                        <h5>SUBTOTAL</h5>
+                        <div>PRECIO</div>
+                        <div>CANTIDAD</div>
+                        <div>SUBTOTAL</div>
                     </div>
                     <div class="detalles">
-                        <h6 class="center-precio">$$$$</h6>
-                        <h6 class="center-mas">+</h6>
-                        <h6 class="center-cant">#</h6>
-                        <h6 class="center-menos">-</h6>
-                        <h6 class="center-subtotal">$$$$</h6>
+                        <div>$$$$</div>
+                        <div class="cantidades">
+                            <div>+</div>
+                            <div>#</div>
+                            <div>-</div>
+                        </div>
+                        <div class="subtotal-price">$$$$</div>
                     </div>
+                    
                     <div class="linea">
                             <!-- LINEA -->
                     </div>
 
                     <div id="main">
                         <img src="/images/vino-rutini.jpg" alt="" width="50" height="50" class="imagen">
-                        <h4>Nombre del producto</h4>
+                        <div>Nombre del producto</div>
                         <i class="fas fa-trash"></i>
                     </div>
                     <div class="sub-main">
-                        <h5>PRECIO</h5>
-                        <h5>CANTIDAD</h5>
-                        <h5>SUBTOTAL</h5>
+                        <div>PRECIO</div>
+                        <div>CANTIDAD</div>
+                        <div class="subtotal">SUBTOTAL</div>
                     </div>
                     <div class="detalles">
-                        <h6 class="center-precio">$$$$</h6>
-                        <h6 class="center-mas">+</h6>
-                        <h6 class="center-cant">#</h6>
-                        <h6 class="center-menos">-</h6>
-                        <h6 class="center-subtotal">$$$$</h6>
+                        <div>$$$$</div>
+                        <div class="cantidades">
+                            <div>+</div>
+                            <div>#</div>
+                            <div>-</div>
+                        </div>
+                        <div class="subtotal-price">$$$$</div>
                     </div>
                     <div class="linea">
                             <!-- LINEA -->
@@ -113,24 +117,25 @@
                         </div>
                     </div>
                 </article>
-            </div>
-            <article>
-                <div>
-                    <h3 id="novedades">Productos Destacados</h4>
-                </div>
-                <div id="Destacados">
-                    <i class="fas fa-angle-left"></i>
-                    <img src="/images/vino-rutini.jpg" alt="" width="100" height="100">
-                    <i class="fas fa-angle-right"></i>
-                </div>
-                <div id="conjunto-circle">
-                    <i class="fas fa-circle"></i> 
-                    <i class="fas fa-circle"></i>
-                    <i class="fas fa-circle"></i>
-                    <i class="fas fa-circle"></i>
-                </div>
-            </article>
-        </section>
+            </section>
+            <section>
+                <article>
+                    <div>
+                        <h3 id="novedades">Productos Destacados</h4>
+                    </div>
+                    <div id="Destacados">
+                        <i class="fas fa-angle-left"></i>
+                        <img src="/images/vino-rutini.jpg" alt="" width="100" height="100">
+                        <i class="fas fa-angle-right"></i>
+                    </div>
+                    <div id="conjunto-circle">
+                        <i class="fas fa-circle"></i> 
+                        <i class="fas fa-circle"></i>
+                        <i class="fas fa-circle"></i>
+                        <i class="fas fa-circle"></i>
+                    </div>
+                </article>
+            </section>
     </main>
 
     <footer>
