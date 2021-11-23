@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WineOn</title>
-    <link rel="stylesheet" href="css/style_index.css">
+    <title>Productos</title>
+    <link rel="stylesheet" href="css/style_productDetail.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 
@@ -13,9 +13,10 @@
 <body>
     <header>
         <div class="header-div-one">
-            <figure class="image">
-                <img src="/images/WineOn.png" alt="WineOn"> 
-            </figure>
+            <div>
+                <a href="" class="logo">WineOn</a>
+            </div>
+            
             <figure class="product-cart">
                 <a href="/carrito"><i class="fas fa-shopping-cart"></i></a> 
             </figure>
@@ -25,7 +26,7 @@
         </div>
         <div class="header-div-two">
             <form action="">
-                <input class="main-input" type="text" name="" id="" placeholder="¿Qué estás buscando?">
+                <input class="header-input" type="text" name="" id="" placeholder="¿Qué estás buscando?">
                 <i id="posicion-i" class="fas fa-search"></i>
             </form>
         </div>
@@ -41,54 +42,50 @@
         </nav>
     </header>
     <main>
-        <section>
-            <article>
+        <section class="bloqueProducto-padre">
+            <article >
                 <div class="vip_item">
-                    <p>Combo Luigi Bosca De Sangre</p>
+                    <h3>Combo Luigi Bosca De Sangre</h3>
                     <img src="/images/foto_combo.jpeg" alt="" width="350" height="350">
-                    <img src="/images/foto_combo.jpeg" alt="">
+                    <h3 class="price">$12.174</h3>
                 </div>
-                <div class="price">
-                    <p>$12.174</p>
-                </div>
+            </article>
+
+            <article>
                 <div class="detalle_item">
-                    <br><h3>Detalle del producto</h3><br>
+                    <h3>Detalle del producto</h3>
                     <p>Llevando 6 botellas de Luigi Bosca De Sangre, LIGIER TE REGALA 2 copas RIEDEL.
                         La marca RIEDEL revolucionó el mundo de la cristalería cuando Claus J. Riedel, de la 9ª generación, diseñó la primera colección de copas respetuosas con el vino en 1974. Innovadora y siempre en constante evolución, RIEDEL es líder indiscutible de la cristalería moderna y funcional.</p><br>
                 </div>
-            </article>
-
-            <article>
-                
                 <div class="quantity">
-                    <form action="/detalle" method="POST">
-                        <label for="cantidad">Cantidad: </label>
+                    <label for="cantidad">Cantidad: </label>
+                    <form  lass="checkout" action="/detalle" method="POST">
                         <select name="OS">
                             <option value="1">1</option> 
-                            <option value="2">2 </option> 
-                            <option value="3">3 </option>
+                            <option value="2">2 Unidades</option> 
+                            <option value="3">3 Unidades</option>
+                            <option value="4">4 Unidades</option>
+                            <option value="5">5 Unidades</option>
                         </select>
                     </form>
+                    <form action="/carrito" method="GET">
+                        <button class="boton" type="submit" value="agregar_carrito" style=cursor:pointer>Agregar al carrito</button>
+                    </form>
                 </div>
+                
 
- 
-                <div class="checkout">
-                    <a class="boton" href="/carrito">Agregar al carrito</a>
-                </div>
-                <form action="/carrito" method="GET">
-                    <button class="cart-button" type="submit" value="ENVIAR" style=cursor:pointer>Agregar al carrito</button>
-                </form>
             </article>
 
-            <article>
-                
-                <div class="sugerencias">
-                    <h3 id="novedades">Te pueden interesar estos productos</h4><br>
+        </section>
 
+        <section>
+            <article id="sugerencias">
+                <div>
+                    <h3 >Te pueden interesar estos productos</h4>
+                </div>
+                <div id="Destacados">
                     <i class="fas fa-angle-left"></i>
-                    <img src="/images/otro_vino.jpeg" alt="" width="200" height="200">
-                    <img src="/images/otro_vino.jpeg" alt="">
-
+                    <img src="/images/vino-rutini.jpg" alt="" width="100" height="100">
                     <i class="fas fa-angle-right"></i>
                 </div>
                 <div id="conjunto-circle">
@@ -98,38 +95,26 @@
                     <i class="fas fa-circle"></i>
                 </div>
                 <div>
-                    <br><h5>Luigi Bosca De Sangre Cabernet Sauvignon 750</h5><br>
+                    <h5>Luigi Bosca De Sangre Cabernet Sauvignon 750</h5>
                     <h4>$2.407</h4>
                 </div>
             </article>
-
         </section>
 
     </main>
 
     <footer>
-
-        <div class="Suscripcion">
-            <h3>¡ Suscribite y enterate las mejores ofertas !</h3>
-            <input type="text" name="" id="" placeholder="Mail...">
-            <a href="" id="Suscribirse">Suscribirse</a>
-        </div>
-        <div id="footer-arriba">
-
         <div class="suscription">
             <h3>¡ Suscribite y enterate de las mejores     ofertas !</h3>
             <input type="text" name="" id=""    placeholder="Ingresá tu e-mail">
             <a href="" id="Suscribirse">Suscribirse</a>
         </div>
         <div class="lists"> 
-
             <ul>
                 <li>AYUDA</li>
                 <li>Cómo comprar</li>
                 <li>Envíos</li>
                 <li>Preguntas frecuentes</li>
-
-             </ul>
             </ul>
             <ul>
                 <li>MAS INFORMACION</li>
@@ -137,17 +122,12 @@
                 <li>Términos y condiciones</li>
                 <li>Todas las tarjetas</li>
             </ul>
-        </div>
-        <div id="footer-abajo">
-
             <ul>
                 <li>CONTACTANOS</li>
                 <li>11-6164-2556 (Whatsapp)</li>
                 <li>info@wineon.com.ar</li>
                 <li>Lunes a Viernes de 10 a 18 hs</li>
             </ul>
-
-            <ul id="ajustar-abajo">
             <ul>
                 <li>SEGUINOS</li>
                 <li>Cómo comprar</li>
@@ -155,7 +135,6 @@
                 <li>Preguntas frecuentes</li>
              </ul>
         </div>
-        <p>Copyright 2021. Wine On. Beber con moderación. Prohibida la venta a menores de 18 años.</p>  
          <div> 
              <p>Copyright 2021. Wine On. Beber con  moderación. Prohibida la venta a menores de  18 años.</p>  
         </div>
