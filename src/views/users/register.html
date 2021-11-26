@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="css/style_register.css">
+    <link href="https://fonts.googleapis.com/css2?  family=Open+Sans&family=Roboto&display=swap"  rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+</head>
+<body>
+    
+    <header>
+        <div class="header-div-one">
+            <div>
+                <a href="" class="logo">WineOn</a>
+            </div>
+            <figure class="product-cart">
+                <a href="/carrito"><i class="fas fa-shopping-cart"></i></a> 
+            </figure>
+            <figure class="burger">
+                <i class="fas fa-bars"></i> 
+            </figure>
+        </div>
+        <div class="header-div-two">
+            <form action="">
+                <input class="header-input" type="text" name="" id="" placeholder="¿Qué estás buscando?">
+                <i id="posicion-i" class="fas fa-search"></i>
+            </form>
+        </div>
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="#">VINO TINTO</a></li>
+                <li><a href="#">VINO BLANCO</a></li>
+                <li><a href="#">ESPUMANTES</a></li>
+                <li><a href="#">WHISKYS</a></li>
+                <li><a href="#">ESPIRITUOSAS</a></li>
+                <li><a href="#">CERVEZAS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="registro">
+        <form action="/registro" method="POST">
+            <div>
+                <h2 id="h2">Creá tu cuenta</h2>
+            </div>
+            <br/>
+            <div class="form1-div">
+                <p>Nombre y apellido</p>
+                <input class="main-input" type="text" placeholder="Ej.: Martín Perez" required>
+            </div>
+           
+            <div class="form1-div"> 
+                <p>Fecha de nacimiento</p>
+                <input class="main-input" type="date">
+            </div>
+            
+            <div class="form1-div">
+                <p>Domicilio</p>
+                <input class="main-input" type="text" placeholder="Ej.: Av. Independencia 2324" required>
+            </div>
+
+            <div class="form1-div"> 
+                <p>Documento de identidad</p>
+                <input class="main-input" type="number" placeholder="Ej.: 22333444" required>
+            </div>
+
+            <div class="form1-div"> 
+                <p>Email</p>
+                <input class="main-input" type="email" placeholder="Ej.: tunombre@email.com" required>
+            </div>
+            
+            <div class="form1-div">
+                <p>Contraseña</p>
+                <input class="main-input" type="password" placeholder ="********"> 
+            </div>
+
+            <div class="form1-div">
+                <p>Confirmá tu contraseña</p>
+                <input class="main-input" type="password" placeholder="*********">
+            </div>
+        </form>
+        
+        <form action="/home" method="GET">
+            <button class="main-button" type="submit" value="ENVIAR" style=cursor:pointer>Crear cuenta</button>
+        </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="suscription">
+            <h3>¡ Suscribite y enterate de las mejores     ofertas !</h3>
+            <input type="text" name="" id=""    placeholder="Ingresá tu e-mail">
+            <a href="" id="Suscribirse">Suscribirse</a>
+        </div>
+        <div class="lists"> 
+            <ul>
+                <li>AYUDA</li>
+                <li>Cómo comprar</li>
+                <li>Envíos</li>
+                <li>Preguntas frecuentes</li>
+            </ul>
+            <ul>
+                <li>MAS INFORMACION</li>
+                <li>Nosotros</li>
+                <li>Términos y condiciones</li>
+                <li>Todas las tarjetas</li>
+            </ul>
+            <ul>
+                <li>CONTACTANOS</li>
+                <li>11-6164-2556 (Whatsapp)</li>
+                <li>info@wineon.com.ar</li>
+                <li>Lunes a Viernes de 10 a 18 hs</li>
+            </ul>
+            <ul>
+                <li>SEGUINOS</li>
+                <li>Cómo comprar</li>
+                <li>Envíos</li>
+                <li>Preguntas frecuentes</li>
+             </ul>
+        </div>
+         <div> 
+             <p>Copyright 2021. Wine On. Beber con  moderación. Prohibida la venta a menores de  18 años.</p>  
+        </div>
+    </footer>
+</body>
+</html>
