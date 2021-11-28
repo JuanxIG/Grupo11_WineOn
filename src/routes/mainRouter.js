@@ -4,17 +4,18 @@ const mainController = require("../controllers/mainController")
 
 router.get("/", mainController.index)
 
-router.get("/carrito", (req, res) => {
-    res.sendFile(path.join(__dirname,"/views/productCart.html"))});
+router.get("/carrito", mainController.carrito)
 
-router.get("/registro", (req, res) => {
-    res.sendFile(path.join(__dirname,"/views/register.html"))});
+router.get("/register", mainController.register)
 
-router.get("/login", (req, res) => {
-    res.sendFile(path.join(__dirname,"/views/login.html"))});
+router.get("/login", mainController.login)
 
-router.get("/finalizado", (req, res) => {
-    res.sendFile(path.join(__dirname,"/views/finalizar.html"))});
+router.get("/finalizado", mainController.finalizado)
 
+router.get("/editProduct", mainController.editProduct)
+
+router.get("/addProduct", mainController.addProduct)
+
+router.get("/finalizado", mainController.finalizado)
 
 module.exports = router;
