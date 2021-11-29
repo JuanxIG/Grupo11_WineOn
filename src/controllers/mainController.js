@@ -21,7 +21,7 @@ const mainController = {
 
     editProduct: function (req, res){
         res.render("editProduct")
-    } 
+    }, 
 
     addProduct: function (req, res){
         res.render("addProduct")

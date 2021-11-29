@@ -27,7 +27,7 @@ body{
 
 header{
     background-color: #14192d;
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.8rem;
 }
 
 .header-div-one{
@@ -44,15 +44,28 @@ header{
     margin: 0px;
     padding-left: 0.5rem;
 }
+
+.image a {
+    color: #E91E63;
+    text-decoration: none;
+    font-size: 40px;
+    margin-left: 15px;
+}
+
 .product-cart{
     text-align: right;
     width: 20%;
     margin: 0px;
+    position: relative;
+    bottom: 5px;
 }
+
 .burger{
     text-align: center;
     width: 20%;
     margin: 0px;
+    position: relative;
+    bottom: 4px;
 }
 
 .image img{
@@ -73,13 +86,21 @@ header{
     color: #E91E63;
 }
 
+.fa-bars:before,
+.fa-shopping-cart:before {
+    border: 1px solid;
+    padding: 10px;
+    border-radius: 40px;
+ }
+
 .header-div-two{
     text-align: center;
+    margin-top: 10px;
 }
 
 .fa-search {
     color: #E91E63;
-    font-size: 25px;
+    font-size: 15px;
 }
 
 #posicion-i {
@@ -98,6 +119,11 @@ header{
 
 
 /* seccion MAIN */
+
+.article-main {
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
 
 .main-input{
     height: 40px;
@@ -137,6 +163,7 @@ main {
 #main div{
     font-size: 15px;
     font-weight: 700;
+    color: black;
 }
 
 .sub-main {
@@ -155,8 +182,8 @@ main {
     border-radius: 30px;
     height: 30px;
     width: 30px;
-    background-color: black;
-    color: wheat;
+    background-color: #14192d;
+    color: white;
 }
 
 .fa-trash:before {
@@ -172,6 +199,11 @@ main {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+}
+
+.sub-main,
+.detalles {
+    color: black;
 }
 
 .center-precio {
@@ -192,7 +224,7 @@ main {
 .linea {
     border-top: 1px solid black;
     width: 70%;
-    margin: 3% auto 7% auto;
+    margin: 3% auto 3% auto;
   }
 
 #BloqueCompra-padre{
@@ -255,6 +287,12 @@ main {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+    transition: all 0.7s;
+}
+
+.finalizar a:hover {
+    background-color: white;
+    color: black;
 }
 
 .boton {
@@ -356,7 +394,7 @@ footer p{
     }
 
     .header-div-one{
-        justify-content: space-between;
+        justify-content: space-around;
     }
 
     .nav-bar ul{
@@ -400,6 +438,16 @@ footer p{
 }
 
 @media (min-width: 1024px) {
+
+    /* HEADER */ 
+
+    header{
+        padding-bottom: 0.8rem;
+    }
+
+    .product-cart{
+        right: 20px;
+    }
 
     /* MAIN */
 
