@@ -2,76 +2,76 @@
     <%- include("./partials/head") %>
 <body>
     <header>
-        <div class="header-div-one">
-            <figure class="image">
-                <img src="/images/WineOn.png" alt="WineOn"> 
-            </figure>
-            <figure class="product-cart">
-                <a href="/carrito"><i class="fas fa-shopping-cart"></i></a> 
-            </figure>
-            <figure class="burger">
-                <i class="fas fa-bars"></i> 
-            </figure>
-        </div>
-        <div class="header-div-two">
-            <form action="">
-                <input class="main-input" type="text" name="" id="" placeholder="¿Qué estás buscando?">
-                <i id="posicion-i" class="fas fa-search"></i>
-            </form>
-        </div>
-        <nav class="nav-bar">
-            <ul>
-                <li><a href="#">VINO TINTO</a></li>
-                <li><a href="#">VINO BLANCO</a></li>
-                <li><a href="#">ESPUMANTES</a></li>
-                <li><a href="#">WHISKYS</a></li>
-                <li><a href="#">ESPIRITUOSAS</a></li>
-                <li><a href="#">CERVEZAS</a></li>
-            </ul>
-        </nav>
+        <section class="container">
+            <div class="header-div-one">
+                <div>
+                    <a href="" class="logo">WineOn</a>
+                </div>
+                <figure class="product-cart">
+                    <a href="/carrito"><i class="fas fa-shopping-cart"></i></a> 
+                </figure>
+                <figure class="burger">
+                    <i class="fas fa-bars"></i> 
+                </figure>
+            </div>
+            <div class="header-div-two">
+                <form action="">
+                    <input class="main-input" type="text" name="" id="" placeholder="¿Qué estás buscando?">
+                    <i id="posicion-i" class="fas fa-search"></i>
+                </form>
+            </div>
+            <nav class="nav-bar">
+                <a href="#">VINO TINTO</a>
+                <a href="#">VINO BLANCO</a>
+                <a href="#">ESPUMANTES</a>
+                <a href="#">WHISKYS</a>
+                <a href="#">ESPIRITUOSAS</a>
+                <a href="#">CERVEZAS</a>
+            </nav>
+        </section>
     </header>
-
-    <main>
+    <main>   
+        <section class="container">
+            <div class="banner">
+                <img src="/images/banner-vinos.jpg" alt="banner-vinos">
+            </div>
         
-        <div class="banner">
-            <img src="/images/banner-vinos.jpg" alt="banner-vinos">
-        </div>
-
-        <ul class="info">
-            <li><i class="fas fa-shuttle-van"></i> Envios a todo el pais</li>
-            <li><i class="fas fa-credit-card"></i> Ver medios de pago</li>
-            <li><i class="fas fa-comment-alt"></i></i> Consultá por whatsapp</li>
-        </ul>
-        <section>
-            <h4>DESTACADOS</h4>
-                <article>
-                    <img src="/images/vino-rutini.jpg" alt="vino-rutini">
-                    <p>Rutini Cabernet Sauvignon</p>
-                    <p>$800</p>
-                    <p>Hasta 6 cuotas de $133,33</p>
-                    <button class="main-button" type="submit" value="ENVIAR" style=cursor:pointer><a href="/productos">COMPRAR</a></button>
-                    
-                </article>
-        </section>
-        <section>
-            <h4>RECOMENDADOS</h4>
-                <article>
-                    <img src="/images/vino-rutini.jpg" alt="vino-rutini">
-                    <p>Rutini Cabernet Sauvignon</p>
-                    <p>$800</p>
-                    <p>Hasta 6 cuotas de $133,33</p>
-                    <button class="main-button" type="submit" value="ENVIAR" style=cursor:pointer><a href="/productos">COMPRAR</a></button>
-                </article>
-        </section>
-        <section>
-            <h4>NOVEDADES</h4>
-                <article>
-                    <img src="/images/vino-rutini.jpg" alt="vino-rutini">
-                    <p>Rutini Cabernet Sauvignon</p>
-                    <p>$800</p>
-                    <p>Hasta 6 cuotas de $133,33</p>
-                    <button class="main-button" type="submit" value="ENVIAR" style=cursor:pointer><a href="/productos">COMPRAR</a></button>
-                </article>
+            <nav class="info">
+                <a><i class="fas fa-shuttle-van"></i> Envios a todo el pais</a>
+                <a><i class="fas fa-credit-card"></i> Ver medios de pago</a>
+                <a><i class="fas fa-comment-alt"></i></i> Consultá por whatsapp</a>
+            </nav>
+            <section>
+                <h4>DESTACADOS</h4>
+                    <article>
+                        <img src="/images/vino-rutini.jpg" alt="vino-rutini">
+                        <p>Rutini Cabernet Sauvignon</p>
+                        <p>$800</p>
+                        <p>Hasta 6 cuotas de $133,33</p>
+                        <button class="main-button" type="submit" value="ENVIAR" style=cursor:pointer><a href="/productos">COMPRAR</a></button>
+                        
+                    </article>
+            </section>
+            <section>
+                <h4>RECOMENDADOS</h4>
+                    <article>
+                        <img src="/images/vino-rutini.jpg" alt="vino-rutini">
+                        <p>Rutini Cabernet Sauvignon</p>
+                        <p>$800</p>
+                        <p>Hasta 6 cuotas de $133,33</p>
+                        <button class="main-button" type="submit" value="ENVIAR" style=cursor:pointer><a href="/productos">COMPRAR</a></button>
+                    </article>
+            </section>
+            <section>
+                <h4>NOVEDADES</h4>
+                    <article>
+                        <img src="/images/vino-rutini.jpg" alt="vino-rutini">
+                        <p>Rutini Cabernet Sauvignon</p>
+                        <p>$800</p>
+                        <p>Hasta 6 cuotas de $133,33</p>
+                        <button class="main-button" type="submit" value="ENVIAR" style=cursor:pointer><a href="/productos">COMPRAR</a></button>
+                    </article>
+            </section>
         </section>
     </main>
     <footer>

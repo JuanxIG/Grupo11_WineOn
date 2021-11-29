@@ -19,87 +19,87 @@ body{
 
 /* seccion HEADER*/
 
-.logo {
+/* .logo {
     font-size: 40px;
     font-weight: bold;
     text-decoration: none;
     margin-left: 10px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: #E91E63;
-}
+} */
 
 
-header{
+/* header{
     background-color: #14192d;
     padding-bottom: 0.5rem;
-}
+} */
 
-.header-div-one{
+/* .header-div-one{
     display:flex;
     justify-content: space-around;
     align-items: center;
     padding-bottom: 0.5rem;
     padding-top: 0.5rem;
 }
-
-.image{
+ */
+/* .image{
     width: 60%;
     text-align: left;
     margin: 0px;
     padding-left: 0.5rem;
-}
+} */
 
-.product-cart{
+/* .product-cart{
     text-align: right;
     width: 20%;
     margin: 0px;
-}
-.burger{
+} */
+/* .burger{
     text-align: center;
     width: 20%;
     margin: 0px;
-}
+} */
 
-.image img{
+/* .image img{
     width: 150px;
     margin: 0;
-}
+} */
 
-.fa-bars {
+/* .fa-bars {
     border-radius: 10px;
-}
+} */
 
-.fa-bars, .fa-shopping-cart {
+/* .fa-bars, .fa-shopping-cart {
     width: 50px;
     height: 16px;
     text-align: center;
     padding-top: 20px;
     font-size: 25px;
     color: #E91E63;
-}
+} */
 
-.header-div-two{
+/* .header-div-two{
     text-align: center;
-}
+} */
 
-.fa-search {
+/* .fa-search {
     color: #E91E63;
     font-size: 25px;
-}
+} */
 
-#posicion-i {
+/* #posicion-i {
     position:relative;
     right: 30px;
     top: 5px;
-}
+} */
 
-.header-input{
+/* .header-input{
     height: 40px;
     width: 85%;
     border-radius: 5px;
     border:solid  0.5px #E3D4C5;
     margin-left: 25px;
-}
+} */
 
 
 /* seccion MAIN */
