@@ -42,3 +42,29 @@ COSAS QUE HICIMOS MAL:
 
 COSAS A MEJORAR:        
 - Mejorar el diseño de la página.
+
+
+♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦
+
+SPRINT 3
+
+START DOING:
+- juntarnos virtualmente dos o tres veces por semana para trabajar juntos
+- mandar mas memes, chistes, hablar de nosotros (simplemente conocernos más)
+
+MORE OF:
+- perseverancia
+- compromiso con el grupo
+- diseño de la pagina, mas por el lado estetico
+
+KEEP DOING: 
+- juntarnos virtualmente una vez a la semana (al menos) para trabajar juntos
+- hablar sobre las dudas que se presentan
+- ayudarnos mutuamente
+
+LESS OF:(falta tiempo para madurar los MORE OF o ver si los START DOING nos sirven, y colocarlos acá)
+- incomunicación
+- aplicar buenas practicas
+
+STOP DOING:(falta tiempo para descubrir que LESS OF debemos dejar de practicar)
+- nos cuesta todavia darnos cuenta sobre qué práctica dejar de lado, simplemente porque todavía creemos que es muy pronto o tal vez no encontramos idea.
