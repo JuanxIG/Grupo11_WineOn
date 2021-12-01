@@ -36,6 +36,20 @@ header{
     padding-top: 0.5rem;
 }
 
+.image{
+    width: 60%;
+    text-align: left;
+    margin: 0px;
+    padding-left: 0.5rem;
+}
+
+.image a {
+    color: #E91E63;
+    text-decoration: none;
+    font-size: 40px;
+    margin-left: 15px;
+}
+
 .logo {
     font-size: 40px;
     font-weight: bold;
@@ -45,21 +59,20 @@ header{
     color: #E91E63;
 }
 
-.image{
-    width: 60%;
-    text-align: left;
-    margin: 0px;
-    padding-left: 0.5rem;
-}
+
 .product-cart{
     text-align: right;
     width: 20%;
     margin: 0px;
+    position: relative;
+    bottom: 5px;
 }
 .burger{
     text-align: center;
     width: 20%;
     margin: 0px;
+    position: relative;
+    bottom: 4px;
 }
 
 .image img{
@@ -97,15 +110,13 @@ header{
 
 .header-input{
     height: 40px;
-    width: 85%;
+    width: 55vw;
     border-radius: 5px;
     border:solid  0.5px #E3D4C5;
     margin-left: 25px;
 }
 
-.nav-bar {
-    display:none;
-}
+
 
 /*seccion MAIN*/
 
@@ -126,7 +137,7 @@ padding: 10px 0px;
 
 .main-input{
     height: 40px;
-    width: 90%;
+    width: 75vw;
     border-radius: 5px;
     border:solid  0.5px #14192d;
 }
@@ -145,8 +156,9 @@ text-align: center;
     border-radius: 5px;
     border:solid  0.5px #E3D4C5;
     background-color: #14192d;
-    width: 90%;
+    width: 75vw;
     color: white;
+    font-size: 16px;
 }
 
 /*seccion FOOTER*/
@@ -166,20 +178,104 @@ footer{
     padding-top: 0.5rem;
 }
 
+#Suscribirse {
+    color: #E91E63;
+}
+
 footer >* ul{
     list-style: none;
-    margin-top: 1.5rem;
+    margin-top: 2rem;
 }
 
 footer ul > li:first-child{
     font-weight: bold;
+    font-size: 1.2rem;
 }
 
 footer p{
     font-size: 0.5rem;
 }
 
+.lists li {
+    padding: 5px 0;
+}
+
+.suscription h3 {
+    font-size: 1.4rem;
+}
 /* QUERIES */
+
+@media (max-width: 767px) {
+    .nav-bar {
+        display: none;
+    }
+}
+@media (min-width: 375px){
+   
+    /* HEADER*/
+    
+   
+    
+    /* MAIN*/
+    .info{
+        display: none;
+    }
+}
+
+@media (min-width: 768px){
+    
+    /* HEADER */
+    .header-div-one{
+        justify-content: space-between;
+    }
+
+    .product-cart{
+        text-align: center;
+        width: 20%;
+    }
+    .burger{
+        width: 10%;
+    }
+    .image{
+        width: 80%;
+        
+    }
+
+    .burger{
+        display: none;
+    }
+
+    
+    .nav-bar ul{
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+        text-decoration: none;
+        font-weight: bold;
+        border: thin white solid;
+        padding-left: 1%;
+        padding-top: 1%;
+        padding-bottom: 1%;
+    }
+    
+    .nav-bar a {
+        text-decoration: none;
+        color: white;
+    }
+    /* MAIN */
+
+    .main-input{
+        width: 55vw;
+    }
+
+    .main-button{
+        height: 40px;
+        border-radius: 5px;
+        border:solid  0.5px #E3D4C5;
+        background-color: #14192d;
+        width: 55vw;
+    }
+}
 
 @media (min-width: 1024px){
     

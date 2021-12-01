@@ -100,7 +100,7 @@ header{
 
 .fa-search {
     color: #E91E63;
-    font-size: 15px;
+    font-size: 25px;
 }
 
 #posicion-i {
@@ -111,7 +111,7 @@ header{
 
 .header-input{
     height: 40px;
-    width: 85%;
+    width: 55vw;
     border-radius: 5px;
     border:solid  0.5px #E3D4C5;
     margin-left: 25px;
@@ -374,9 +374,7 @@ footer p{
    
     /* HEADER*/
     
-    .nav-bar ul{
-        display: none;
-    }
+    
     
     /* MAIN*/
     .info{
@@ -386,6 +384,11 @@ footer p{
 
 }
 
+@media (max-width: 767px) {
+    .nav-bar {
+        display: none;
+    }
+}
 
 @media (min-width: 768px) {
 
@@ -394,7 +397,17 @@ footer p{
     }
 
     .header-div-one{
-        justify-content: space-around;
+        justify-content: space-between;
+    }
+
+    .product-cart{
+        text-align: center;
+        width: 20%;
+    }
+    
+    .image{
+        width: 80%;
+        
     }
 
     .nav-bar ul{

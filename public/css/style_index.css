@@ -100,7 +100,7 @@ header{
 
 .header-input{
     height: 40px;
-    width: 85%;
+    width: 250px;
     border-radius: 5px;
     border:solid  0.5px #E3D4C5;
     margin-left: 25px;
@@ -170,7 +170,6 @@ footer{
     color: white;
 }
 
-
 .suscription{
     text-align: center;
     padding-top: 0.5rem;
@@ -182,16 +181,24 @@ footer{
 
 footer >* ul{
     list-style: none;
-    margin-top: 1.5rem;
+    margin-top: 2rem;
 }
 
-ul > li:first-child{
+footer ul > li:first-child{
     font-weight: bold;
+    font-size: 1.2rem;
 }
 
 footer p{
     font-size: 0.5rem;
-    margin: inherit;
+}
+
+.lists li {
+    padding: 5px 0;
+}
+
+.suscription h3 {
+    font-size: 1.4rem;
 }
 
 /* QUERIES*/
