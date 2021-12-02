@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productos</title>
-    <link rel="stylesheet" href="css/style_productCart.css">
+    <link href="/css/style_addProduct.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 </head>
@@ -20,14 +20,20 @@
                 <h2 id="h2">Agregar producto</h2>
             </div>
             <br/>
+
+            <div class="form1-div">
+                <p>Nombre del Producto</p>
+                <input class="main-input" type="text" required>
+            </div>
+
             <div class="form1-div">
                 <p>Descripción</p>
-                <textarea class="main-input" type="text"  required> </textarea>
+                <textarea class="main-input" type="text" id="description" required> </textarea>
             </div>
 
             <div class="form1-div">
                 <p>Categoría</p>
-                <input class="main-input" type="text"  required>
+                <input class="main-input" type="text" required>
             </div>
             
             <div class="form1-div">

@@ -14,6 +14,4 @@ router.get("/productos/:id/editar", productController.formProduct)
 //ruta que procesa la informacion y agrega el producto
 router.put("/productos/editar/:id", productController.editProduct)
 
-
-
 module.exports = router;

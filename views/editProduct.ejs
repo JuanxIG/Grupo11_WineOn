@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productos</title>
-    <link rel="stylesheet" href="css/style_productCart.css">
+    <link rel="stylesheet" href="/css/style_editProduct.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 </head>
@@ -14,101 +14,49 @@
     <%- include ("./partials/header") %>
 
     <main>
-        <section>
-            <article>
-                <div class="Titulo">
-                    <span>CARRITO DE COMPRAS</span>
+        <div id="edicion">
+            <form action="/registro" method="POST">
+                <div>
+                    <h2 id="h2">Editar Producto</h2>
                 </div>
-            </article>
-            <section class="agrupar">
-                <article class="article-main"> 
-                    <div id="main">
-                        <img src="/images/vino-rutini.jpg" alt="" width="50" height="50" class="imagen">
-                        <div>Nombre del producto</div>
-                        <i class="fas fa-trash"></i>
-                    </div>
-                    <div class="sub-main">
-                        <div>PRECIO</div>
-                        <div>CANTIDAD</div>
-                        <div>SUBTOTAL</div>
-                    </div>
-                    <div class="detalles">
-                        <div>$$$$</div>
-                        <div class="cantidades">
-                            <div>+</div>
-                            <div>#</div>
-                            <div>-</div>
-                        </div>
-                        <div class="subtotal-price">$$$$</div>
-                    </div>
-                    
-                    <div class="linea">
-                            <!-- LINEA -->
-                    </div>
+                <br/>
 
-                    <div id="main">
-                        <img src="/images/vino-rutini.jpg" alt="" width="50" height="50" class="imagen">
-                        <div>Nombre del producto</div>
-                        <i class="fas fa-trash"></i>
-                    </div>
-                    <div class="sub-main">
-                        <div>PRECIO</div>
-                        <div>CANTIDAD</div>
-                        <div class="subtotal">SUBTOTAL</div>
-                    </div>
-                    <div class="detalles">
-                        <div>$$$$</div>
-                        <div class="cantidades">
-                            <div>+</div>
-                            <div>#</div>
-                            <div>-</div>
-                        </div>
-                        <div class="subtotal-price">$$$$</div>
-                    </div>
-                    <div class="linea">
-                            <!-- LINEA -->
-                    </div>
-                </article>
-                <article id="BloqueCompra-padre">
-                    <div id="BloqueCompra-hijo">
-                        <div id="Resumen"> Resumen </div>
-                        <div id="subtotal">
-                            <h4>SUBTOTAL</h4>
-                            <h4 id="precio-subtotal">$$$$</h4>
-                        </div>
-                        <div id="envio">
-                            <h4>ENVIO</h4>
-                            <h4>$$$$</h4>
-                        </div>
-                        <div id="total">
-                            <h4>TOTAL</h4>
-                            <h4>$$$$</h4>
-                        </div>
-                        <div class="finalizar">
-                            <a href="home" class="boton">Seguir Comprando</a>
-                            <a href="finalizado" class="boton">Finalizar Compra</a>
-                        </div>
-                    </div>
-                </article>
-            </section>
-            <section>
-                <article>
-                    <div>
-                        <h3 id="novedades">Productos Destacados</h4>
-                    </div>
-                    <div id="Destacados">
-                        <i class="fas fa-angle-left"></i>
-                        <img src="/images/vino-rutini.jpg" alt="" width="100" height="100">
-                        <i class="fas fa-angle-right"></i>
-                    </div>
-                    <div id="conjunto-circle">
-                        <i class="fas fa-circle"></i> 
-                        <i class="fas fa-circle"></i>
-                        <i class="fas fa-circle"></i>
-                        <i class="fas fa-circle"></i>
-                    </div>
-                </article>
-            </section>
+                <div class="form1-div">
+                    <p>Descripción</p>
+                    <textarea class="main-input" type="text" id="description" required> </textarea>
+                </div>
+    
+                <div class="form1-div">
+                    <p>Categoría</p>
+                    <input class="main-input" type="text"  required>
+                </div>
+                
+                <div class="form1-div">
+                    <p>Bodega</p>
+                    <input class="main-input" type="text"  required>
+                </div>
+    
+                <div class="form1-div"> 
+                    <p>Variedad</p>
+                    <input class="main-input" type="text"  required>
+                </div>
+    
+                <div class="form1-div"> 
+                    <p>País de origen</p>
+                    <input class="main-input" type="text"  required>
+                </div>
+                
+                <div class="form1-div"> 
+                    <p>Precio de lista</p>
+                    <input class="main-input" type="text"  required>
+                </div>
+    
+            </form>
+            
+            <form action="/productos?_method=PUT" method="POST">
+                <button class="main-button" type="submit" value="EDITAR" style=cursor:pointer>Editar</button>
+            </form>
+            </div>
     </main>
 
     <%- include ("./partials/footer") %>
