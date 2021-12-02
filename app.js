@@ -1,20 +1,21 @@
 const express = require("express");
 const path = require("path");
 const app = express();
-const mainRouter = require("./src/routes/mainRouter")
+const mainRouter = require("./src/routes/mainRouter");
+const productRouter = require("./src/routes/productRouter");
 
 /* const publicPath = path.resolve(__dirname, "./public"); */
 
 app.use(express.static("public"));
 
-app.set("view engine", "ejs")
+app.set("view engine", "ejs");
 
 app.listen(3000, () => {
     console.log("Servidor corriendo....");
-    console.log(__dirname);
 })
 
-app.use("/", mainRouter) 
+app.use("/", mainRouter); 
+app.use("/", productRouter); 
 
 /* app.get("/productos", (req, res) => {
     res.sendFile(path.join(__dirname,"/views/productDetail.html"))});

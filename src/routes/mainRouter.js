@@ -12,10 +12,4 @@ router.get("/login", mainController.login)
 
 router.get("/finalizado", mainController.finalizado)
 
-router.get("/editProduct", mainController.editProduct)
-
-router.get("/addProduct", mainController.addProduct)
-
-router.get("/finalizado", mainController.finalizado)
-
 module.exports = router;

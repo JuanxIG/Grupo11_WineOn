@@ -17,20 +17,12 @@ const mainController = {
 
     finalizado: function (req, res){
         res.render("finalizar")
-    },
-
-    editProduct: function (req, res){
-        res.render("editProduct")
-    }, 
-
-    addProduct: function (req, res){
-        res.render("addProduct")
     }
 
 }
 
 
-module.exports = mainController
+module.exports = mainController;
 
 
 

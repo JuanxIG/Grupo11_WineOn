@@ -17,47 +17,43 @@
         <div id="registro">
         <form action="/registro" method="POST">
             <div>
-                <h2 id="h2">Creá tu cuenta</h2>
+                <h2 id="h2">Agregar producto</h2>
             </div>
             <br/>
             <div class="form1-div">
-                <p>Nombre y apellido</p>
-                <input class="main-input" type="text" placeholder="Ej.: Martín Perez" required>
+                <p>Descripción</p>
+                <textarea class="main-input" type="text"  required> </textarea>
             </div>
-           
-            <div class="form1-div"> 
-                <p>Fecha de nacimiento</p>
-                <input class="main-input" type="date">
+
+            <div class="form1-div">
+                <p>Categoría</p>
+                <input class="main-input" type="text"  required>
             </div>
             
             <div class="form1-div">
-                <p>Domicilio</p>
-                <input class="main-input" type="text" placeholder="Ej.: Av. Independencia 2324" required>
+                <p>Bodega</p>
+                <input class="main-input" type="text"  required>
             </div>
 
             <div class="form1-div"> 
-                <p>Documento de identidad</p>
-                <input class="main-input" type="number" placeholder="Ej.: 22333444" required>
+                <p>Variedad</p>
+                <input class="main-input" type="text"  required>
             </div>
 
             <div class="form1-div"> 
-                <p>Email</p>
-                <input class="main-input" type="email" placeholder="Ej.: tunombre@email.com" required>
+                <p>País de origen</p>
+                <input class="main-input" type="text"  required>
             </div>
             
-            <div class="form1-div">
-                <p>Contraseña</p>
-                <input class="main-input" type="password" placeholder ="********"> 
+            <div class="form1-div"> 
+                <p>Precio de lista</p>
+                <input class="main-input" type="text"  required>
             </div>
 
-            <div class="form1-div">
-                <p>Confirmá tu contraseña</p>
-                <input class="main-input" type="password" placeholder="*********">
-            </div>
         </form>
         
-        <form action="/home" method="GET">
-            <button class="main-button" type="submit" value="ENVIAR" style=cursor:pointer>Crear cuenta</button>
+        <form action="/productos?_method=PUT" method="POST">
+            <button class="main-button" type="submit" value="AGREGAR" style=cursor:pointer>Agregar</button>
         </form>
         </div>
     </main>
