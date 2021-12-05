@@ -18,7 +18,6 @@ const mainController = {
     finalizado: function (req, res){
         res.render("finalizar")
     }
-
 }
 
 
