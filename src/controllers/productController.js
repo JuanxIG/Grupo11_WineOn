@@ -35,12 +35,30 @@ const productController = {
 
     //se muestra el formulario para edicion de productos
     formProduct: function (req, res){
-        res.render("editProduct")
+        let producto = products.find((producto) => producto.id == req.params.id);
+        res.render("editProduct", {producto:producto})
     },
 
     //se edita el producto
     editProduct: function (req, res) {
-        
+        let modificarProduct = {
+			id: req.params.id,
+			description: req.body.description,
+            category: req.body.category,
+			price: req.body.price,
+			variety: req.body.variety,
+            nation: req.body.nation,
+		}
+		for (let i = 0; i < products.length; i++){
+			if (req.params.id == products[i].id){
+				products[i] = modificarProduct	
+				let productJSON = JSON.stringify(products);
+				fs.writeFileSync(productsFilePath, productJSON);
+				res.redirect("/products")	
+			} else {
+				res.redirect("/")
+			}
+		}
     },
 
     //se elimina un producto

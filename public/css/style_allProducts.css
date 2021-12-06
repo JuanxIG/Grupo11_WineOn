@@ -52,6 +52,10 @@ header{
     margin-left: 15px;
 }
 
+.banner  {
+    width: 100%;
+}
+
 .product-cart{
     text-align: right;
     width: 20%;
@@ -119,6 +123,11 @@ header{
 
 /* seccion MAIN */
 
+img{
+    width: 100%;
+}
+
+
 
 /* seccion FOOTER */
 
@@ -154,6 +163,20 @@ ul > li:first-child{
 footer p{
     font-size: 0.5rem;
     margin: inherit;
+}
+
+@media (min-width: 375px){
+   
+    /* HEADER*/
+    
+    .nav-bar ul{
+        display: none;
+    }
+    
+    /* MAIN*/
+    .info{
+        display: none;
+    }
 }
 
 @media (max-width: 767px) {
@@ -199,16 +222,17 @@ footer p{
         text-decoration: none;
     }
 
-    .imagen {
-        margin-left: 1%;
-    }
-
-    .fa-trash{
-        margin-right: 2%;
-    }
-
-    .linea {
-        width: 62%;
+    /* MAIN*/
+    .info {
+        background-color: #E3D4C5;
+        padding-top: 0.7rem;
+        padding-bottom: 0.7rem;
+        padding-left: 0px;
+        border: solid 3px #14192d;
+        background-color: white;
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
     }
 }
 

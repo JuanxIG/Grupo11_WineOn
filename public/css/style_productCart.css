@@ -374,7 +374,9 @@ footer p{
    
     /* HEADER*/
     
-    
+    .nav-bar ul{
+        display: none;
+    }
     
     /* MAIN*/
     .info{

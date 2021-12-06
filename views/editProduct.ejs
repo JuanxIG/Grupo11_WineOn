@@ -15,40 +15,41 @@
 
     <main>
         <div id="edicion">
+            <div>
+                <h2 id="h2">Producto a editar: <%= producto.name %></h2>
+            </div>
             <form action="/registro" method="POST">
-                <div>
-                    <h2 id="h2">Editar Producto</h2>
-                </div>
+                
                 <br/>
 
                 <div class="form1-div">
                     <p>Descripción</p>
-                    <textarea class="main-input" type="text" id="description" required> </textarea>
+                    <textarea class="main-input" type="text" id="description" name="description" required> </textarea>
                 </div>
     
                 <div class="form1-div">
                     <p>Categoría</p>
-                    <input class="main-input" type="text"  required>
+                    <input class="main-input" type="text" name="category"  required>
                 </div>
                 
                 <div class="form1-div">
                     <p>Bodega</p>
-                    <input class="main-input" type="text"  required>
+                    <input class="main-input" type="text" name="price"  required>
                 </div>
     
                 <div class="form1-div"> 
                     <p>Variedad</p>
-                    <input class="main-input" type="text"  required>
+                    <input class="main-input" type="text" name="variety"  required>
                 </div>
     
                 <div class="form1-div"> 
                     <p>País de origen</p>
-                    <input class="main-input" type="text"  required>
+                    <input class="main-input" type="text" name="nation"  required>
                 </div>
                 
                 <div class="form1-div"> 
                     <p>Precio de lista</p>
-                    <input class="main-input" type="text"  required>
+                    <input class="main-input" type="text" name="price"  required>
                 </div>
     
             </form>
