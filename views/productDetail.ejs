@@ -18,17 +18,16 @@
         <section class="bloqueProducto-padre">
             <article >
                 <div class="vip_item">
-                    <h3>Combo Luigi Bosca De Sangre</h3>
-                    <img src="/images/foto_combo.jpeg" alt="" width="350" height="350">
-                    <h3 class="price">$12.174</h3>
+                    <h3><%= product.name %></h3>
+                    <img src="/images/<%= product.image %>" alt="" width="350" height="350">
+                    <h3 class="price">$ <%= product.price %></h3>
                 </div>
             </article>
 
             <article>
                 <div class="detalle_item">
                     <h3>Detalle del producto</h3>
-                    <p>Llevando 6 botellas de Luigi Bosca De Sangre, LIGIER TE REGALA 2 copas RIEDEL.
-                        La marca RIEDEL revolucionó el mundo de la cristalería cuando Claus J. Riedel, de la 9ª generación, diseñó la primera colección de copas respetuosas con el vino en 1974. Innovadora y siempre en constante evolución, RIEDEL es líder indiscutible de la cristalería moderna y funcional.</p><br>
+                    <p><%= product.description %></p><br>
                 </div>
                 <div class="quantity">
                     <label for="cantidad">Cantidad: </label>

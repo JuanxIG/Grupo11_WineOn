@@ -1,3 +1,13 @@
+const fs = require('fs');
+const path = require('path');
+
+//const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
+const productsFilePath = path.join(__dirname, '../data/vinos_test.json');
+const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
+const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+
+
 const productController = {
 
     products: function(req, res) {
@@ -5,8 +15,12 @@ const productController = {
     },
 
     //muestra el detalle de producto
-    showProduct: function (req, res) {
-        res.render("productDetail")
+    detail:  (req, res) =>{
+        let id = req.params.id
+		let product = products.find(product => product.id == id)
+		res.render('productDetail', {
+			product
+		})
     },
 
     //se muestra el formulario para agregar un producto

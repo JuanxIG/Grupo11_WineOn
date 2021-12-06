@@ -8,10 +8,10 @@ app.use(express.static("public"));
 
 app.set("view engine", "ejs");
 
-app.listen(3000, () => {
+app.listen(3500, () => {
     console.log("Servidor corriendo....");
 })
 
 app.use("/", mainRouter); 
-app.use("/", productRouter); 
+app.use("/productos", productRouter); 
 

@@ -1,6 +1,25 @@
+const fs = require('fs');
+const path = require('path');
+
+//const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
+const productsFilePath = path.join(__dirname, '../data/vinos_test.json');
+const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
+const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+
+const visited = products.filter(function(product){
+	return product.category == 'visited'
+})
+const inSale = products.filter(function(product){
+	return product.category == 'in-sale'
+})
+
 const mainController = {
     index: function (req, res) {
-        res.render("index")
+		res.render('index', {
+			visited,
+			inSale
+		});
     },
 
     carrito: function (req, res) {
