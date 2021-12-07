@@ -28,7 +28,7 @@ const productController = {
         res.render("addProduct")
     },
     	
-	store: (req, res) => {
+	addProduct: (req, res) => {
 		let image
 		console.log(req.files);
 		if(req.files[0] != undefined){
@@ -45,11 +45,6 @@ const productController = {
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
 		res.redirect('/');
 	},
-
-    //se agrega un producto
-    addProduct: function(req, res) {
-        res.render("index")
-    },
 
     //se muestra el formulario para edicion de productos
     formProduct: function (req, res){

@@ -21,11 +21,11 @@ router.get("/", productController.products)
 
 //ruta que muestra el formulario para agregar un producto y procesar el formulario
 router.get("/agregar", productController.showAdd)
-router.post("/agregar/:id", productController.addProduct)
+router.post('/', upload.any(), productController.addProduct); 
 
 /*** Crear producto ***/ 
 router.get('/create', productController.showAdd); 
-router.post('/', upload.any(), productController.store); 
+
 
 //ruta que lleva al detalle de un producto
 router.get("/detail/:id", productController.detail);
