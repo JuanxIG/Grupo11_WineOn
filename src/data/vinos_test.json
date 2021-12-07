@@ -5,6 +5,7 @@
         "price": 12174,
         "discount": 10,
         "category": "in-sale",
+        "cuotas": "Hasta 6 cuotas sin interés",
         "description": "Llevando 6 botellas de Luigi Bosca De Sangre, LIGIER TE REGALA 2 copas RIEDEL. La marca RIEDEL revolucionó el mundo de la cristalería cuando Claus J. Riedel, de la 9ª generación, diseñó la primera colección de copas respetuosas con el vino en 1974. Innovadora y siempre en constante evolución, RIEDEL es líder indiscutible de la cristalería moderna y funcional.",
         "image": "foto_combo.jpeg"
     },
@@ -14,6 +15,7 @@
         "price": 800,
         "discount": 3,
         "category": "visited",
+        "cuotas": "Hasta 6 cuotas sin interés",
         "description": "Alta Vista Premium Bonarda 750cc. Consulte por envoltorios, cajas y estuches de diseño para que este producto sea obsequio único. Ofrecemos entregas a varios destinos por compra, con nuestra propia logística siguiendo todas las normas de seguridad sanitaria. Aceptamos Mercadopago, tarjetas de crédito y transferencia bancaria.",
         "image": "vino-rutini.jpg"
     },
@@ -23,6 +25,7 @@
         "price": 1100,
         "discount": 25,
         "category": "in-sale",
+        "cuotas": "Hasta 6 cuotas sin interés",
         "description": "Alta Vista Premium Bonarda 750cc. Consulte por envoltorios, cajas y estuches de diseño para que este producto sea obsequio único. Ofrecemos entregas a varios destinos por compra, con nuestra propia logística siguiendo todas las normas de seguridad sanitaria. Aceptamos Mercadopago, tarjetas de crédito y transferencia bancaria.",
         "image": "vino-alta-vista.jpeg"
     },
@@ -32,6 +35,7 @@
         "price": 1152,
         "discount": 25,
         "category": "visited",
+        "cuotas": "Hasta 6 cuotas sin interés",
         "description": "Consulte por envoltorios, cajas y estuches de diseño para que este producto sea obsequio único.",
         "image": "vino-la-linda.jpeg"
     }

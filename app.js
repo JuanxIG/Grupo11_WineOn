@@ -3,6 +3,7 @@ const path = require("path");
 const app = express();
 const mainRouter = require("./src/routes/mainRouter");
 const productRouter = require("./src/routes/productRouter");
+const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
 
 app.use(express.static("public"));
 
