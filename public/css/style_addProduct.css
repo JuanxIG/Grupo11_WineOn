@@ -122,32 +122,29 @@ header{
 
 /* MAIN */
 
-#registro {
+.container {
     text-align: center;
-    border: 1px black solid;
-    padding-bottom: 10px;
-    width: 338px;
+    border: 1px solid black;
     margin: auto;
+    width: 350px;
 }
 
-#h2 {
-    margin-bottom: 5px;
+#Dcol-12 {
+    display: flex;
+    flex-direction: column;
 }
 
-.form1-div {
-    font-weight: 800;
-}
-
-.main-input {
-    width: 250px;
+.col-12 {
+    margin-bottom: 15px;
 }
 
 #description {
-    height: 50px;
+    width: 70%;
+    margin: auto;
 }
 
-.main-button {
-    margin-top: 20px;
+.buy-now-button {
+    margin-top: 10px;
 }
 
 /* seccion FOOTER */
@@ -225,8 +222,8 @@ footer p{
 
     /* MAIN */
 
-    #registro {
-        width: 400px;
+    .container{
+        width: 450px;
     }
 
     .main-input {
@@ -256,7 +253,20 @@ footer p{
         text-align: center;
     }
 
-        /* MAIN */
+    /* MAIN */
+
+    section {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .container {
+        width: 750px;
+    }
+
+    .col-12 {
+        margin-bottom: 35px;
+    }
 
     #registro {
         width: 500px;

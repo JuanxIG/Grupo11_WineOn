@@ -56,20 +56,23 @@ const productController = {
     editProduct: function (req, res) {
         let modificarProduct = {
 			id: req.params.id,
-			description: req.body.description,
-            category: req.body.category,
+			name: req.body.name,
 			price: req.body.price,
+			discount: req.body.discount,
+			category: req.body.category,
+			bodega: req.body.bodega,
 			variety: req.body.variety,
+			cuotas: req.body.cuotas,
+			description: req.body.description,
             nation: req.body.nation,
 		}
-		console.log(req.params.id);
+		
 		for (let i = 0; i < products.length; i++){
 			if (req.params.id == products[i].id){
 				products[i] = modificarProduct	
 				let productJSON = JSON.stringify(products);
 				fs.writeFileSync(productsFilePath, productJSON);
-				res.redirect("/products/detail/" + req.params.id)	
-			} else {
+				console.log(req.params.id);
 				res.redirect("/")
 			}
 		}

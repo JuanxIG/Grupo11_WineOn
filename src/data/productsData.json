@@ -6,22 +6,20 @@
         "discount": 10,
         "category": "in-sale",
         "bodega": "xxxx",
-        "variety": "yyyyy", 
+        "variety": "yyyyy",
         "cuotas": "Hasta 6 cuotas sin interés",
         "description": "Llevando 6 botellas de Luigi Bosca De Sangre, LIGIER TE REGALA 2 copas RIEDEL. La marca RIEDEL revolucionó el mundo de la cristalería cuando Claus J. Riedel, de la 9ª generación, diseñó la primera colección de copas respetuosas con el vino en 1974. Innovadora y siempre en constante evolución, RIEDEL es líder indiscutible de la cristalería moderna y funcional.",
         "image": "foto_combo.jpeg"
     },
     {
-        "id": 2,
-        "name": "Rutini Cabernet Sauvignon",
-        "price": 800,
-        "discount": 3,
-        "category": "visited",
-        "bodega": "xxxx",
-        "variety": "yyyyy",
-        "cuotas": "Hasta 6 cuotas sin interés",
-        "description": "Alta Vista Premium Bonarda 750cc. Consulte por envoltorios, cajas y estuches de diseño para que este producto sea obsequio único. Ofrecemos entregas a varios destinos por compra, con nuestra propia logística siguiendo todas las normas de seguridad sanitaria. Aceptamos Mercadopago, tarjetas de crédito y transferencia bancaria.",
-        "image": "vino-rutini.jpg"
+        "id": "2",
+        "name": "dgffdg",
+        "price": "324",
+        "discount": "234",
+        "category": "in-sale",
+        "bodega": "234",
+        "cuotas": "321",
+        "description": "sfdsdf"
     },
     {
         "id": 3,
