@@ -23,7 +23,7 @@
             <!-- Show all products -->
 			<% visited.forEach(function(product){ %>
                 <a href="/productos/detail/<%= product.id %>"></a>
-                    <article class="box">
+                    <article class="box1">
                         <img src="/images/<%= product.image%>" alt="vino-rutini" >
                         <p><%= product.name %></p>
                         <p>$<%= product.price %></p>
@@ -42,7 +42,7 @@
             <!-- Show all products -->
 			<% inSale.forEach(function(product){ %>
                 <a href="/productos/detail/<%= product.id %>"></a>
-                    <article>
+                    <article class="box2">
                         <img src="/images/<%= product.image%>" alt="vino-rutini" >
                         <p><%= product.name %></p>
                         <p>$<%= product.price %></p>

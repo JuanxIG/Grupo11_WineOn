@@ -130,6 +130,7 @@ header{
 
 
 /* seccion MAIN */
+
 main{
     background-color: white;
 }
@@ -139,8 +140,13 @@ section{
     width: 330px;
 }
 
-.box {
+.box1 {
     margin-bottom: 10px;
+    width: 330px;
+}
+
+.box2 {
+    width: 330px;
 }
 
 article{
