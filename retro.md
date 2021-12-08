@@ -44,7 +44,7 @@ COSAS A MEJORAR:
 - Mejorar el diseño de la página.
 
 
-♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦
+♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦
 
 SPRINT 3
 
@@ -68,3 +68,4 @@ LESS OF:(falta tiempo para madurar los MORE OF o ver si los START DOING nos sirv
 
 STOP DOING:(falta tiempo para descubrir que LESS OF debemos dejar de practicar)
 - nos cuesta todavia darnos cuenta sobre qué práctica dejar de lado, simplemente porque todavía creemos que es muy pronto o tal vez no encontramos idea.
+

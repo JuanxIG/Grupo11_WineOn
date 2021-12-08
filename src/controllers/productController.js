@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 //const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
-const productsFilePath = path.join(__dirname, '../data/vinos_test.json');
+const productsFilePath = path.join(__dirname, '../data/productsData.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
@@ -11,7 +11,7 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const productController = {
 
     products: function(req, res) {
-        res.render("products")
+        res.render("products", {products})
     },
 
     //muestra el detalle de producto
@@ -62,12 +62,13 @@ const productController = {
 			variety: req.body.variety,
             nation: req.body.nation,
 		}
+		console.log(req.params.id);
 		for (let i = 0; i < products.length; i++){
 			if (req.params.id == products[i].id){
 				products[i] = modificarProduct	
 				let productJSON = JSON.stringify(products);
 				fs.writeFileSync(productsFilePath, productJSON);
-				res.redirect("/products")	
+				res.redirect("/products/detail/" + req.params.id)	
 			} else {
 				res.redirect("/")
 			}

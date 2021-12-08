@@ -18,15 +18,12 @@
             <div>
                 <h2 id="h2">Producto a editar: <%= producto.name %></h2>
             </div>
-            <form action="/registro" method="POST">
-                
+            <form action="/productos/editar/<%= producto.id %>?_method=PUT" method="POST">
                 <br/>
-
                 <div class="form1-div">
                     <p>Descripción</p>
                     <textarea class="main-input" type="text" id="description" name="description" required> </textarea>
                 </div>
-    
                 <div class="form1-div">
                     <p>Categoría</p>
                     <input class="main-input" type="text" name="category"  required>
@@ -45,6 +42,16 @@
                 <div class="form1-div"> 
                     <p>País de origen</p>
                     <input class="main-input" type="text" name="nation"  required>
+                </div>
+
+                <div class="form1-div"> 
+                    <p>Descuento</p>
+                    <input class="main-input" type="text" name="discount"  required>
+                </div>
+
+                <div class="form1-div"> 
+                    <p>Cuotas</p>
+                    <input class="main-input" type="text" name="cuotas"  required>
                 </div>
                 
                 <div class="form1-div"> 

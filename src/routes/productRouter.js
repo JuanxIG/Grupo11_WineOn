@@ -26,7 +26,6 @@ router.post('/', upload.any(), productController.addProduct);
 /*** Crear producto ***/ 
 router.get('/create', productController.showAdd); 
 
-
 //ruta que lleva al detalle de un producto
 router.get("/detail/:id", productController.detail);
 

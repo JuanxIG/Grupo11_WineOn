@@ -127,6 +127,14 @@ img{
     width: 100%;
 }
 
+article {
+    border: 1px solid #E91E63;
+    margin: 10px;
+}
+
+article p {
+    text-align: center;
+}
 
 
 /* seccion FOOTER */
