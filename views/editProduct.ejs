@@ -54,8 +54,12 @@
     
             </form>
             
-            <form action="/productos?_method=PUT" method="POST">
+            <form action="/editar?_method=PUT" method="POST">
                 <button class="main-button" type="submit" value="EDITAR" style=cursor:pointer>Editar</button>
+            </form>
+
+            <form action="/productos/eliminar/<%=producto.id%>?_method=DELETE" method="POST">
+                <button class="main-button" type="submit" value="ELIMINAR" style=cursor:pointer>Eliminar</button>
             </form>
             </div>
     </main>

@@ -9,9 +9,9 @@ const methodOverride =  require('method-override'); // Pasar poder usar los mét
 
 app.use(express.static(path.join(__dirname, '../public'))); // Necesario para los archivos estáticos en el folder /public
 app.use(express.urlencoded({ extended: false }));
-app.use(logger('dev'));
+//app.use(logger('dev'));
 app.use(express.json());
-app.use(cookieParser());
+//app.use(cookieParser());
 app.use(methodOverride('_method')); 
 
 // ************ Template Engine - (don't touch) ************

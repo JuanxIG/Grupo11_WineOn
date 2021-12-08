@@ -76,7 +76,7 @@ const productController = {
 
     //se elimina un producto
     deleteProduct: function (req, res){
-
+		res.send("Se elimino el producto");
     },
 
 }
