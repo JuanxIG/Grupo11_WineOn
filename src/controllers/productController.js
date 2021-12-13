@@ -7,11 +7,20 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
+const visited = products.filter(function(product){
+	return product.category == 'visited'
+})
+const inSale = products.filter(function(product){
+	return product.category == 'in-sale'
+})
 
 const productController = {
 
     products: function(req, res) {
-        res.render("products", {products})
+        res.render('products', {
+			visited,
+			inSale
+		});
     },
 
     //muestra el detalle de producto

@@ -21,6 +21,12 @@ const mainController = {
 			inSale
 		});
     },
+    productos: function (req, res) {
+		res.render('products', {
+			visited,
+			inSale
+		});
+    },
 
     carrito: function (req, res) {
         res.render("productCart")
