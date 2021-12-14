@@ -1,6 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const mainController = require("../controllers/mainController")
+const productController = require("../controllers/productController")
+
 
 const path = require('path')
 const multer = require('multer')
@@ -16,6 +18,8 @@ var storage = multer.diskStorage({
 var upload = multer({storage: storage})
 
 router.get("/", mainController.index)
+
+router.get("/productos", productController.products)
 
 router.get("/carrito", mainController.carrito)
 

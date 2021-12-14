@@ -74,7 +74,8 @@ img{
     height: auto;
 }
 
-/* seccion HEADER*/
+
+/* seccion HEADER */
 
 .burger{
     text-align: center;
@@ -175,10 +176,76 @@ header{
     top: 5px;
 }
 
+.image a {
+    color: #E91E63;
+    text-decoration: none;
+    font-size: 40px;
+    margin-left: 15px;
+}
+
 .product-cart{
     text-align: right;
     width: 20%;
     margin: 0px;
+    position: relative;
+    bottom: 5px;
+}
+
+.burger{
+    text-align: center;
+    width: 20%;
+    margin: 0px;
+    position: relative;
+    bottom: 4px;
+}
+
+.image img{
+    width: 150px;
+    margin: 0;
+}
+
+.fa-bars {
+    border-radius: 10px;
+}
+
+.fa-bars, .fa-shopping-cart {
+    width: 50px;
+    height: 16px;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 25px;
+    color: #E91E63;
+}
+
+.fa-bars:before,
+.fa-shopping-cart:before {
+    border: 1px solid;
+    padding: 10px;
+    border-radius: 40px;
+ }
+
+.header-div-two{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.fa-search {
+    color: #E91E63;
+    font-size: 25px;
+}
+
+#posicion-i {
+    position:relative;
+    right: 30px;
+    top: 5px;
+}
+
+.header-input{
+    height: 40px;
+    width: 55vw;
+    border-radius: 5px;
+    border:solid  0.5px #E3D4C5;
+    margin-left: 25px;
 }
 
 
@@ -202,18 +269,6 @@ main {
     margin-bottom: 5px;
 
 } 
-
-.price{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
-    font-weight: 300;
-    line-height: 1.35;
-    text-align: center;
-    font-size: 35px;
-    margin-top: 10px;
-    margin-bottom: 5px;
-    color:#000050;
-
-}
 
 
 .detalle_item{
@@ -241,6 +296,17 @@ main {
     flex-wrap: nowrap;
     justify-content: space-around;
     align-items: center;
+}
+
+.price{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+    font-weight: 200;
+    line-height: 1.35;
+    text-align: center;
+    font-size: 35px;
+    margin-top: 90px;
+    color:#000050;
+
 }
 
 .quantity{
@@ -289,6 +355,40 @@ main {
     border-radius: 6px;
     text-align: center;
 }
+.acciones{
+    padding-top: 10px;
+    display: inline-block;;
+    justify-content: space-around;
+    align-items: center;
+    transition: all 0.7s;
+}
+
+.boton_editar {
+    font-family: Arial,sans-serif; 
+    margin: 5px;
+    padding: 5px;
+    width: 8.375rem;
+    height: 2.175rem;
+    font-size: 0.775rem;
+    background-color: #858B8F;
+    color: white;
+    text-decoration: none;
+    border: 2px solid #858B8F;
+    border-radius: 6px;
+}
+.boton_eliminar{
+    font-family: Arial,sans-serif; 
+    margin: 5px;
+    padding: 5px;
+    width: 8.375rem;
+    height: 2.175rem;
+    font-size: 0.775rem;
+    background-color:#98A1A6;
+    color: white;
+    text-decoration: none;
+    border: 2px solid #98A1A6;
+    border-radius: 6px;
+}
 
 
 #sugerencias {
@@ -314,6 +414,8 @@ main {
     font-size: 10px;
     display: flex;
 }
+
+
     
 /* seccion FOOTER */
 
@@ -629,6 +731,18 @@ footer p{
         font-size: 16px;
         text-align: justify;
     }
+    .price{
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+        font-weight: 400;
+        line-height: 1.35;
+        text-align: center;
+        justify-content: center;
+        font-size: 35px;
+        margin-top: 80px;
+        padding-right:55px; 
+        color:#2780C1;
+    
+    }
 
     .quantity{
         font-size: 18px;
@@ -641,9 +755,17 @@ footer p{
         border: 1px solid #f0f0f0;
         border-radius: 6px;
         background-color:#f0f0f0;
-        padding: 15px 0px 5px;
-        margin: 100px 10px auto 10px;
+        padding: 0px 0px 5px;
+        margin: -30px 10px auto 10px;
     
+    }
+
+    #acciones{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-star;
+        margin: 20px 180px -35px;
     }
 
     .quantity select{
