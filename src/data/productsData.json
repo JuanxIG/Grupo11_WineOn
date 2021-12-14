@@ -12,14 +12,16 @@
         "image": "foto_combo.jpeg"
     },
     {
-        "id": "2",
+        "id": 2,
         "name": "dgffdg",
-        "price": "324",
-        "discount": "234",
+        "price": 324,
+        "discount": 234,
         "category": "in-sale",
         "bodega": "234",
         "cuotas": "321",
-        "description": "sfdsdf"
+        "description": "sfdsdf",
+        "image": "vino-alta-vista.jpeg"
+
     },
     {
         "id": 3,
