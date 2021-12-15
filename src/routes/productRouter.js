@@ -30,8 +30,8 @@ router.get('/create', productController.showAdd);
 router.get("/detail/:id", productController.detail);
 
 //ruta que muestra el formulario de edicion de un producto y procesar el formulario
-router.get("/editar/:id", productController.formProduct);
-router.put("/editar/:id", productController.editProduct);
+router.get("/detail/editar/:id", productController.formProduct);
+router.put("/detail/editar/:id", productController.editProduct);
 
 //ruta que elimina un producto
 router.delete("/eliminar/:id", productController.deleteProduct);

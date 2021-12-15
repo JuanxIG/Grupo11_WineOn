@@ -41,7 +41,6 @@ body{
     margin: 0;
     margin-left: auto;
     margin-right: auto;
-    overflow-x: hidden; /* para evitar el desplazamiento por la hero image cuando todavia no hay diseño responsive */
     color: var(--text-color);
     /* max-width: var(--max-width); */
 

@@ -41,7 +41,6 @@ body{
     margin: 0;
     margin-left: auto;
     margin-right: auto;
-    overflow-x: hidden; /* para evitar el desplazamiento por la hero image cuando todavia no hay diseño responsive */
     color: var(--text-color);
     /* max-width: var(--max-width); */
 
@@ -176,77 +175,12 @@ header{
     top: 5px;
 }
 
-.image a {
-    color: #E91E63;
-    text-decoration: none;
-    font-size: 40px;
-    margin-left: 15px;
-}
-
 .product-cart{
     text-align: right;
     width: 20%;
     margin: 0px;
-    position: relative;
-    bottom: 5px;
 }
 
-.burger{
-    text-align: center;
-    width: 20%;
-    margin: 0px;
-    position: relative;
-    bottom: 4px;
-}
-
-.image img{
-    width: 150px;
-    margin: 0;
-}
-
-.fa-bars {
-    border-radius: 10px;
-}
-
-.fa-bars, .fa-shopping-cart {
-    width: 50px;
-    height: 16px;
-    text-align: center;
-    padding-top: 20px;
-    font-size: 25px;
-    color: #E91E63;
-}
-
-.fa-bars:before,
-.fa-shopping-cart:before {
-    border: 1px solid;
-    padding: 10px;
-    border-radius: 40px;
- }
-
-.header-div-two{
-    text-align: center;
-    margin-top: 10px;
-}
-
-.fa-search {
-    color: #E91E63;
-    font-size: 25px;
-}
-
-#posicion-i {
-    position:relative;
-    right: 30px;
-    top: 5px;
-}
-
-.header-input{
-    height: 40px;
-    width: 55vw;
-    border-radius: 5px;
-    border:solid  0.5px #E3D4C5;
-    margin-left: 25px;
-}
 
 
 /* seccion MAIN */

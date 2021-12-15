@@ -41,7 +41,6 @@ body{
     margin: 0;
     margin-left: auto;
     margin-right: auto;
-    overflow-x: hidden; /* para evitar el desplazamiento por la hero image cuando todavia no hay diseño responsive */
     color: var(--text-color);
     /* max-width: var(--max-width); */
 
@@ -225,7 +224,7 @@ header{
 .main-button{
     height: 40px;
     border-radius: 5px;
-    border:solid  0.5px #E3D4C5;
+    border:solid  0.5px var(--white-color);
     background-color: var(--third-color);
     width: 140px;
     color: var(--white-color);
@@ -233,7 +232,7 @@ header{
 
  .main-button a{
     text-decoration: none;
-    color:white;
+    color:var(--white-color);
 } 
 
 .products-title{
