@@ -54,11 +54,8 @@
         </section>
 
         <div id="acciones">
-            <form action="/editar/<%= product.id %>" method="GET">
+            <form action="/productos/detail/<%= product.id %>/editar"  method="GET">
                 <button class="boton_editar" type="submit" value="editar_item" style=cursor:pointer>Editar Producto</button>
-            </form>
-            <form action="/eliminar/<%= product.id %>" method="GET">
-                <button class="boton_eliminar" type="submit" value="eliminar_item" style=cursor:pointer>Eliminar Producto</button>
             </form>
         </div>
 

@@ -1,1 +1,45 @@
-[{"id":"1","name":"","price":"","discount":"","category":"","bodega":"","cuotas":"","description":""},{"id":2,"name":"dgffdg","price":324,"discount":234,"category":"in-sale","bodega":"234","cuotas":"321","description":"sfdsdf","image":"vino-alta-vista.jpeg"},{"id":3,"name":"Alta Vista Premium Bonarda 750","price":1100,"discount":25,"category":"in-sale","bodega":"xxxx","variety":"yyyyy","cuotas":"Hasta 6 cuotas sin interés","description":"Alta Vista Premium Bonarda 750cc. Consulte por envoltorios, cajas y estuches de diseño para que este producto sea obsequio único. Ofrecemos entregas a varios destinos por compra, con nuestra propia logística siguiendo todas las normas de seguridad sanitaria. Aceptamos Mercadopago, tarjetas de crédito y transferencia bancaria.","image":"vino-alta-vista.jpeg"},{"id":4,"name":"La Linda Cabernet Sauvignon 750","price":1152,"discount":25,"category":"visited","bodega":"xxxx","variety":"yyyyy","cuotas":"Hasta 6 cuotas sin interés","description":"Consulte por envoltorios, cajas y estuches de diseño para que este producto sea obsequio único.","image":"vino-la-linda.jpeg"}]
+[
+  {
+    "id": "1",
+    "name": "",
+    "price": "",
+    "discount": "",
+    "category": "visited",
+    "bodega": "",
+    "cuotas": "",
+    "description": ""
+  },
+  {
+    "id": "2",
+    "name": "Juani cosecha tardia",
+    "price": "",
+    "discount": "",
+    "category": "in-sale",
+    "bodega": "",
+    "cuotas": "",
+    "description": "",
+    "image": "vino-alta-vista.jpeg"
+  },
+  {
+    "id": "3",
+    "name": "Juani cosecha tardia",
+    "price": "3000",
+    "discount": "50",
+    "category": "in-sale",
+    "bodega": "99",
+    "cuotas": "6",
+    "description": "hola como estan "
+  },
+  {
+    "id": "4",
+    "name": "La Linda Cabernet Sauvignon 750",
+    "price": "1152",
+    "discount": "25",
+    "category": "visited",
+    "bodega": "xxxx",
+    "variety": "yyyyy",
+    "cuotas": "Hasta 6 cuotas sin interés",
+    "description": "Consulte por envoltorios, cajas y estuches de diseño para que este producto sea obsequio único.",
+    "image": "vino-la-linda.jpeg"
+  }
+]

@@ -64,8 +64,33 @@ KEEP DOING:
 
 LESS OF:(falta tiempo para madurar los MORE OF o ver si los START DOING nos sirven, y colocarlos acá)
 - incomunicación
-- aplicar buenas practicas
 
 STOP DOING:(falta tiempo para descubrir que LESS OF debemos dejar de practicar)
 - nos cuesta todavia darnos cuenta sobre qué práctica dejar de lado, simplemente porque todavía creemos que es muy pronto o tal vez no encontramos idea.
 
+♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦
+
+SPRINT 4
+
+START DOING:
+- establecer deadlines (entre sprints) para las diversas tareas que nos proponemos, y así incentivarnos más para cumplirlas
+- empezar a trabajar con ramas
+
+MORE OF:
+- perseverancia
+- resistencia a la frustración
+- aplicar buenas prácticas
+
+KEEP DOING: 
+- juntarnos virtualmente una veces por semana para trabajar juntos
+- hablar sobre las dudas que se presentan
+- ayudarnos mutuamente
+- diseño de la página, más por el lado estético
+- compromiso con el grupo
+- mandar más memes, chistes, hablar de nosotros (simplemente conocernos más)
+
+LESS OF:
+- Reunirnos virtualmente dos o tres veces por semana para trabajar juntos (no tenemos mucho tiempo por nuestros trabajos, no logramos ccoordinar tantas veces a la semana)
+
+STOP DOING:
+- incomunicación
