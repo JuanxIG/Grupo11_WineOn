@@ -21,7 +21,7 @@
                 </div>
             </div>
             <div class="col-12">
-                <form action="/productos/detail/<%= producto.id %>/editar?_method=PUT" method="POST">
+                <form action="/productos/detail/<%= producto.id %>/editar?_method=PUT" method="POST" enctype="multipart/form-data">
                     <div class="row product-detail">
                         <section>
                             <article>
@@ -61,7 +61,7 @@
                                 </div>
                                 <div class="col-12">
                                     <label for="image" class="form-label">Imagen:</label>
-                                    <input type="file" name="image" id="image" class="form-input">
+                                    <input type="file" name="image" id="image" class="form-input" multiple>
                                 </div>
                                 <div class="col-12">
                                     <button type="submit" class="buy-now-button">Editar</button>
@@ -79,7 +79,7 @@
         </div>
     </main>
 
-    <%- include ("./partials/footer") %>
+    <!-- <%- include ("./partials/footer") %> -->
 
 </body>
 </html>

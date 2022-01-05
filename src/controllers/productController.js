@@ -74,18 +74,19 @@ const productController = {
 			variety: req.body.variety,
 			cuotas: req.body.cuotas,
 			description: req.body.description,
-            nation: req.body.nation,
+			image: req.files.file
 		}
-		
+		console.log(modificarProduct.image)
 		for (let i = 0; i < products.length; i++){
 			if (req.params.id == products[i].id){
+				
 				products[i] = modificarProduct	
 				let productJSON = JSON.stringify(products);
 				fs.writeFileSync(productsFilePath, productJSON);
-				console.log(req.params.id);
 				res.redirect("/")
 			}
 		}
+		
     },
 
     //se elimina un producto

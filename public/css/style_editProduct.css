@@ -43,9 +43,6 @@ body{
     margin-right: auto;
     color: var(--text-color);
     /* max-width: var(--max-width); */
-
-
-
 }
 
 a{
@@ -183,6 +180,10 @@ header{
 
 /* MAIN */ 
 
+main {
+    margin-top: 14%;
+}
+
 .container {
     text-align: center;
     border: 1px solid black;
@@ -254,6 +255,11 @@ footer p{
     padding-top: 0.5rem;
 }
 
+footer {
+    position: relative;
+    top: 57px;
+}
+
 /*---------------------------- QUERIES----------------------------*/
 
 
@@ -319,6 +325,7 @@ footer p{
         right: -152px;
         bottom: 8px;
     }
+    
 
     /* MAIN */
 
