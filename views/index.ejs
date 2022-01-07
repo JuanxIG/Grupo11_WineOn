@@ -12,61 +12,62 @@
 <body>
     <%- include ("./partials/header") %>
 
-    <main>   
-        <section class="container">
-            <div class="banner">
-                <img src="/images/banner-vinos.jpg" alt="banner-vinos">
-            </div>
+    <main>
         
-            <nav class="info">
-                <a><i class="fas fa-shuttle-van"></i> Envios a todo el pais</a>
-                <a><i class="fas fa-credit-card"></i> Ver medios de pago</a>
-                <a><i class="fas fa-comment-alt"></i></i> Consultá por whatsapp</a>
-            </nav>
-            <div class="col-12">
-                <h2 class="products-title">Basado en tu última visita</h2>
-            </div>
-        
-            <section class="section-index">    
-                <!-- Show all products -->
-                <% visited.forEach(function(product){ %>
-                    <a href="/productos/detail/<%= product.id %>"></a>
-                        <article class="article-index">
-                            <img src="/images/<%= product.image%>" alt="<%= product.name %>" >
-                            <p><%= product.name %></p>
-                            <p>$<%= product.price %></p>
-                            <p>Hasta 6 cuotas de $133,33</p>
-                            <div class="button-position">
-                                <a href="/productos/detail/<%= product.id %>">
-                                    <button class="main-button" type="submit" value="ENVIAR">COMPRAR</button>
-                                </a>
-                            </div>
-                        </article>
-                    </a>
-                <% }) %>
-            </section>
-        
-            <div class="col-12">
-                <h2 class="products-title">Ofertas</h2>
-            </div>
-            <section class="section-index">
-                <!-- Show all products -->
-                <% inSale.forEach(function(product){ %>
-                    <a href="/productos/detail/<%= product.id %>"></a>
-                        <article class="article-index">
-                            <img src="/images/<%= product.image%>" alt="<%= product.name %>" >
-                            <p><%= product.name %></p>
-                            <p>$<%= product.price %></p>
-                            <p>Hasta 6 cuotas de $133,33</p>
-                            <div class="button-position">    
-                                <a href="/productos/detail/<%= product.id %>">
-                                    <button class="main-button" type="submit" value="ENVIAR">COMPRAR</button>
-                                </a>
-                            </div>
-                        </article>
-                    </a>
-                <% }) %>
-            </section>
+        <div class="banner">
+            <img src="/images/banner-vinos.jpg" alt="banner-vinos">
+        </div>
+
+        <ul class="info">
+            <li><i class="fas fa-shuttle-van"></i> Envios a todo el pais</li>
+            <li><i class="fas fa-credit-card"></i> Ver medios de pago</li>
+            <li><i class="fas fa-comment-alt"></i></i> Consultá por whatsapp</li>
+        </ul>
+        <div class="col-12">
+            <h2 class="products-title">Basado en tu última visita</h2>
+        </div>
+
+        <section class="section-index">    
+            <!-- Show all products -->
+			<% visited.forEach(function(product){ %>
+                <a href="/productos/detail/<%= product.id %>"></a>
+                    <article class="article-index">
+                        <img src="/images/products/<%= product.image%>" alt="<%= product.name %>" >
+                        <p><%= product.name %></p>
+                        <p>$<%= product.price %></p>
+                        <p>Hasta 6 cuotas de $133,33</p>
+                        <div class="button-position">
+                            <a href="/productos/detail/<%= product.id %>">
+                                <button class="main-button" type="submit" value="ENVIAR">COMPRAR</button>
+                            </a>
+                        </div>
+                    </article>
+                </a>
+            <% }) %>
+        </section>
+
+        <div class="col-12">
+            <h2 class="products-title">Ofertas</h2>
+        </div>
+        <section class="section-index">
+            <!-- Show all products -->
+			<% inSale.forEach(function(product){ %>
+                <a href="/productos/detail/<%= product.id %>"></a>
+                    <article class="article-index">
+                        <img src="/images/products/<%= product.image%>" alt="<%= product.name %>" >
+                        <p><%= product.name %></p>
+                        <p>$<%= product.price %></p>
+                        <p>Hasta 6 cuotas de $133,33</p>
+                        <div class="button-position">    
+                            <a href="/productos/detail/<%= product.id %>">
+                                <button class="main-button" type="submit" value="ENVIAR">COMPRAR</button>
+                            </a>
+                        </div>
+                    </article>
+                </a>
+            <% }) %>
+        </section>
+
     </main>
 
     <%- include ("./partials/footer") %>

@@ -74,7 +74,7 @@ const productController = {
 			variety: req.body.variety,
 			cuotas: req.body.cuotas,
 			description: req.body.description,
-			image: req.files.file
+			image: req.files[0].filename
 		}
 		console.log(modificarProduct.image)
 		for (let i = 0; i < products.length; i++){

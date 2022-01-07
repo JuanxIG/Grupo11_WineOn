@@ -170,8 +170,8 @@ ul > li:first-child{
 
 footer p{
     font-size: 0.5rem;
-    margin: inherit;
 }
+
 
 @media (min-width: 375px){
    

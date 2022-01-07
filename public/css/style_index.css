@@ -283,6 +283,7 @@ footer p{
     font-size: 0.5rem;
     text-align: center;
     color: var(--white-color);
+    margin: 0px;
 }
 
 .suscription{
@@ -399,7 +400,7 @@ footer p{
 
 @media (min-width: 1024px){
     
-     /*HEADER*/
+     /* HEADER */
 
      .product-cart {
         text-align: right;
@@ -410,7 +411,8 @@ footer p{
         bottom: 8px;
     }
     
-    /*MAIN*/
+    /* MAIN */
+
     .article-index{
         width: 32%;
         height: 340px;
