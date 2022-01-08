@@ -42,6 +42,14 @@ const mainController = {
 
     finalizado: function (req, res){
         res.render("finalizar")
+    },
+
+    contacto: function (req, res){
+        res.render("contacto")
+    },
+    
+    nosotros: function (req, res){
+        res.render("nosotros")
     }
 }
 

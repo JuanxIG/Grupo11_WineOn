@@ -29,4 +29,8 @@ router.get("/login", mainController.login)
 
 router.get("/finalizado", mainController.finalizado)
 
+router.get("/contacto", mainController.contacto)
+
+router.get("/nosotros", mainController.nosotros)
+
 module.exports = router;
