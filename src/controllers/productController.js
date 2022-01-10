@@ -45,15 +45,17 @@ const productController = {
 		} else {
 			image = 'default-image.png'
 		}
-		let productJson = JSON.parse(products)
+		//let productJson = JSON.parse(products)
+		let lastProduct = products[products.length-1]
+		console.log(lastProduct)
 		let newProduct = {
-			id: productJson[productJson.length - 1].id + 1,
+			id: lastProduct.id + 1,
 			...req.body,
 			image: image
 		};
-		productJson.push(newProduct)
-		fs.writeFileSync(productsFilePath, JSON.stringify(productJson, null, ' '));
-		res.redirect('/');
+		products.push(newProduct)
+		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
+		res.redirect('/productos/detail/' + newProduct.id);
 	},
 
     //se muestra el formulario para edicion de productos
@@ -64,7 +66,14 @@ const productController = {
 
     //se edita el producto
     editProduct: function (req, res) {
-        let modificarProduct = {
+        let imagen = ""
+		for (let i = 0; i < products.length; i++){
+			if (req.params.id == products[i].id){
+				if (req.files[0].filename == undefined){
+					imagen = products[i].image
+				}else{imagen = req.files[0].filename}
+			}
+		let modificarProduct = {
 			id: req.params.id,
 			name: req.body.name,
 			price: req.body.price,
@@ -74,8 +83,9 @@ const productController = {
 			variety: req.body.variety,
 			cuotas: req.body.cuotas,
 			description: req.body.description,
-			image: req.files[0].filename
+			image: imagen
 		}
+		
 		console.log(modificarProduct.image)
 		for (let i = 0; i < products.length; i++){
 			if (req.params.id == products[i].id){
@@ -83,11 +93,12 @@ const productController = {
 				products[i] = modificarProduct	
 				let productJSON = JSON.stringify(products);
 				fs.writeFileSync(productsFilePath, productJSON);
-				res.redirect("/")
+				res.redirect('/productos/detail/' + modificarProduct.id)
 			}
 		}
 		
-    },
+    }
+},
 
     //se elimina un producto
     deleteProduct: function (req, res){

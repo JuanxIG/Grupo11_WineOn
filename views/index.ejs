@@ -35,7 +35,7 @@
                         <img src="/images/products/<%= product.image%>" alt="<%= product.name %>" >
                         <p><%= product.name %></p>
                         <p>$<%= product.price %></p>
-                        <p>Hasta 6 cuotas de $133,33</p>
+                        <p>Hasta en <%= product.cuotas %> cuotas sin interés</p>
                         <div class="button-position">
                             <a href="/productos/detail/<%= product.id %>">
                                 <button class="main-button" type="submit" value="ENVIAR">COMPRAR</button>
@@ -57,7 +57,7 @@
                         <img src="/images/products/<%= product.image%>" alt="<%= product.name %>" >
                         <p><%= product.name %></p>
                         <p>$<%= product.price %></p>
-                        <p>Hasta 6 cuotas de $133,33</p>
+                        <p>Hasta en <%= product.cuotas %> cuotas sin interés</p>
                         <div class="button-position">    
                             <a href="/productos/detail/<%= product.id %>">
                                 <button class="main-button" type="submit" value="ENVIAR">COMPRAR</button>

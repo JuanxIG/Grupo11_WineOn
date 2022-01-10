@@ -19,7 +19,7 @@ var upload = multer({storage: storage})
 
 router.get("/", mainController.index)
 
-router.get("/productos", productController.products)
+/* router.get("/productos", productController.products) */
 
 router.get("/carrito", mainController.carrito)
 
@@ -31,6 +31,6 @@ router.get("/finalizado", mainController.finalizado)
 
 router.get("/contacto", mainController.contacto)
 
-router.get("/nosotros", mainController.nosotros)
+router.get("/nosotros", mainController.nosotros) 
 
 module.exports = router;

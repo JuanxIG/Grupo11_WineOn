@@ -11,7 +11,7 @@ const visited = products.filter(function(product){
 	return product.category == 'visited'
 })
 const inSale = products.filter(function(product){
-	return product.category == 'in-sale'
+	return product.category == 'inSale'
 })
 
 const mainController = {

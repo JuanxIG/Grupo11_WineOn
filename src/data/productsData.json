@@ -1,1 +1,44 @@
-[{"id":"1","name":"fasdffdssd","price":"21","discount":"234","category":"in-sale","bodega":"234432","cuotas":"432","description":"asdfdsf","image":"image-1641519375128.png"},{"id":"2","name":"Juani cosecha tardia","price":"","discount":"","category":"in-sale","bodega":"","cuotas":"","description":"","image":"vino-alta-vista.jpeg"},{"id":"3","name":"Juani cosecha tardia","price":"3000","discount":"50","category":"in-sale","bodega":"99","cuotas":"6","description":"hola como estan "},{"id":"4","name":"La Linda Cabernet Sauvignon 750","price":"1152","discount":"25","category":"visited","bodega":"xxxx","variety":"yyyyy","cuotas":"Hasta 6 cuotas sin interés","description":"Consulte por envoltorios, cajas y estuches de diseño para que este producto sea obsequio único.","image":"vino-la-linda.jpeg"}]
+[
+ {
+  "id": 1,
+  "name": "DAMIAN",
+  "price": "432423",
+  "discount": "23423",
+  "category": "visited",
+  "bodega": "",
+  "cuotas": "23423",
+  "description": "",
+  "image": "undefined-1641769025319.jpeg"
+ },
+ {
+  "id": "4",
+  "name": "JUANI",
+  "price": "2",
+  "discount": "3",
+  "category": "in-sale",
+  "bodega": "",
+  "cuotas": "2",
+  "description": "cefdcdc",
+  "image": "undefined-1641776119015.jpeg"
+ },
+ {
+  "id": 6,
+  "name": "SOL",
+  "price": "2",
+  "discount": "2",
+  "category": "visited",
+  "cuotas": "3",
+  "description": "ASDASDA",
+  "image": "undefined-1641774423783.jpeg"
+ },
+ {
+  "id": 7,
+  "name": "FERNANDO",
+  "price": "2",
+  "discount": "2",
+  "category": "in-sale",
+  "cuotas": "2",
+  "description": "XSDSFSDF",
+  "image": "undefined-1641776645966.jpeg"
+ }
+]
