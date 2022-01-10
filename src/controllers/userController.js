@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const bcrypt = require("bcryptjs");
 
 //const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 const usersFilePath = path.join(__dirname, '../data/users.json');
@@ -32,7 +33,7 @@ const userController = {
     	
 	Registro: (req, res) => {
 		let image
-		if(req.files != undefined){
+		if(req.files[0].filename != undefined){
 			image = req.files[0].filename
 		} else {
 			image = 'default-image.png'
@@ -44,6 +45,12 @@ const userController = {
 		let newUser = {
 			id: lastUser.id + 1,
 			first_name: req.body.first_name,
+			last_name: req.body.last_name,
+			email: req.body.email,
+			nacimiento: req.body.nacimiento,
+			domicilio: req.body.domicilio,
+			dni: req.body.dni,
+			contraseña: bcrypt.hashSync(req.body.contraseña, 10),
 			image: image
 		};
 		users.push(newUser)

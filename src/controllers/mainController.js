@@ -11,18 +11,12 @@ const visited = products.filter(function(product){
 	return product.category == 'visited'
 })
 const inSale = products.filter(function(product){
-	return product.category == 'inSale'
+	return product.category == 'in-sale'
 })
 
 const mainController = {
     index: function (req, res) {
 		res.render('index', {
-			visited,
-			inSale
-		});
-    },
-    productos: function (req, res) {
-		res.render('products', {
 			visited,
 			inSale
 		});

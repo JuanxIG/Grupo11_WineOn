@@ -161,19 +161,41 @@
  },
  {
   "id": 21,
-  "image": "default-image.png"
+  "first_name": "g",
+  "last_name": "f",
+  "email": "g@sda",
+  "image": "imagen-1641845232372.png"
  },
  {
   "id": 22,
-  "image": "default-image.png"
+  "first_name": "f",
+  "last_name": "f",
+  "email": "s@s",
+  "nacimiento": "2022-01-06",
+  "domicilio": "dsa",
+  "dni": "312",
+  "image": "imagen-1641845332737.png"
  },
  {
   "id": 23,
-  "image": "default-image.png"
+  "first_name": "efw",
+  "last_name": "sfdsf",
+  "email": "ewr@dasd",
+  "nacimiento": "2022-01-12",
+  "domicilio": "dsad",
+  "dni": "1323",
+  "contraseña": "$2a$10$87aUtb8K8usU22/Gz23RMO.jEBQi8NneilEauI.4OMFjwCun8gKaO",
+  "image": "imagen-1641845379996.png"
  },
  {
   "id": 24,
-  "first_name": "fgdgfd",
-  "image": "default-image.png"
+  "first_name": "fsddfsfsf",
+  "last_name": "sdf",
+  "email": "ds@dsad",
+  "nacimiento": "2021-12-29",
+  "domicilio": "123432",
+  "dni": "123123",
+  "contraseña": "$2a$10$DIxaYKcAGDnYCTW1XHqezeifYLS0SKYkXuud8KdR9VKWa1.rIEwku",
+  "image": "imagen-1641845870088.png"
  }
 ]

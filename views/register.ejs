@@ -15,7 +15,7 @@
 
     <main>
         <div id="registro">
-        <form action="/user/register" method="POST">
+        <form action="/user/register" method="POST" enctype="multipart/form-data">
             <div>
                 <h2 id="h2">Creá tu cuenta</h2>
             </div>
@@ -37,27 +37,27 @@
 
             <div class="form1-div"> 
                 <p>Fecha de nacimiento</p>
-                <input class="main-input" type="date">
+                <input class="main-input" type="date" name="nacimiento">
             </div>
             
             <div class="form1-div">
                 <p>Domicilio</p>
-                <input class="main-input" type="text" placeholder="Ej.: Av. Independencia 2324" required>
+                <input class="main-input" type="text" placeholder="Ej.: Av. Independencia 2324" name="domicilio" required>
             </div>
 
             <div class="form1-div"> 
                 <p>Documento de identidad</p>
-                <input class="main-input" type="number" placeholder="Ej.: 22333444" required>
+                <input class="main-input" type="number" placeholder="Ej.: 22333444" name="dni" required>
             </div>
             
             <div class="form1-div">
                 <p>Foto de Perfil</p>
-                <input class="main-input" type="file" placeholder="*********" id="imagen">
+                <input class="main-input" type="file" id="imagen" name="imagen">
             </div>
 
             <div class="form1-div">
                 <p>Contraseña</p>
-                <input class="main-input" type="password" placeholder ="********" required> 
+                <input class="main-input" type="password" placeholder ="********" name="contraseña" required> 
             </div>
 
             <div class="form1-div">
