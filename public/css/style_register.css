@@ -218,6 +218,12 @@ text-align: center;
     width: 75vw;
     color: white;
     font-size: 16px;
+    margin-left: 22px;
+}
+
+#imagen {
+    border: none;
+    margin-top: 10px;
 }
 
 /*seccion FOOTER*/

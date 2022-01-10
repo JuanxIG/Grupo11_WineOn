@@ -219,7 +219,12 @@ section input[type="email"]{
     width: 85%;
 }
 
-.main-button{
+.registro {
+    margin-top: 20px;
+    padding: 5px;
+}
+
+.main-button, .registro{
     height: 40px;
     border-radius: 5px;
     background-color: var(--third-color);
@@ -230,6 +235,8 @@ section input[type="email"]{
     margin-right: auto;
     border: 0;
 }
+
+
 
 /* seccion FOOTER */
 

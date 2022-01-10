@@ -2,19 +2,12 @@ const fs = require('fs');
 const path = require('path');
 
 //const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
-const productsFilePath = path.join(__dirname, '../data/productsData.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const usersFilePath = path.join(__dirname, '../data/users.json');
+const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
-const visited = products.filter(function(product){
-	return product.category == 'visited'
-})
-const inSale = products.filter(function(product){
-	return product.category == 'in-sale'
-})
-
-const productController = {
+const userController = {
 
     products: function(req, res) {
         res.render('products', {
@@ -33,27 +26,30 @@ const productController = {
     },
 
     //se muestra el formulario para agregar un producto
-    showAdd: function(req, res) {
-        res.render("addProduct")
+    FormularioRegistro: function(req, res) {
+        res.render("register")
     },
     	
-	addProduct: (req, res) => {
+	Registro: (req, res) => {
 		let image
-		console.log(req.files);
-		if(req.files[0] != undefined){
+		if(req.files != undefined){
 			image = req.files[0].filename
 		} else {
 			image = 'default-image.png'
 		}
-		let productJson = JSON.parse(products)
-		let newProduct = {
-			id: productJson[productJson.length - 1].id + 1,
-			...req.body,
+
+		//let productJson = JSON.parse(products)
+		let lastUser = users[users.length-1]
+		console.log(lastUser)
+		let newUser = {
+			id: lastUser.id + 1,
+			first_name: req.body.first_name,
 			image: image
 		};
-		productJson.push(newProduct)
-		fs.writeFileSync(productsFilePath, JSON.stringify(productJson, null, ' '));
-		res.redirect('/');
+		users.push(newUser)
+		console.log(newUser)
+		fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));
+		res.redirect("/")
 	},
 
     //se muestra el formulario para edicion de productos
@@ -64,7 +60,14 @@ const productController = {
 
     //se edita el producto
     editProduct: function (req, res) {
-        let modificarProduct = {
+        let imagen = ""
+		for (let i = 0; i < products.length; i++){
+			if (req.params.id == products[i].id){
+				if (req.files[0].filename == undefined){
+					imagen = products[i].image
+				}else{imagen = req.files[0].filename}
+			}
+		let modificarProduct = {
 			id: req.params.id,
 			name: req.body.name,
 			price: req.body.price,
@@ -74,19 +77,22 @@ const productController = {
 			variety: req.body.variety,
 			cuotas: req.body.cuotas,
 			description: req.body.description,
-            nation: req.body.nation,
+			image: imagen
 		}
 		
+		console.log(modificarProduct.image)
 		for (let i = 0; i < products.length; i++){
 			if (req.params.id == products[i].id){
+				
 				products[i] = modificarProduct	
 				let productJSON = JSON.stringify(products);
 				fs.writeFileSync(productsFilePath, productJSON);
-				console.log(req.params.id);
-				res.redirect("/")
+				res.redirect('/productos/detail/' + modificarProduct.id)
 			}
 		}
-    },
+		
+    }
+},
 
     //se elimina un producto
     deleteProduct: function (req, res){
@@ -99,4 +105,4 @@ const productController = {
 
 }
 
-module.exports = productController;
+module.exports = userController;

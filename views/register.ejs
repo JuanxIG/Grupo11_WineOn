@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WineOn - Creá tu cuenta</title>
-    <link rel="stylesheet" href="css/style_register.css">
+    <link rel="stylesheet" href="/css/style_register.css">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 </head>
@@ -15,16 +15,26 @@
 
     <main>
         <div id="registro">
-        <form action="/registro" method="POST">
+        <form action="/user/register" method="POST">
             <div>
                 <h2 id="h2">Creá tu cuenta</h2>
             </div>
             <br/>
             <div class="form1-div">
-                <p>Nombre y apellido</p>
-                <input class="main-input" type="text" placeholder="Ej.: Martín Perez" required>
+                <p>Nombre</p>
+                <input class="main-input" type="text" placeholder="Ej.: Martín" name="first_name" required>
+            </div>
+
+            <div class="form1-div">
+                <p>Apellido</p>
+                <input class="main-input" type="text" placeholder="Ej.: Perez" name="last_name" required>
             </div>
            
+            <div class="form1-div"> 
+                <p>Email</p>
+                <input class="main-input" type="email" placeholder="Ej.: tunombre@email.com" name="email" required>
+            </div>
+
             <div class="form1-div"> 
                 <p>Fecha de nacimiento</p>
                 <input class="main-input" type="date">
@@ -39,24 +49,21 @@
                 <p>Documento de identidad</p>
                 <input class="main-input" type="number" placeholder="Ej.: 22333444" required>
             </div>
-
-            <div class="form1-div"> 
-                <p>Email</p>
-                <input class="main-input" type="email" placeholder="Ej.: tunombre@email.com" required>
-            </div>
             
             <div class="form1-div">
+                <p>Foto de Perfil</p>
+                <input class="main-input" type="file" placeholder="*********" id="imagen">
+            </div>
+
+            <div class="form1-div">
                 <p>Contraseña</p>
-                <input class="main-input" type="password" placeholder ="********"> 
+                <input class="main-input" type="password" placeholder ="********" required> 
             </div>
 
             <div class="form1-div">
                 <p>Confirmá tu contraseña</p>
-                <input class="main-input" type="password" placeholder="*********">
+                <input class="main-input" type="password" placeholder="*********" required>
             </div>
-        </form>
-        
-        <form action="/" method="GET">
             <button class="main-button" type="submit" value="ENVIAR" style=cursor:pointer>Crear cuenta</button>
         </form>
         </div>

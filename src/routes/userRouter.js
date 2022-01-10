@@ -1,7 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const mainController = require("../controllers/mainController")
-const productController = require("../controllers/productController")
+const userController = require("../controllers/userController")
 
 
 const path = require('path')
@@ -18,24 +17,21 @@ var storage = multer.diskStorage({
 var upload = multer({storage: storage})
 
 
-// ruta que muestra todos los productos
-router.get("/", productController.products)
+//ruta que muestra el register y procesar el registro
+router.get("/register", userController.FormularioRegistro)
+router.post('/register', upload.any(), userController.Registro); 
 
-//ruta que muestra el formulario para agregar un producto y procesar el formulario
-router.get("/agregar", productController.showAdd)
-router.post('/agregar', upload.any(), productController.addProduct); 
-
-/*** Crear producto ***/ 
-router.get('/create', productController.showAdd); 
+/*** Crear producto 
+router.get('/create', userController.showAdd); 
 
 //ruta que lleva al detalle de un producto
-router.get("/detail/:id", productController.detail);
+router.get("/detail/:id", userController.detail);
 
-//ruta que muestra el formulario de edicion de un producto y procesar el formulario
-router.get("/detail/:id/editar", productController.formProduct);
-router.put("/detail/:id/editar", productController.editProduct);
+//ruta que muestra el login y procesar el usuario logueado
+router.get("/detail/:id/editar", userController.formProduct);
+router.put("/detail/:id/editar", userController.editProduct);
 
-//ruta que elimina un producto
-router.delete("/detail/:id/editar/eliminar", productController.deleteProduct);
-
+//ruta que elimina el usuario
+router.delete("/detail/:id/editar/eliminar", userController.deleteProduct);
+***/ 
 module.exports = router;
