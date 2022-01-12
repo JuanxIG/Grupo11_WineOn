@@ -22,47 +22,95 @@
             <br/>
             <div class="form1-div">
                 <p>Nombre</p>
-                <input class="main-input" type="text" placeholder="Ej.: Martín" name="first_name" required>
+                <input type="text" placeholder="Ej.: Martín" name="first_name" value= "<%= locals.oldData ? oldData.first_name : null %>" class="main-input <%= locals.errors && errors.first_name ? 'is-invalid' : null %>" >
+                <% if (locals.errors && errors.first_name) { %>
+                    <div>
+                    <%= errors.first_name.msg %>
+                    </div>
+
+                <% } %>
             </div>
 
             <div class="form1-div">
                 <p>Apellido</p>
-                <input class="main-input" type="text" placeholder="Ej.: Perez" name="last_name" required>
+                <input class="main-input" type="text" placeholder="Ej.: Perez" name="last_name" value= "<%= locals.oldData ? oldData.last_name : null %>">
+                <% if (locals.errors && errors.last_name) { %>
+                    <div>
+                    <%= errors.last_name.msg %>
+                    </div>
+
+                <% } %>
             </div>
            
             <div class="form1-div"> 
                 <p>Email</p>
-                <input class="main-input" type="email" placeholder="Ej.: tunombre@email.com" name="email" required>
+                <input class="main-input" type="text" placeholder="Ej.: tunombre@email.com" name="email" value= "<%= locals.oldData ? oldData.email : null %>">
+                <% if (locals.errors && errors.email) { %>
+                    <div>
+                    <%= errors.email.msg %>
+                    </div>
+
+                <% } %>
             </div>
 
             <div class="form1-div"> 
                 <p>Fecha de nacimiento</p>
-                <input class="main-input" type="date" name="nacimiento">
+                <input class="main-input" type="date" name="nacimiento" value= "<%= locals.oldData ? oldData.nacimiento : null %>">
             </div>
             
             <div class="form1-div">
                 <p>Domicilio</p>
-                <input class="main-input" type="text" placeholder="Ej.: Av. Independencia 2324" name="domicilio" required>
+                <input class="main-input" type="text" placeholder="Ej.: Av. Independencia 2324" name="domicilio" value= "<%= locals.oldData ? oldData.domicilio : null %>">
+                <% if (locals.errors && errors.domicilio) { %>
+                    <div>
+                    <%= errors.domicilio.msg %>
+                    </div>
+
+                <% } %>
             </div>
 
             <div class="form1-div"> 
                 <p>Documento de identidad</p>
-                <input class="main-input" type="number" placeholder="Ej.: 22333444" name="dni" required>
+                <input class="main-input" type="number" placeholder="Ej.: 22333444" name="dni" value= "<%= locals.oldData ? oldData.dni : null %>">
+                <% if (locals.errors && errors.dni) { %>
+                    <div>
+                    <%= errors.dni.msg %>
+                    </div>
+
+                <% } %>
             </div>
             
             <div class="form1-div">
                 <p>Foto de Perfil</p>
                 <input class="main-input" type="file" id="imagen" name="imagen">
+                <% if (locals.errors && errors.imagen) { %>
+                    <div>
+                    <%= errors.imagen.msg %>
+                    </div>
+
+                <% } %>
             </div>
 
             <div class="form1-div">
                 <p>Contraseña</p>
-                <input class="main-input" type="password" placeholder ="********" name="contraseña" required> 
+                <input class="main-input" type="password" placeholder ="********" name="contraseña" > 
+                <% if (locals.errors && errors.contraseña) { %>
+                    <div>
+                    <%= errors.contraseña.msg %>
+                    </div>
+
+                <% } %>
             </div>
 
             <div class="form1-div">
                 <p>Confirmá tu contraseña</p>
-                <input class="main-input" type="password" placeholder="*********" required>
+                <input class="main-input" type="password" placeholder="*********" name="confirma_contraseña" >
+                <% if (locals.errors && errors.confirma_contraseña) { %>
+                    <div>
+                    <%= errors.confirma_contraseña.msg %>
+                    </div>
+
+                <% } %>
             </div>
             <button class="main-button" type="submit" value="ENVIAR" style=cursor:pointer>Crear cuenta</button>
         </form>

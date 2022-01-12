@@ -5,6 +5,7 @@ const userController = require("../controllers/userController")
 
 const path = require('path')
 const multer = require('multer')
+const {body} = require ("express-validator");
 // ************ Multer ************ 
 var storage = multer.diskStorage({
     destination:function(req,file,cb){
@@ -16,10 +17,31 @@ var storage = multer.diskStorage({
 })
 var upload = multer({storage: storage})
 
+// ************ Validator ************ 
+const validaciones = [
+    body("first_name").notEmpty().withMessage("Ingresá tu nombre"),
+    body("last_name").notEmpty().withMessage("Ingresá tu apellido"),
+    body("email").notEmpty().withMessage("Ingresá tu email").bail()
+                 .isEmail().withMessage("ingresá un formato de correo válido. Ej.: tucorreo@email"),
+    body("nacimiento").notEmpty().withMessage("Seleccioná tu fecha de nacimiento"),
+    body("domicilio").notEmpty().withMessage("Ingresá tu domicilio"),
+    body("dni").notEmpty().withMessage("Ingresá tu DNI"),
+    body("contraseña").notEmpty().withMessage("Ingresá una contraseña"),
+    body("confirma_contraseña").notEmpty().withMessage("Confirmá tu contraseña"),
+    body("imagen").custom((value, {req}) => {
+        let extensionesAceptadas = [".jpeg", ".png"]
+        if (!extensionesAceptadas.includes(path.extname(req.file.originalname))) {
+            throw new Error("Las extensiones del archivo permitidas son '.jpeg' y '.png'");
+        }
+        return true;
+    })
+]
 
 //ruta que muestra el register y procesar el registro
-router.get("/register", userController.FormularioRegistro)
-router.post('/register', upload.any(), userController.Registro); 
+router.get("/register", userController.formularioRegistro)
+router.post('/register', upload.single("imagen"), validaciones, userController.procesoRegistro); 
+
+router.get("/profile", userController.profile);
 
 /*** Crear producto 
 router.get('/create', userController.showAdd); 
