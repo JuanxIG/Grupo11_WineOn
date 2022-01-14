@@ -10,11 +10,24 @@
             <figure class="burger">
                 <i class="fas fa-bars"></i> 
             </figure>
+            <% if (locals.estaLogueado) { %>
             <div>
-                <a href="/login">
+                <a href="/user/profile">
+                    <button class="login-button">Hola <%= locals.usuarioLogueado.first_name %></button>
+                </a>
+                <a href="/user/logout">salir</a>
+            </div>    
+              
+            <% } else {%>
+           <div>
+                <a href="/user/login">
                     <button class="login-button">INGRESAR</button>
                 </a>
             </div>
+        <% } %>
+
+          
+        
         </div>
         <div class="header-div-two">
             <form action="">

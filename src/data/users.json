@@ -197,5 +197,125 @@
   "dni": "123123",
   "contraseña": "$2a$10$DIxaYKcAGDnYCTW1XHqezeifYLS0SKYkXuud8KdR9VKWa1.rIEwku",
   "image": "imagen-1641845870088.png"
+ },
+ {
+  "id": 25,
+  "first_name": "Fernando",
+  "last_name": "Odriozola",
+  "email": "holadasdasda@dfds.com",
+  "nacimiento": "2022-01-03",
+  "domicilio": "r34tretewte",
+  "dni": "34222800",
+  "contraseña": "$2a$10$lXdxhlHRgfkKyarvx4WOseGFzXLZoQERiFTxJDU4tG0y8fBUqRZRy"
+ },
+ {
+  "id": 26,
+  "first_name": "Fernando",
+  "last_name": "Odriozola",
+  "email": "holadasdasda@dfds.com",
+  "nacimiento": "2022-01-03",
+  "domicilio": "r34tretewte",
+  "dni": "34222800",
+  "contraseña": "$2a$10$VUt6fqdxHkEkVnjeOlLC9OTgn/PSLM5RlXSruZHDc8Eu8WbJhwv.G",
+  "image": "imagen-1642029617839.png"
+ },
+ {
+  "id": 27,
+  "first_name": "Damian",
+  "last_name": "Odrio",
+  "email": "dami@odrio.com",
+  "nacimiento": "2022-01-12",
+  "domicilio": "sañdasdasd",
+  "dni": "343424234",
+  "contraseña": "$2a$10$ltznseHnS.et8JmY3zhJpe1VOcwp/25mu2h.0i.4YTBCy7y4jS546",
+  "image": "imagen-1642103037769.png"
+ },
+ {
+  "id": 28,
+  "first_name": "fasfasf",
+  "last_name": "Odrioasxasx",
+  "email": "dami@odrio.com",
+  "nacimiento": "2022-01-12",
+  "domicilio": "sañdasdasd",
+  "dni": "343424234",
+  "contraseña": "$2a$10$OE8TM/oJqC7RaGCq9fIxbu4pY.FW6/1wLgGeqsjNiGP0dNZP76.56",
+  "image": "imagen-1642104118680.png"
+ },
+ {
+  "id": 29,
+  "first_name": "fasfasf",
+  "last_name": "adfdsfsfasdfasdf",
+  "email": "dami@odriozola.com",
+  "nacimiento": "2022-01-12",
+  "domicilio": "sañdasdasd",
+  "dni": "343424234",
+  "contraseña": "$2a$10$AD9p.DBYt.VtlycqpTRH4umxZRzxUfF6Uwni0a9odT.hwppX.e4n.",
+  "image": "imagen-1642104567349.png"
+ },
+ {
+  "id": 30,
+  "first_name": "fasfasf",
+  "last_name": "adfdsfsfasdfasdf",
+  "email": "dami@feafef.com",
+  "nacimiento": "2022-01-12",
+  "domicilio": "sañdasdasd",
+  "dni": "343424234",
+  "contraseña": "$2a$10$iIZafED./DhnvPO6Ua8shexu5qVA1nkWvTFbSdCjeBEOWorkYNt92",
+  "image": "imagen-1642104656627.png"
+ },
+ {
+  "id": 31,
+  "first_name": "Fernando",
+  "last_name": "Odriozola",
+  "email": "feseod@gmail.com",
+  "nacimiento": "2022-01-25",
+  "domicilio": "dasd",
+  "dni": "342342342",
+  "contraseña": "$2a$10$hh/XgfuEwolHas./YJ6ZBe6Tu5mEkHJ5trdZpSuJPtwk6OdVFQAB2",
+  "image": "imagen-1642105112263.png"
+ },
+ {
+  "id": 32,
+  "first_name": "Fernando",
+  "last_name": "Odriozola",
+  "email": "feseod@feseod.com",
+  "nacimiento": "2022-01-06",
+  "domicilio": "sdfsdf",
+  "dni": "445242",
+  "contraseña": "$2a$10$DOtyuArSSciV5RRecVWczev1FH6lvmszGWC/97ao4GoBy3dABZf1i",
+  "image": "imagen-1642109197931.png"
+ },
+ {
+  "id": 33,
+  "first_name": "Fernando",
+  "last_name": "Odriozola",
+  "email": "dsfs@feseod.com",
+  "nacimiento": "2022-01-06",
+  "domicilio": "sdfsdf",
+  "dni": "445242",
+  "contraseña": "$2a$10$6x8UOEeNJbUeADRLh87naey5UJeEmff1XkOOv4L.3sSLHZNkSDWlq",
+  "image": "imagen-1642109329848.png"
+ },
+ {
+  "id": 34,
+  "first_name": "Fernando",
+  "last_name": "Odriozola",
+  "email": "dgsdgsds@feseod.com",
+  "nacimiento": "2022-01-06",
+  "domicilio": "sdfsdf",
+  "dni": "445242",
+  "contraseña": "$2a$10$.LurYd3vllGPO.DQVMD.kO4Y2gCNJrki/bOZmpilYZob6ozkqryDu",
+  "image": "imagen-1642109358955.png"
+ },
+ {
+  "id": 35,
+  "first_name": "Fernando",
+  "last_name": "Odriozola",
+  "email": "thtrrtherths@feseod.com",
+  "nacimiento": "2022-01-06",
+  "domicilio": "sdfsdf",
+  "dni": "445242",
+  "contraseña": "$2a$10$85JWNd3VQb7WMd.FLqRzMeZpXfcnM9Ft2eLhA6u0Sbo9n9lKFd8Hq",
+  "image": "imagen-1642109468670.png"
  }
 ]

@@ -22,7 +22,7 @@
             <br/>
             <div class="form1-div">
                 <p>Nombre</p>
-                <input type="text" placeholder="Ej.: Martín" name="first_name" value= "<%= locals.oldData ? oldData.first_name : null %>" class="main-input <%= locals.errors && errors.first_name ? 'is-invalid' : null %>" >
+                <input type="text" placeholder="Ej.: Martín" name="first_name" value= "<%= locals.oldData ? oldData.first_name : null %>" class="main-input <%= locals.errors && errors.first_name ? 'is-invalid' : null %>" > <!-- probar la clase "is ivalid" -->
                 <% if (locals.errors && errors.first_name) { %>
                     <div>
                     <%= errors.first_name.msg %>

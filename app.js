@@ -5,8 +5,20 @@ const mainRouter = require("./src/routes/mainRouter");
 const productRouter = require("./src/routes/productRouter");
 const userRouter = require("./src/routes/userRouter");
 const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
+const session = require("express-session");
+const cookies = require("cookie-parser")
+const userLoggedMiddleware = require("./src/middlewares/userLoggedMiddleware");
 
-//app.use(express.static("public"));
+
+app.use(session({
+    secret: "shh, es un secreto",
+    resave: false,
+    saveUninitialized: false
+}))
+
+app.use(cookies());
+
+app.use(userLoggedMiddleware);
 
 app.use(express.static(path.join(__dirname, './public'))); // Necesario para los archivos estáticos en el folder /public
 app.use(express.urlencoded({ extended: false }));
