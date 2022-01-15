@@ -6,14 +6,14 @@ const productController = require("../controllers/productController")
 
 // ************ middlewares ************
 const canBuyMiddleware = require("../middlewares/canBuyMiddleware");
-
+const authMiddleware = require ("../middlewares/authMiddleware");
  
 
 router.get("/", mainController.index)
 
 /* router.get("/productos", productController.products) */
 
-router.get("/carrito", mainController.carrito)
+router.get("/carrito", authMiddleware, mainController.carrito)
 
 router.get("/finalizado", canBuyMiddleware, mainController.finalizado)
 
