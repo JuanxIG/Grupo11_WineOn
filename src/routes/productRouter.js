@@ -11,7 +11,7 @@ const authMiddleware = require ("../middlewares/authMiddleware");
 router.get("/", productController.products)
 
 //ruta que muestra el formulario para agregar un producto y procesar el formulario
-router.get("/agregar", authMiddleware,productController.showAdd)
+router.get("/agregar",authMiddleware,productController.showAdd)
 router.post('/agregar', upload.single("image"), productController.addProduct); 
 
 /*** Crear producto ***/ 

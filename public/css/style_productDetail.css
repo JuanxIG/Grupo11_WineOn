@@ -310,17 +310,17 @@ main {
     border: 2px solid #858B8F;
     border-radius: 6px;
 }
-.boton_eliminar{
+.boton_crear{
     font-family: Arial,sans-serif; 
     margin: 5px;
     padding: 5px;
     width: 8.375rem;
     height: 2.175rem;
     font-size: 0.775rem;
-    background-color:#98A1A6;
+    background-color:#E22692;
     color: white;
     text-decoration: none;
-    border: 2px solid #98A1A6;
+    border: 2px solid #E22692;
     border-radius: 6px;
 }
 
