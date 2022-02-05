@@ -29,21 +29,21 @@
 
         <section class="section-index">    
             <!-- Show all products -->
-			<% visited.forEach(function(product){ %>
-                <a href="/productos/detail/<%= product.id %>"></a>
+			<% for (let i=0; i < vinos.length; i++) { %>
+                <a href="/productos/detail/<%= vinos[i].id %>"></a>
                     <article class="article-index">
-                        <img src="/images/products/<%= product.image%>" alt="<%= product.name %>" >
-                        <p><%= product.name %></p>
-                        <p>$<%= product.price %></p>
-                        <p>Hasta en <%= product.cuotas %> cuotas sin interés</p>
+                        <img src="/images/products/<%= vinos[i].imagen%>" alt="<%= vinos.nombre %>" >
+                        <p><%= vinos[i].nombre %></p>
+                        <p>$<%= vinos[i].precio %></p>
+                        <p>Hasta en <%= vinos[i].cuotas %> cuotas sin interés</p>
                         <div class="button-position">
-                            <a href="/productos/detail/<%= product.id %>">
+                            <a href="/productos/detail/<%= vinos[i].id %>">
                                 <button class="main-button" type="submit" value="ENVIAR">COMPRAR</button>
                             </a>
                         </div>
                     </article>
                 </a>
-            <% }) %>
+            <% } %>
         </section>
 
         <div class="col-12">
@@ -51,21 +51,21 @@
         </div>
         <section class="section-index">
             <!-- Show all products -->
-			<% inSale.forEach(function(product){ %>
-                <a href="/productos/detail/<%= product.id %>"></a>
+			<% for (let i=0; i < vinos.length; i++) { %>
+                <a href="/productos/detail/<%= vinos[i].id %>"></a>
                     <article class="article-index">
-                        <img src="/images/products/<%= product.image%>" alt="<%= product.name %>" >
-                        <p><%= product.name %></p>
-                        <p>$<%= product.price %></p>
-                        <p>Hasta en <%= product.cuotas %> cuotas sin interés</p>
+                        <img src="/images/products/<%= vinos[i].imagen%>" alt="<%= vinos.nombre %>" >
+                        <p><%= vinos[i].nombre %></p>
+                        <p>$<%= vinos[i].precio %></p>
+                        <p>Hasta en <%= vinos[i].cuotas %> cuotas sin interés</p>
                         <div class="button-position">    
-                            <a href="/productos/detail/<%= product.id %>">
+                            <a href="/productos/detail/<%= vinos[i].id %>">
                                 <button class="main-button" type="submit" value="ENVIAR">COMPRAR</button>
                             </a>
                         </div>
                     </article>
                 </a>
-            <% }) %>
+            <% } %>
         </section>
 
     </main>

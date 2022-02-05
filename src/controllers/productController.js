@@ -1,61 +1,73 @@
-const fs = require('fs');
-const path = require('path');
+//const fs = require('fs');
+//const path = require('path');
+let db = require("../../database/models");
 
 //const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
-const productsFilePath = path.join(__dirname, '../data/productsData.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+//const productsFilePath = path.join(__dirname, '../data/productsData.json');
+//const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
-const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+//const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
-const visited = products.filter(function(product){
+/*const visited = products.filter(function(product){
 	return product.category == 'visited'
 })
 const inSale = products.filter(function(product){
 	return product.category == 'in-sale'
-})
+})*/
 
 const productController = {
 
     products: function(req, res) {
-        res.render('products', {
+		db.Vino.findAll()
+			.then(function(vinos) {
+				 res.render("products", {vinos: vinos})
+			})
+        /*res.render('products', {
 			visited,
 			inSale
-		});
+		});*/
     },
 
     //muestra el detalle de producto
     detail:  (req, res) =>{
-        let id = req.params.id
-		let product = products.find(product => product.id == id)
-		res.render('productDetail', {
-			product
+        db.Vino.findByPk(req.params.id, {
+			include: [{association: "unaBodega"}, {association: "unaCepa"}, {association: "muchospedidos"}]
 		})
+			.then(function(vino) {
+				res.render("productDetail", {vino:vino})
+			})
     },
 
     //se muestra el formulario para agregar un producto
     showAdd: function(req, res) {
-        res.render("addProduct")
+		db.Cepa.findAll()
+			.then(function(cepas) {
+				db.Bodega.findAll()
+				.then(function(bodegas) {
+					return res.render("addProduct", {cepas, bodegas})
+
+				})
+			});
+			
+		/*db.Bodega.findAll()
+			.then(function(bodegas) {
+				return res.render("addProduct", {bodegas})
+			})*/
     },
     	
 	addProduct: (req, res) => {
-		let image
-		console.log(req.files);
-		if(req.files[0] != undefined){
-			image = req.files[0].filename
-		} else {
-			image = 'default-image.png'
-		}
-		//let productJson = JSON.parse(products)
-		let lastProduct = products[products.length-1]
-		console.log(lastProduct)
-		let newProduct = {
-			id: lastProduct.id + 1,
-			...req.body,
-			image: image
-		};
-		products.push(newProduct)
-		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
-		res.redirect('/productos/detail/' + newProduct.id);
+		db.Vino.create({
+			nombre: req.body.name,
+			precio: req.body.price,
+			cuotas: req.body.cuotas,
+			descuento: req.body.discount,
+			descripcion: req.body.description,
+			imagen: req.body.image,
+			bodegaid: req.body.bodega,
+			cepaid: req.body.cepa,
+			stock: req.body.unidades
+		});
+		res.redirect("/productos");
 	},
 
     //se muestra el formulario para edicion de productos

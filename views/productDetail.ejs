@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>WineOn - <%= product.name %></title>
+        <title>WineOn - <%= vino.nombre %></title>
         <link rel="stylesheet" href="/css/style_productDetail.css">
         <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
@@ -18,8 +18,8 @@
         <section class="bloqueProducto-padre">
             <article >
                 <div class="vip_item">
-                    <h3><%= product.name %></h3>
-                    <img src="/images/products/<%= product.image %>" alt="" width="350" height="350">
+                    <h3><%= vino.nombre %></h3>
+                    <img src="/images/products/<%= vino.imagen %>" alt="" width="350" height="350">
                     
                 </div>
             </article>
@@ -27,10 +27,10 @@
             <article>
                 <div class="detalle_item">
                     <h3>Detalle del producto</h3>
-                    <p><%= product.description %></p><br>
+                    <p><%= vino.descripcion %></p><br>
                 </div>
                 <div class="price">
-                    <p>$ <%= product.price %></p>
+                    <p>$ <%= vino.precio%></p>
                 </div>
                 <div class="quantity">
                     <label for="cantidad">Cantidad: </label>
@@ -54,7 +54,7 @@
         </section>
 
         <div id="acciones">
-            <form action="/productos/detail/<%= product.id %>/editar"  method="GET">
+            <form action="/productos/detail/<%= vino.id %>/editar"  method="GET">
                 <button class="boton_editar" type="submit" value="editar_item" style=cursor:pointer>Editar Producto</button>
             </form>
             <form action="/productos/agregar"  method="GET">

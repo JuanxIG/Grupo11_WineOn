@@ -19,7 +19,14 @@ module.exports = function(sequelize, dataTypes) {
         timestamps: false
     }
 
-    let Vinos = sequelize.define(alias, cols, config);
+    let Cepa = sequelize.define(alias, cols, config);
+
+    Cepa.associate = function(models) {
+        Cepa.hasMany(models.Vino, {
+            as: "muchosVinos",
+            foreignKey: "cepaid"
+        });
+    }
 
     return Cepa;
 }

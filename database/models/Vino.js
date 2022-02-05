@@ -32,13 +32,17 @@ module.exports = function(sequelize, dataTypes) {
             type: dataTypes.STRING,
             allowNull: false,
         },
-        bodegaid:{
+        stock:{
             type: dataTypes.INTEGER,
             allowNull: false,
         },
         cepaid:{
             type: dataTypes.INTEGER,
             allowNull: false,
+        },
+        bodegaid:{
+            type: dataTypes.INTEGER,
+            allowNull: false
         }
     }
 
@@ -47,7 +51,26 @@ module.exports = function(sequelize, dataTypes) {
         timestamps: false
     }
 
-    let Vinos = sequelize.define(alias, cols, config);
+    let Vino = sequelize.define(alias, cols, config);
 
+    Vino.associate = function(models) {
+        Vino.belongsTo(models.Bodega, {
+            as: "unaBodega",
+            foreignKey: "bodegaid"
+        });
+
+        Vino.belongsTo(models.Cepa, {
+            as: "unaCepa",
+            foreignKey: "cepaid"
+        });
+
+        Vino.belongsToMany(models.Pedido, {
+            as: "muchospedidos",
+            through: "pedidos_vinos",
+            foreignKey: "vinoid",
+            otherKey: "pedidoid",
+            timestamps: false
+        });
+    }
     return Vino;
 }

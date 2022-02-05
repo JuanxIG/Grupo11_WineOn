@@ -18,7 +18,8 @@ module.exports = function(sequelize, dataTypes) {
         },
         mail:{
             type: dataTypes.STRING,
-            allowNull: false
+            allowNull: false,
+            unique: true,
         },
         dni:{
             type: dataTypes.INTEGER,
@@ -59,6 +60,13 @@ module.exports = function(sequelize, dataTypes) {
     }
 
     let Usuario = sequelize.define(alias, cols, config);
+
+    Usuario.associate = function(models) {
+        Usuario.hasMany(models.Pedido, {
+            as: "muchosPedidos",
+            foreignKey: "usuarioid"
+        });
+    }
 
     return Usuario;
 }

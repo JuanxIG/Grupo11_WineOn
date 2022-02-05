@@ -317,5 +317,16 @@
   "dni": "445242",
   "contraseña": "$2a$10$85JWNd3VQb7WMd.FLqRzMeZpXfcnM9Ft2eLhA6u0Sbo9n9lKFd8Hq",
   "image": "imagen-1642109468670.png"
+ },
+ {
+  "id": 36,
+  "first_name": "damian",
+  "last_name": "odrio",
+  "email": "yo@hotmail.com",
+  "nacimiento": "1999-03-12",
+  "domicilio": "Thames 1527",
+  "dni": "34555666",
+  "contraseña": "$2a$10$LI348w1cU/v5j/RfZg4wVeXWG89DDeoQlEqAIH8xAv6OyTGO0ehbi",
+  "image": "imagen-1644001072305.png"
  }
 ]

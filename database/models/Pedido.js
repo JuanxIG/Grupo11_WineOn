@@ -8,18 +8,41 @@ module.exports = function(sequelize, dataTypes) {
             autoIncrement: true,
             allowNull: false
         },
-        nombre:{
-            type: dataTypes.STRING,
+        usuarioid:{
+            type: dataTypes.INTEGER,
+            allowNull: false
+        },
+        cantidad:{
+            type: dataTypes.INTEGER,
+            allowNull: false
+        },
+        fecha_pedido:{
+            type: dataTypes.DATE,
             allowNull: false
         }
     }
 
     let config = {
-        tableName: "cepas", //el nombre de la base de datos
+        tableName: "pedidos", //el nombre de la base de datos
         timestamps: false
     }
 
-    let Vinos = sequelize.define(alias, cols, config);
+    let Pedido = sequelize.define(alias, cols, config);
 
-    return Cepa;
+    Pedido.associate = function(models) {
+        Pedido.belongsTo(models.Usuario, {
+            as: "unUsuario",
+            foreignKey: "usuarioid"
+        });
+
+        Pedido.belongsToMany(models.Vino, {
+            as: "muchosvinos",
+            through: "pedidos_vinos",
+            foreignKey: "pedidoid",
+            otherKey: "vinoid",
+            timestamps: false
+        });
+    }
+
+    return Pedido;
 }

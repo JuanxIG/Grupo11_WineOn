@@ -19,7 +19,14 @@ module.exports = function(sequelize, dataTypes) {
         timestamps: false
     }
 
-    let Vinos = sequelize.define(alias, cols, config);
+    let Bodega = sequelize.define(alias, cols, config);
+
+    Bodega.associate = function(models) {
+        Bodega.hasMany(models.Vino, {
+            as: "muchosVinos",
+            foreignKey: "bodegaid"
+        });
+    }
 
     return Bodega;
 }
