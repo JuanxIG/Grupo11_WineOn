@@ -19,7 +19,9 @@ router.get("/login",  guestMiddleware, userController.login);
 //procesar el login
 router.post("/login", userController.procesoLogin);
 
-router.get("/profile", authMiddleware, userController.profile);
+//router.get("/profile", authMiddleware, userController.profile);
+router.get("/profile", userController.profile);
+
 router.get("/logout", userController.logout);
 
 

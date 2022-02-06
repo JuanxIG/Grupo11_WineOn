@@ -110,11 +110,14 @@ const userController = {
     },
 	
 	profile: (req, res) => {
-		console.log(req.cookies.emailUsuario) /* COOKIES */
+		/*console.log(req.cookies.emailUsuario) /* COOKIES */
 		
-		return res.render("profile", {
+		/*return res.render("profile", {
 			user: req.session.usuarioLogueado
-		});
+		}); */
+
+		return res.render("profile");
+
 	},
 	
 	logout: (req, res) => {
