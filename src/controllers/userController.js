@@ -2,6 +2,8 @@ const fs = require('fs');
 const path = require('path'); 
 const bcrypt = require("bcryptjs");
 const {validationResult} = require("express-validator");
+const db = require('../../database/models');
+const Usuario = require('../../database/models/Usuario');
 
 
 //const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
@@ -65,8 +67,9 @@ const userController = {
 						image: req.file.filename
         			}
         		
-				users.push(nuevoUsuario);
-        		fs.writeFileSync(usersFilePath, JSON.stringify(users, null, " "));
+				//users.push(nuevoUsuario);
+        		//fs.writeFileSync(usersFilePath, JSON.stringify(users, null, " "));
+				Usuario.create(nuevoUsuario);
 				res.redirect("login");
 	}
     },

@@ -195,12 +195,26 @@ main {
     padding-top: 10px;
 }
 
-.div-title{
+.perfil{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Raleway", sans-serif;
+
+}
+
+.div-title {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
+}
+
+.pic_self {
+    height: 250px;
+    width: 250px;
 }
 
 .datos-personales{
@@ -208,8 +222,10 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-family: "Raleway", sans-serif;
 
 }
+
 
 .datos-personales div{
     border: 1px solid #000050;

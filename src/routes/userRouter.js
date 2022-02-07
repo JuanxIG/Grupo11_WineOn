@@ -11,7 +11,8 @@ const guestMiddleware = require ("../middlewares/guestMiddleware");
 const authMiddleware = require ("../middlewares/authMiddleware");
 
 //ruta que muestra el register y procesar el registro
-router.get("/register", guestMiddleware, userController.formularioRegistro);
+//router.get("/register", guestMiddleware, userController.formularioRegistro);
+router.get("/register", userController.formularioRegistro);
 router.post('/register', upload.single("imagen"), validaciones, userController.procesoRegistro); 
 
 //formulario de login
