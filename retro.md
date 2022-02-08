@@ -126,7 +126,7 @@ STOP DOING:
 
 ♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦
 
-SPRINT 5
+SPRINT 6
 
 START DOING:
 - establecer deadlines (entre sprints) para las diversas tareas que nos proponemos, y así incentivarnos más para cumplirlas
