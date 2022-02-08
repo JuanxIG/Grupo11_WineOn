@@ -1,6 +1,8 @@
-//const fs = require('fs');
+const fs = require('fs');
+const db = require("../../database/models");
 //const path = require('path');
-let db = require("../../database/models");
+
+
 
 //const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 //const productsFilePath = path.join(__dirname, '../data/productsData.json');
@@ -56,69 +58,67 @@ const productController = {
     },
     	
 	addProduct: (req, res) => {
+	
 		db.Vino.create({
+			nombre: req.body.nombre,
+			precio: req.body.precio,
+			cuotas: req.body.cuotas,
+			descuento: req.body.descuento,
+			descripcion: req.body.descripcion,
+			imagen: req.file.filename,
+			bodegaid: req.body.bodega,
+			cepaid: req.body.cepa,
+			stock: req.body.unidades
+		});
+	
+		res.redirect("/productos/detail/" + req.params.id);
+	},
+
+    //se muestra el formulario para edicion de productos
+    formProduct: function (req, res){
+		let elVino = db.Vino.findByPk(req.params.id, {
+			include: [{association: "unaBodega"}, {association: "unaCepa"}, {association: "muchospedidos"}]
+		})
+
+		let lasBodegas = db.Bodega.findAll();
+		let lasCepas = db.Cepa.findAll();
+
+		Promise.all([elVino, lasBodegas, lasCepas])
+			.then(function([vino, bodegas, cepas]) {
+				res.render("editProduct", {vino:vino, bodegas: bodegas, cepas: cepas})
+			})
+    },
+
+    //se edita el producto
+    editProduct: function (req, res) {
+		db.Vino.update({
 			nombre: req.body.name,
 			precio: req.body.price,
 			cuotas: req.body.cuotas,
 			descuento: req.body.discount,
 			descripcion: req.body.description,
-			imagen: req.body.image,
+			imagen: req.file.filename,
 			bodegaid: req.body.bodega,
 			cepaid: req.body.cepa,
 			stock: req.body.unidades
+		}, {where: {
+			id: req.params.id
+		}
 		});
-		res.redirect("/productos");
-	},
-
-    //se muestra el formulario para edicion de productos
-    formProduct: function (req, res){
-        let producto = products.find((producto) => producto.id == req.params.id);
-        res.render("editProduct", {producto:producto})
-    },
-
-    //se edita el producto
-    editProduct: function (req, res) {
-        let imagen = ""
-		for (let i = 0; i < products.length; i++){
-			if (req.params.id == products[i].id){
-				if (req.files[0].filename == undefined){
-					imagen = products[i].image
-				}else{imagen = req.files[0].filename}
-			}
-		let modificarProduct = {
-			id: req.params.id,
-			name: req.body.name,
-			price: req.body.price,
-			discount: req.body.discount,
-			category: req.body.category,
-			bodega: req.body.bodega,
-			variety: req.body.variety,
-			cuotas: req.body.cuotas,
-			description: req.body.description,
-			image: imagen
-		}
-		
-		console.log(modificarProduct.image)
-		for (let i = 0; i < products.length; i++){
-			if (req.params.id == products[i].id){
-				
-				products[i] = modificarProduct	
-				let productJSON = JSON.stringify(products);
-				fs.writeFileSync(productsFilePath, productJSON);
-				res.redirect('/productos/detail/' + modificarProduct.id)
-			}
-		}
-		
-    }
+	
+		res.redirect("/productos/detail/" + req.params.id);
 },
 
     //se elimina un producto
     deleteProduct: function (req, res){
 		
-		let newList = products.filter((producto) => producto.id != req.params.id);
-		fs.writeFileSync(productsFilePath, JSON.stringify(newList));
-		
-		res.redirect("/");
+		db.Vino.destroy({
+			where: {
+				id: req.params.id
+			}
+		})
+
+		res.redirect("/productos")
     },
 
 }
