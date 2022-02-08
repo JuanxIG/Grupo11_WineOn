@@ -123,3 +123,34 @@ LESS OF:
 
 STOP DOING:
 - incomunicación
+
+♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦
+
+SPRINT 5
+
+START DOING:
+- establecer deadlines (entre sprints) para las diversas tareas que nos proponemos, y así incentivarnos más para cumplirlas
+- empezar a trabajar con ramas
+
+MORE OF:
+- perseverancia
+- Mantener la dinamica de equipo
+
+KEEP DOING: 
+- juntarnos virtualmente una veces por semana para trabajar juntos
+- hablar sobre las dudas que se presentan
+- ayudarnos mutuamente
+- diseño de la página, más por el lado estético
+- compromiso con el grupo
+- aplicar buenas prácticas
+- mandar más memes, chistes, hablar de nosotros (simplemente conocernos más)
+
+LESS OF:
+- Reunirnos virtualmente dos o tres veces por semana para trabajar juntos (no tenemos mucho tiempo por nuestros trabajos, no logramos ccoordinar tantas veces a la semana)
+- Mejorar la comunicacion
+- Tener mayor iniciativa
+- Mejorar en conocimientos
+
+STOP DOING:
+- incomunicación
+- perder la dinamica
