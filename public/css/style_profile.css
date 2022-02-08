@@ -195,12 +195,128 @@ main {
     padding-top: 10px;
 }
 
+/* css para listado de usuarios */
+
+.section-listado h3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.listado  {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px;
+    caption-side: bottom;
+    color: #666;
+    text-align: center;
+    letter-spacing: 1px;
+
+}
+
+td{
+    border:1px solid;
+    border-collapse: collapse;
+    font-family: Arial,sans-serif; 
+}
+
+.editar{
+    font-family: Arial,sans-serif; 
+    margin: 5px;
+    padding-right: 5px;
+    width: 5.375rem;
+    height: 2.175rem;
+    font-size: 0.775rem;
+    background-color: #858B8F;
+    color: white;
+    text-decoration: none;
+    border: 2px solid #858B8F;
+    border-radius: 6px;
+
+}
+
+.add_user{
+    font-family: Arial,sans-serif; 
+    margin: 5px;
+    padding: 5px;
+    width: 8.375rem;
+    height: 2.175rem;
+    font-size: 0.775rem;
+    background-color:#E22692;
+    color: white;
+    text-decoration: none;
+    border: 2px solid #E22692;
+    border-radius: 6px;
+
+}
+
+/* css para editar perfil de usuario */
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial,sans-serif; 
+
+}
+
+.img_section{
+    padding-bottom: 8px;
+    margin-left: 45px;
+    margin-top: -20px;
+}
+
+label.form-label{
+    margin-top: 8px;
+    margin-bottom: -5px;
+
+}
+
+
+.div_edit{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 28.375rem;
+    font-family: Arial,sans-serif; 
+
+    border: 1px solid #000050;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    text-align:center;
+    line-height : 11px;
+
+}
+
+.input_edit{
+    margin-top: 10px;
+    border: none;
+    width: 27.375rem;
+    height: 2.075rem;
+    text-align:center;
+    line-height : 11px;
+    color: #8A7983 ;
+    font-family: Arial,sans-serif; 
+    font-size:18px;
+
+}
+/* css para perfil de usuario */
+
 .perfil{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: "Raleway", sans-serif;
+    font-family: Arial,sans-serif; 
+
+}
+
+.perfil img{
+    margin-left: 45px;
 
 }
 
@@ -223,6 +339,7 @@ main {
     justify-content: center;
     align-items: center;
     font-family: "Raleway", sans-serif;
+    margin-top:-85px;
 
 }
 
@@ -237,6 +354,14 @@ main {
     line-height : 11px;
 
 }
+
+.datos-personales h3{
+    text-align:center;
+    line-height : 11px;
+    color: #8A7983 ;
+
+}
+
 
 
 #acciones{
@@ -262,7 +387,7 @@ main {
     border: 2px solid #858B8F;
     border-radius: 6px;
 }
-.boton_salir{
+.boton_listado{
     font-family: Arial,sans-serif; 
     margin: 5px;
     padding: 5px;

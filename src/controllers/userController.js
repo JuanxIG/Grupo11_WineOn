@@ -6,9 +6,11 @@ const db = require('../../database/models');
 const Usuario = require('../../database/models/Usuario');
 
 
+const userFilePath = path.join(__dirname, '../data/users.json');
+const users = JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
+
+
 //const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
-const usersFilePath = path.join(__dirname, '../data/users.json'); 
-const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8', null, " "));
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
@@ -111,6 +113,13 @@ const userController = {
 				}
 			});
     },
+
+	list:(req,res) =>{
+		res.render('user_list', {
+			users
+		})
+
+	},
 	
 	profile: (req, res) => {
 		/*console.log(req.cookies.emailUsuario) /* COOKIES */
@@ -119,7 +128,51 @@ const userController = {
 			user: req.session.usuarioLogueado
 		}); */
 
-		return res.render("profile");
+		let id = req.params.id
+		let usuario = users.find(user => user.id == id)
+
+		return res.render("profile",{usuario});
+
+	},
+
+	formEdit: (req,res)=>{
+		let id = req.params.id
+		let usuario = users.find(user => user.id == id)
+
+		res.render("user_edit",{usuario});
+
+
+	},
+
+	edit:(req,res)=>{
+		console.log(req.params)
+
+		console.log(req.body)
+		let id = req.params.id;
+		let usuario = users.find(user => user.id == id)
+		let image
+
+		if(req.files[0] != undefined){
+			image = req.files[0].filename
+		} else {
+			image = productToEdit.image
+		}
+
+		userToEdit = {
+			id: userToEdit.id,
+			...req.body,
+			image: image,
+		};
+		
+		let newUser = users.map(user => {
+			if (user.id == userToEdit.id) {
+				return user = {...userToEdit};
+			}
+			return user;
+		})
+
+		fs.writeFileSync(productsFilePath, JSON.stringify(newProducts, null, ' '));
+		res.redirect('/'+id+'/profile');
 
 	},
 	

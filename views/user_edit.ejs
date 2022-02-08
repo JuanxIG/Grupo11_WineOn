@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title><%= usuario.first_name %></title>
+        <link rel="stylesheet" href="/css/style_profile.css">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+</head>
+<body>
+
+    <%- include ("./partials/header") %>
+
+    <main>
+        <section class="perfil">
+            <div class="div-title">
+                <h1>Editar datos de tu cuenta: </h1>
+            </div>  
+        </section>
+
+        <form action="/user/<%= usuario.id%>/profile/edit?_method=PUT" method="POST" enctype="multipart/form-data">
+            <div class="img_section">
+                <img src="<%= usuario.image %>" alt="" width="150" height="150" style="border-radius: 1900px;"  ><br>
+                
+                <label for="imagen" class="form-label"> </label><br>
+                <input type="file" name="imagen" id="imagen" class="form-input">
+                
+            </div>
+
+            <div class="div_edit">
+                <label for="first_name" class="form-label">Nombre</label>
+                <input type="text" class = "input_edit" id="first_name" name="first_name" value="<%= usuario.first_name %>"  class="form-input">
+           
+            </div>  
+            <div class="div_edit">
+                <label for="last_name" class="form-label">Apellido</label>
+                <input type="text" class = "input_edit" id="last_name" name="last_name" value="<%= usuario.last_name %>"  class="form-input">
+           
+            </div>  
+            <div class="div_edit">
+                <label for="mail" class="form-label">Email</label>
+                <input type="text" class = "input_edit" id="mail" name="mail" value="<%= usuario.email %>"  class="form-input">
+            </div>  
+            <div class="div_edit">
+                <label for="nacimiento" class="form-label">Fecha de nacimiento</label>
+                <input type="text" class = "input_edit" id="nacimiento" name="nacimiento" value="<%= usuario.nacimiento %>"  class="form-input">
+           
+            </div>  
+            
+            <div class="div_edit">
+                <label for="domicilio" class="form-label">Domicilio</label>
+                <input type="text" class = "input_edit" id="domicilio" name="domicilio" value="<%= usuario.domicilio %>"  class="form-input">
+           
+            </div> 
+            <div class="div_edit">
+                <label for="dni" class="form-label">DNI</label>
+                <input type="text" class = "input_edit" id="dni" name="dni" value="<%= usuario.dni %>"  class="form-input">
+           
+            </div>  
+            <div class="div_edit">
+                <label for="password" class="form-label">Contraseña</label>
+                <input type="text" class = "input_edit" id="password" name="password" value="<%= usuario.password %>"  class="form-input">
+           
+            </div>  
+            
+            <div >
+                <button type="submit" class="boton_listado">Guardar cambios</button>
+            </div>
+        </form>
+    </main>
+
+    <%- include ("./partials/footer") %>
+
+</body>
+</html>

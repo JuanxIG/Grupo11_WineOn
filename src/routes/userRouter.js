@@ -21,9 +21,16 @@ router.get("/login",  guestMiddleware, userController.login);
 router.post("/login", userController.procesoLogin);
 
 //router.get("/profile", authMiddleware, userController.profile);
-router.get("/profile", userController.profile);
+router.get("/:id/profile", userController.profile);
+
+router.get("/list", userController.list);
+
+router.get("/:id/profile/edit", userController.formEdit);
+router.put("/:id/profile/edit",  userController.edit);
 
 router.get("/logout", userController.logout);
+
+
 
 
 /*** Crear producto 
