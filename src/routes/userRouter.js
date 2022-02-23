@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+
 // ************ Controlador ************ 
 const userController = require("../controllers/userController")
 
@@ -20,13 +21,13 @@ router.get("/login",  guestMiddleware, userController.login);
 //procesar el login
 router.post("/login", userController.procesoLogin);
 
-//router.get("/profile", authMiddleware, userController.profile);
+router.get("/profile", authMiddleware, userController.profile);
 router.get("/:id/profile", userController.profile);
 
 router.get("/list", userController.list);
 
-router.get("/:id/profile/edit", userController.formEdit);
-router.put("/:id/profile/edit",  userController.edit);
+router.get("/:id/profile/edit", authMiddleware, userController.formEdit);
+router.put("/:id/profile/edit", authMiddleware, userController.edit);
 
 router.get("/logout", userController.logout);
 

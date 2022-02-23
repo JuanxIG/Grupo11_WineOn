@@ -12,9 +12,9 @@ const validaciones = [
     body("contraseña").notEmpty().withMessage("Ingresá una contraseña"),
     body("confirma_contraseña").notEmpty().withMessage("Confirmá tu contraseña"),
     body("imagen").custom((value, {req}) => {
-        let extensionesAceptadas = [".jpeg", ".png"]
+        let extensionesAceptadas = [".jpeg", ".png", ".jpg"]
         if (!extensionesAceptadas.includes(path.extname(req.file.originalname))) {
-            throw new Error("Las extensiones del archivo permitidas son '.jpeg' y '.png'");
+            throw new Error("Las extensiones del archivo permitidas son '.jpeg', '.jpg' y '.png'");
         }
         return true;
     })
