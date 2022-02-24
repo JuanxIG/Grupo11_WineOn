@@ -10,14 +10,30 @@ const validaciones = [
     body("domicilio").notEmpty().withMessage("Ingresá tu domicilio"),
     body("dni").notEmpty().withMessage("Ingresá tu DNI"),
     body("contraseña").notEmpty().withMessage("Ingresá una contraseña"),
-    body("confirma_contraseña").notEmpty().withMessage("Confirmá tu contraseña"),
+    body("confirma_contraseña").notEmpty().withMessage("Confirmá tu contraseña").bail()
+    .custom((confirma_contraseña, {req}) => {
+        const password = req.body.contraseña
+        // Verifico que las contraseñas sean las mismas
+        if(password != confirma_contraseña){
+          throw new Error('Las contraseñas deben ser las mismas')
+        } else {
+            return true
+        }
+      }),
     body("imagen").custom((value, {req}) => {
         let extensionesAceptadas = [".jpeg", ".png", ".jpg"]
         if (!extensionesAceptadas.includes(path.extname(req.file.originalname))) {
             throw new Error("Las extensiones del archivo permitidas son '.jpeg', '.jpg' y '.png'");
         }
         return true;
-    })
+    }).bail()
+    // El input de imagenes no puede estar vacio
+    .custom((value, { req }) => {
+        if (!req.file) {
+            throw new Error("Profile Img es requerida");
+        }
+        return true;
+    }),
 ];
 
 module.exports = validaciones;

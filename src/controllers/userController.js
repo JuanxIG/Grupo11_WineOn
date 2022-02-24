@@ -34,7 +34,6 @@ const userController = {
 
 	procesoRegistro: (req, res) => {
 		const resultadoValidacion = validationResult(req);
-		console.log(req.file.originalname);
 		//validacion de campos de registro (si estan o no completos)
 		if (resultadoValidacion.errors.length > 0){
 			return res.render("register", {
