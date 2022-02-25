@@ -1,5 +1,7 @@
 const fs = require('fs');
-const path = require('path'); 
+const db = require("../../database/models");
+
+/* const path = require('path'); 
 
 //index de productos productJSON
 const productsFilePath = path.join(__dirname, '../data/productsData.json');
@@ -12,13 +14,14 @@ const visited = products.filter(function(product){
 const inSale = products.filter(function(product){
 	return product.category == 'in-sale'
 })
+*/
 
 const mainController = {
     index: function (req, res) {
-		res.render('index', {
-			visited,
-			inSale
-		});
+		db.Vino.findAll()
+			.then(function(vinos) {
+				 res.render("products", {vinos: vinos})
+			})
     },
 
     carrito: function (req, res) {
