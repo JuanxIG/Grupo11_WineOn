@@ -60,18 +60,19 @@ const productController = {
 	addProduct: (req, res) => {
 	
 		db.Vino.create({
-			nombre: req.body.nombre,
-			precio: req.body.precio,
+			nombre: req.body.name,
+			precio: req.body.price,
 			cuotas: req.body.cuotas,
-			descuento: req.body.descuento,
-			descripcion: req.body.descripcion,
+			descuento: req.body.discount,
+			descripcion: req.body.description,
 			imagen: req.file.filename,
 			bodegaid: req.body.bodega,
 			cepaid: req.body.cepa,
 			stock: req.body.unidades
 		});
 	
-		res.redirect("/productos/detail/" + req.params.id);
+		res.redirect("/productos");
+		
 	},
 
     //se muestra el formulario para edicion de productos

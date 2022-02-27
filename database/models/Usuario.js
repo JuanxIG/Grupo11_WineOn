@@ -28,7 +28,7 @@ module.exports = function(sequelize, dataTypes) {
         },
         imagen:{
             type: dataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
         },
         contrasenia:{
             type: dataTypes.STRING,

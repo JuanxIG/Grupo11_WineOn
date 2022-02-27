@@ -19,18 +19,16 @@ const userController = {
     
 	formularioRegistro: function(req, res) {
         res.render("register");
-
-	
     },
 
-	generarId: (req, res) => {
+	/* generarId: (req, res) => {
     
         let ultimoUsuario = users.pop();
         if (ultimoUsuario) {
              return ultimoUsuario.id + 1;
         }
         return 1;
-    },
+    }, */
 
 	procesoRegistro: (req, res) => {
 		const resultadoValidacion = validationResult(req);
@@ -60,6 +58,13 @@ const userController = {
 					
 					} else { 
 						//creacion de usuario
+						let img;
+						if (!req.file) {
+							img = null
+						} else {
+							img = req.file.filename
+						}
+						console.log(img)
 						db.Usuario.create({
 							first_name: req.body.first_name,
 							last_name: req.body.last_name,
@@ -68,7 +73,7 @@ const userController = {
 							domicilio: req.body.domicilio,
 							dni: req.body.dni,
 							contrasenia: bcrypt.hashSync(req.body.contraseña, 10),
-							imagen: req.file.originalname
+							imagen: img
 						});	
         			}
 					res.redirect("login");
@@ -100,7 +105,7 @@ const userController = {
 							res.cookie("emailUsuario", req.body.email, { maxAge: 72000 * 10}) /* seteado de COOKIE */
 						}
 		
-						return res.redirect("profile")
+						return res.redirect("/user/" + req.session.usuarioLogueado. id + "/profile")
 					}
 							return res.render("login", {
 								errors: {
@@ -138,13 +143,21 @@ const userController = {
 	},
 
 	formEdit: (req,res)=>{
-		
-	 	res.render("user_edit", {user: req.session.usuarioLogueado})
+		db.Usuario.findByPk(req.params.id)
+			.then(function(usuario){
+				res.render("user_edit", {usuario: usuario})
+			})
+	 	
 				
 	},
 
 	edit:(req,res)=>{
-
+		 let img;
+		if (!req.file) {
+			img = null
+		} else {
+			img = req.file.filename
+		} 
 		db.Usuario.update({
 			first_name: req.body.first_name,
 			last_name: req.body.last_name,
@@ -152,10 +165,10 @@ const userController = {
 			nacimiento: req.body.nacimiento,
 			domicilio: req.body.domicilio,
 			dni: req.body.dni,
-			//imagen: req.file.filename
+			imagen: img
 		}, {
 			where: {
-				id: req.params.id
+				dni: req.params.id
 			}
 		});	
 

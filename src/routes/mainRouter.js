@@ -12,6 +12,7 @@ const authMiddleware = require ("../middlewares/authMiddleware");
 router.get("/", mainController.index)
 
 /* router.get("/productos", productController.products) */
+router.get("/", mainController.buscador)
 
 router.get("/carrito", authMiddleware, mainController.carrito)
 
