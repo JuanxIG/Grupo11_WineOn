@@ -7,12 +7,13 @@ const productsFilePath = path.join(__dirname, '../data/productsData.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 
-const visited = products.filter(function(product){
+/* const visited = products.filter(function(product){
 	return product.category == 'visited'
 })
 const inSale = products.filter(function(product){
 	return product.category == 'in-sale'
-})
+}) */
+
 
 const mainController = {
     index: function (req, res) {

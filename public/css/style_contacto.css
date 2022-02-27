@@ -185,27 +185,45 @@ header{
 
 h1 {
     text-align: center;
+<<<<<<< HEAD
     
+=======
+    text-decoration: underline;
+>>>>>>> c8644510cd7592aecda8c3afa59a67ff970cd8e3
 }
 
 .form {
     text-align: center;
+<<<<<<< HEAD
     margin-right: 50px;
     margin-left: 50px;
 }
 .form-input{
     width: 40vw;
 }
+=======
+    border: #000 1px solid;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+>>>>>>> c8644510cd7592aecda8c3afa59a67ff970cd8e3
 
 .subForm {
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
+<<<<<<< HEAD
 /* #asunto {
     height: 60px;
     width: 200px;
 } */
+=======
+#asunto {
+    height: 60px;
+    width: 200px;
+}
+>>>>>>> c8644510cd7592aecda8c3afa59a67ff970cd8e3
 
 #mensaje {
     height: 200px;
