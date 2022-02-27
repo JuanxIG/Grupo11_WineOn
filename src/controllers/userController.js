@@ -74,11 +74,7 @@ const userController = {
 							domicilio: req.body.domicilio,
 							dni: req.body.dni,
 							contrasenia: bcrypt.hashSync(req.body.contraseña, 10),
-<<<<<<< HEAD
 							imagen: img
-=======
-							imagen: req.file.filename
->>>>>>> c8644510cd7592aecda8c3afa59a67ff970cd8e3
 						});	
         			}
 					res.redirect("login");

@@ -21,7 +21,7 @@ router.get("/login",  guestMiddleware, userController.login);
 //procesar el login
 router.post("/login", userController.procesoLogin);
 
-//router.get("/profile", authMiddleware, userController.profile);
+router.get("/profile", authMiddleware, userController.profile);
 router.get("/:id/profile", userController.profile);
 
 router.get("/list", userController.list);
