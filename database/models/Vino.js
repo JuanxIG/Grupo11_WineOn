@@ -30,7 +30,7 @@ module.exports = function(sequelize, dataTypes) {
         },
         imagen:{
             type: dataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
         },
         stock:{
             type: dataTypes.INTEGER,

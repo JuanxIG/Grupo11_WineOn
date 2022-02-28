@@ -21,18 +21,10 @@ const userController = {
         res.render("register");
     },
 
-	/* generarId: (req, res) => {
-    
-        let ultimoUsuario = users.pop();
-        if (ultimoUsuario) {
-             return ultimoUsuario.id + 1;
-        }
-        return 1;
-    }, */
 
 	procesoRegistro: (req, res) => {
 		const resultadoValidacion = validationResult(req);
-		console.log(req.file.filename);
+		//console.log(req.file.filename);
 		//validacion de campos de registro (si estan o no completos)
 		if (resultadoValidacion.errors.length > 0){
 			return res.render("register", {
@@ -77,6 +69,7 @@ const userController = {
 							imagen: img
 						});	
         			}
+
 					res.redirect("login");
         		
 						

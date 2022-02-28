@@ -19,15 +19,15 @@ const validaciones = [
         } else {
             return true
         }
-      })
-    /* body("imagen").custom((value, {req}) => {
+      }),
+     body("imagen").custom((value, {req}) => {
         let extensionesAceptadas = [".jpeg", ".png", ".jpg"]
         
         if (!extensionesAceptadas.includes(path.extname(req.file.originalname))) {
             throw new Error("Las extensiones del archivo permitidas son '.jpeg', '.jpg' y '.png'");
         }
         return true;
-    }) */
+    }) 
 ];
 
 module.exports = validaciones;

@@ -1,5 +1,6 @@
 const fs = require('fs');
 const db = require("../../database/models");
+const {validationResult} = require("express-validator");
 //const path = require('path');
 
 
@@ -42,37 +43,68 @@ const productController = {
 
     //se muestra el formulario para agregar un producto
     showAdd: function(req, res) {
-		db.Cepa.findAll()
-			.then(function(cepas) {
-				db.Bodega.findAll()
-				.then(function(bodegas) {
-					return res.render("addProduct", {cepas, bodegas})
+		let lasCepas = db.Cepa.findAll();
+		let lasBodegas = db.Bodega.findAll();
 
+
+		Promise.all([lasCepas, lasBodegas])
+				.then(function([cepas, bodegas]) {
+					 res.render("addProduct", {cepas, bodegas})
 				})
-			});
+
+				
 			
-		/*db.Bodega.findAll()
-			.then(function(bodegas) {
-				return res.render("addProduct", {bodegas})
-			})*/
     },
     	
 	addProduct: (req, res) => {
-	
+		const resultadoValidacion = validationResult(req);
+		
+		//validacion de campos del registro del producto (si estan o no completos)
+		if (resultadoValidacion.errors.length > 0){
+			return res.render("addProduct", {
+				errors: resultadoValidacion.mapped(), //mapped toma un array y lo convierte en objeto literal
+				oldData: req.body
+			});
+		}
+		 //validacion de producto existente
+		 db.Vino.findOne({
+			where: {
+				nombre: req.body.name
+			}
+		})
+			.then(function(nombreVino) {
+				if (nombreVino) {
+					return res.render("addProduct", {
+						errors: {
+							name: {
+								msg: "El producto con ese nombre ya está registrado"
+							}
+						},
+						oldData: req.body
+					})
+				
+				} else {
+		let img;
+		if (!req.file) {
+			img = null
+		} else {
+			img = req.file.filename
+		} 
+
 		db.Vino.create({
 			nombre: req.body.name,
 			precio: req.body.price,
 			cuotas: req.body.cuotas,
 			descuento: req.body.discount,
 			descripcion: req.body.description,
-			imagen: req.file.filename,
+			imagen: img,
 			bodegaid: req.body.bodega,
 			cepaid: req.body.cepa,
 			stock: req.body.unidades
 		});
-	
-		res.redirect("/productos");
-		
+	  }
+		     res.redirect("/productos");
+		 })
 	},
 
     //se muestra el formulario para edicion de productos
@@ -108,7 +140,7 @@ const productController = {
 		});
 	
 		res.redirect("/productos/detail/" + req.params.id);
-},
+    },
 
     //se elimina un producto
     deleteProduct: function (req, res){

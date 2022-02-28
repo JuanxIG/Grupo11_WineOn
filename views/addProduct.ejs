@@ -11,7 +11,7 @@
 </head>
 <body>
 
-	<%- include ("./partials/header") %>
+	
 
     <main>
 	<div class="container products-wrapper">
@@ -28,18 +28,42 @@
 							<div class="col-12 col-md-6">
 								<label for="name" class="form-label">Nombre del producto:</label>
 								<input type="text" id="name" name="name" placeholder="Ej: Cosecha tardía" class="form-input">
+								<% if (locals.errors && errors.name) { %>
+									<div class="red-text">
+									<%= errors.name.msg %>
+									</div>
+				
+								<% } %>
 							</div>
 							<div class="col-12 col-md-6">
 								<label for="price" class="form-label">Precio del producto:</label>
 								<input type="number" id="price" name="price" placeholder="Ej: 5678" class="form-input">
+								<% if (locals.errors && errors.price) { %>
+									<div class="red-text">
+									<%= errors.price.msg %>
+									</div>
+				
+								<% } %>
 							</div>
 							<div class="col-12 col-md-6">
 								<label for="discount" class="form-label">Descuento:</label>
 								<input type="number" id="discount" name="discount" placeholder="Ej: 15" class="form-input">
+								<% if (locals.errors && errors.discount) { %>
+									<div class="red-text">
+									<%= errors.discount.msg %>
+									</div>
+				
+								<% } %>
 							</div>
 							<div class="col-12 col-md-6">
 								<label for="discount" class="form-label">Unidades:</label>
 								<input type="number" name="unidades" placeholder="Ej: 15" class="form-input">
+								<% if (locals.errors && errors.unidades) { %>
+									<div class="red-text">
+									<%= errors.unidades.msg %>
+									</div>
+				
+								<% } %>
 							</div>
 							<div class="col-12 col-md-6">
 								<label for="cepa" class="form-label">Cepas:</label>
@@ -52,16 +76,7 @@
 								</select>
 							</div>
 
-							<div class="col-12 col-md-6">
-								<label for="bodega" class="form-label">Bodegas:</label>
-								<select name="bodega" class="form-input">
-									<% for (let i=0; i < bodegas.length; i++) { %>
-									<option value="<%=bodegas[i].id%>">
-										<%=bodegas[i].nombre%>
-									</option>
-									<%  } %>
-								</select>
-							</div>
+							
 							
 						</article>
 						
@@ -70,17 +85,38 @@
 							<div class="col-12 col-md-6">
 								<label for="discount" class="form-label">Cuotas sin interes:</label>
 								<input type="number" id="cuotas" name="cuotas" placeholder="Ej: 6" class="form-input">
+								<% if (locals.errors && errors.cuotas) { %>
+									<div class="red-text">
+									<%= errors.cuotas.msg %>
+									</div>
+				
+								<% } %>
 							</div>
 							<div class="col-12" id="Dcol-12">
 								<label for="description" class="form-label">Descipción:</label>
 								<textarea name="description" id="description" class="form-input"></textarea>
+								<% if (locals.errors && errors.description) { %>
+									<div class="red-text">
+									<%= errors.description.msg %>
+									</div>
+				
+								<% } %>
 							</div>
 							<div class="col-12">
 								<label for="image" class="form-label">Imagen:</label>
 								<input type="file" name="image" id="image" class="form-input">
+								<% if (locals.errors && errors.image) { %>
+									<div class="red-text">
+									<%= errors.image.msg %>
+									</div>
+				
+								<% } %>
 							</div>
 							<div class="col-12">
 								<button type="submit" class="buy-now-button">Guardar producto</button>
+							</div>
+							<div class="col-12">
+							<a href="/"><button type="submit" class="buy-now-button">Cancelar</button></a>
 							</div>
 						</article>
 					</section>
@@ -89,8 +125,11 @@
 		</div>
 
 	</div>
+
+	
 	</main>
-    <%- include ("./partials/footer") %>
+   
+
 
 </body>
 </html>

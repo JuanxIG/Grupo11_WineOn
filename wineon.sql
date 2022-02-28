@@ -141,7 +141,7 @@ CREATE TABLE `usuarios` (
   UNIQUE KEY `usuarios_un` (`dni`),
   UNIQUE KEY `mail_unique` (`mail`),
   UNIQUE KEY `dni_unique` (`dni`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -150,7 +150,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (1,'Damian','Odriozola','damian@hotmail.com',35148735,'imagen-1645136968267.png','$2a$10$mElc8QMFc9FKuX5USI0j5Ol7ByI8LQk944JacLha6yq1c2Hg6.Gye','Thames 1527','1990-03-11',1,0),(2,'Fernando','Odriozola','feseod@hotmail.com',34222800,'imagen-1645566101850.jpg','$2a$10$djE26/O7hiIwmB4Vc2fnSuOrsNfKfL6ZuQJCHBEqIaNjfa2xp1U5q','Ñaembe 2628','1988-11-03',1,0),(5,'Martin','Perez','martin@hotmail.com',22333444,'imagen-1645567568982.jpg','$2a$10$BbStVGoa5Ff7xQ0/DWkjyOhcHthy02LnwNvkLcTDoGvHRgxn0/qGi','Thames 1527','1990-12-11',1,0),(6,'Fede','Perez','fede@hotmail.com',11222333,'fernando..jpg-1645740439323.jpg','$2a$10$RQ.6e6ek2lmLsYsvp88cx.15m3VZXhoLbm/5F/6Ax306t//xP7a2O','3 de abril 2233','1990-03-11',1,0),(7,'Juan Ignacio','Mendieta','juani@hotmail.com',43900201,'fernando..jpg-1645904960015.jpg','$2a$10$1p2AyFF3oMR7VJfda951d.edzC4MAi6IHMESESUuvtOFTFjKKvfqm','Guastavino 123','2002-05-23',1,0);
+INSERT INTO `usuarios` VALUES (1,'Damian','Odriozola','damian@hotmail.com',35148735,'imagen-1645136968267.png','$2a$10$mElc8QMFc9FKuX5USI0j5Ol7ByI8LQk944JacLha6yq1c2Hg6.Gye','Thames 1527','1990-03-11',1,0),(2,'Fernando','Odriozola','feseod@hotmail.com',34222800,'imagen-1645566101850.jpg','$2a$10$djE26/O7hiIwmB4Vc2fnSuOrsNfKfL6ZuQJCHBEqIaNjfa2xp1U5q','Ñaembe 2628','1988-11-03',1,0),(5,'Martin','Perez','martin@hotmail.com',22333444,'imagen-1645567568982.jpg','$2a$10$BbStVGoa5Ff7xQ0/DWkjyOhcHthy02LnwNvkLcTDoGvHRgxn0/qGi','Thames 1527','1990-12-11',1,0),(6,'Fede','Perez','fede@hotmail.com',11222333,'fernando..jpg-1645740439323.jpg','$2a$10$RQ.6e6ek2lmLsYsvp88cx.15m3VZXhoLbm/5F/6Ax306t//xP7a2O','3 de abril 2233','1990-03-11',1,0),(7,'Juan Ignacio','Mendieta','juani@hotmail.com',43900201,'fernando..jpg-1645904960015.jpg','$2a$10$1p2AyFF3oMR7VJfda951d.edzC4MAi6IHMESESUuvtOFTFjKKvfqm','Guastavino 123','2002-05-23',1,0),(8,'sdasd','asda','ada@hotmail.com',33333333,NULL,'$2a$10$cpvA0nw05YaYP5yHfIEl4u00bf0xVztOFYKrLb1Lm1FYk25bKCCNK','sdfs','1990-12-11',1,0);
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -168,7 +168,7 @@ CREATE TABLE `vinos` (
   `cuotas` tinyint(4) NOT NULL,
   `descuento` tinyint(4) NOT NULL,
   `descripcion` text NOT NULL,
-  `imagen` varchar(255) NOT NULL,
+  `imagen` varchar(255) DEFAULT NULL,
   `stock` int(11) NOT NULL,
   `cepaid` int(11) NOT NULL,
   `bodegaid` int(11) NOT NULL,
@@ -186,7 +186,7 @@ CREATE TABLE `vinos` (
 
 LOCK TABLES `vinos` WRITE;
 /*!40000 ALTER TABLE `vinos` DISABLE KEYS */;
-INSERT INTO `vinos` VALUES (1,'Reserva',500,3,0,'Aromas de fruta madura típicos de Malbec y notas ahumadas que denotan su paso por barricas.','gdfgd',50,1,1),(4,'Rutini Malbec',1500,3,0,'Descripcion de prueba','image-1645744653624.jpg',20,1,3),(5,'Rutini Malbec',1500,3,0,'Descripcion de prueba','image-1645744684053.jpg',20,1,3),(6,'Rutini Malbec',1500,3,0,'Descripcion de prueba','image-1645744699843.jpg',20,1,3),(7,'Rutini Malbec',1500,3,0,'Descripcion de prueba','image-1645744801804.jpg',20,1,3),(8,'Rutini Malbec',1500,3,0,'Descripcion de prueba','image-1645744906961.jpg',20,1,3),(9,'Rutini Malbec',1500,3,0,'Descripcion de prueba','image-1645745091738.jpg',20,1,3),(10,'Rutini Malbec',1500,3,0,'Descripcion de prueba','image-1645745108971.jpg',20,1,3),(11,'Rutini Malbec',1500,3,0,'Descripcion de prueba','image-1645745136408.jpg',20,1,3),(12,'Rutini Malbec',1500,3,0,'Descripcion de prueba','image-1645746796105.jpg',20,1,3),(13,'Rutini Malbec',1500,3,0,'Descripcion de prueba','image-1645747324244.jpg',20,1,3),(14,'Rutini Malbec',1500,3,0,'Descripcion de prueba','image-1645747381359.jpg',20,1,3),(15,'Rutini Malbec',1500,3,0,'Descripcion de prueba','image-1645747422532.jpg',20,1,3),(16,'Rutini Malbec',1500,3,0,'Descripcion de prueba','image-1645747460196.jpg',20,1,3),(17,'Rutini Malbec',1500,3,0,'Descripcion de prueba','image-1645747604655.jpg',20,1,3);
+INSERT INTO `vinos` VALUES (1,'Reserva',500,3,0,'Aromas de fruta madura típicos de Malbec y notas ahumadas que denotan su paso por barricas.','gdfgd',50,1,1),(4,'Rutini ',2000,3,10,'Descripcion de prueba','image-1645744653624.jpg',20,1,3),(5,'Rutini Malbec',1500,3,0,'Descripcion de prueba','image-1645744684053.jpg',20,1,3),(6,'Rutini Malbec',1500,3,0,'Descripcion de prueba','image-1645744699843.jpg',20,1,3),(7,'Rutini Malbec',1500,3,0,'Descripcion de prueba','image-1645744801804.jpg',20,1,3),(8,'Rutini Malbec',1500,3,0,'Descripcion de prueba','image-1645744906961.jpg',20,1,3),(9,'Rutini Malbec',1500,3,0,'Descripcion de prueba','image-1645745091738.jpg',20,1,3),(10,'Rutini Malbec',1500,3,0,'Descripcion de prueba','image-1645745108971.jpg',20,1,3),(11,'Rutini Malbec',1500,3,0,'Descripcion de prueba','image-1645745136408.jpg',20,1,3),(12,'Rutini Malbec',1500,3,0,'Descripcion de prueba','image-1645746796105.jpg',20,1,3),(13,'Rutini Malbec',1500,3,0,'Descripcion de prueba','image-1645747324244.jpg',20,1,3),(14,'Rutini Malbec',1500,3,0,'Descripcion de prueba','image-1645747381359.jpg',20,1,3),(15,'Rutini Malbec',1500,3,0,'Descripcion de prueba','image-1645747422532.jpg',20,1,3),(16,'Rutini Malbec',1500,3,0,'Descripcion de prueba','image-1645747460196.jpg',20,1,3),(17,'Rutini Malbec',1500,3,0,'Descripcion de prueba','image-1645747604655.jpg',20,1,3);
 /*!40000 ALTER TABLE `vinos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -203,4 +203,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-02-26 17:03:11
+-- Dump completed on 2022-02-27 17:33:05

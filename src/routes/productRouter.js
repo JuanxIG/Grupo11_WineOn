@@ -5,6 +5,7 @@ const productController = require("../controllers/productController")
 // ************ Middlewares ************ 
 const upload = require("../middlewares/multerProductsMiddleware");
 const authMiddleware = require ("../middlewares/authMiddleware");
+const validacionesProducto = require ("../middlewares/validacionesProducto");
 
 
 // ruta que muestra todos los productos
@@ -12,7 +13,7 @@ router.get("/", productController.products)
 
 //ruta que muestra el formulario para agregar un producto y procesar el formulario
 router.get("/agregar",authMiddleware,productController.showAdd)
-router.post('/agregar', upload.single("image"), productController.addProduct); 
+router.post("/agregar", upload.single("image"), validacionesProducto, productController.addProduct); 
 
 
 //ruta que lleva al detalle de un producto

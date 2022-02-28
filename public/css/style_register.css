@@ -187,6 +187,7 @@ main {
 
 .form1-div {
 padding: 10px 0px;
+font-size: 20px;
 }
 
 .form1-div p {
@@ -224,6 +225,11 @@ text-align: center;
 #imagen {
     border: none;
     margin-top: 10px;
+}
+
+.red-text {
+    color: red;
+    font-size: 15px;
 }
 
 /*seccion FOOTER*/
