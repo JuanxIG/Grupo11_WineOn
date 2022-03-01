@@ -42,18 +42,15 @@ const productController = {
     },
 
     //se muestra el formulario para agregar un producto
-    showAdd: function(req, res) {
-		let lasCepas = db.Cepa.findAll();
-		let lasBodegas = db.Bodega.findAll();
+    showAdd: async function(req, res) {
+		let cepas = await db.Cepa.findAll();
+		let bodegas = await db.Bodega.findAll();
 
 
-		Promise.all([lasCepas, lasBodegas])
-				.then(function([cepas, bodegas]) {
-					 res.render("addProduct", {cepas, bodegas})
-				})
-
+		console.log(cepas.dataValues)
 				
-			
+		await res.render("addProduct", {cepas, bodegas})
+				
     },
     	
 	addProduct: (req, res) => {

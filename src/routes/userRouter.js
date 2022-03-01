@@ -27,7 +27,7 @@ router.get("/:id/profile", userController.profile);
 router.get("/list", userController.list);
 
 router.get("/:id/profile/edit", authMiddleware, userController.formEdit);
-router.put("/:id/profile/edit", userController.edit);
+router.put("/:id/profile/edit", upload.single("imagen"), userController.edit);
 
 router.get("/logout", userController.logout);
 

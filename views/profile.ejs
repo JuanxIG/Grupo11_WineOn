@@ -28,28 +28,28 @@
 
             <div class="first_name">
                 <p>Nombre</p>
-                <h3><%= user.first_name %></p><h3>
+                <h3><%= user.first_name ? user.first_name : "nombre" %></p><h3>
             </div>  
             <div class="last_name">
                 <p>Apellido</p>
-                <h3><%= user.last_name %> </h3>
+                <h3><%= user.last_name ? user.last_name : "apellido" %> </h3>
             </div>  
             <div class="mail">
                 <p>Email</p>
-                <h3><%= user.mail %></h3>
+                <h3><%= user.mail ? user.mail : "mail" %></h3>
             </div>  
             <div class="nac">
                 <p>Fecha de nacimiento</p>
-                <h3><%= user.nacimiento %></h3>
+                <h3><%= user.nacimiento  && user.nacimiento %></h3>
             </div>  
             
             <div class="address">
                 <p>Domicilio</p>
-                <h3><%= user.domicilio %></h3>
+                <h3><%= user.domicilio ? user.domicilio : "domicilio" %></h3>
             </div> 
             <div class="dni">
                 <p>DNI</p>
-                <h3><%= user.dni %></h3>
+                <h3><%= user.dni ? user.dni : 123 %></h3>
             </div>  
             
             

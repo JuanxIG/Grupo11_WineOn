@@ -69,8 +69,19 @@
 								<label for="cepa" class="form-label">Cepas:</label>
 								<select name="cepa" class="form-input">
 									<% for (let i=0; i < cepas.length; i++) { %>
-									<option value="<%=cepas[i].id%>">
-										<%=cepas[i].nombre%>
+									<option value="<%= cepas[i].id %>">
+										<%= cepas[i].nombre %>
+									</option>
+									<%  } %>
+								</select>
+							</div>
+
+							<div class="col-12 col-md-6">
+								<label for="bodega" class="form-label">Bodegas:</label>
+								<select name="bodega" class="form-input">
+									<% for (let i=0; i < bodegas.length; i++) { %>
+									<option value="<%=bodegas[i].id%>">
+										<%= bodegas[i].nombre %>
 									</option>
 									<%  } %>
 								</select>

@@ -130,10 +130,12 @@ const userController = {
 	},
 	
 	profile: (req, res) => {
-		console.log(req.session.usuarioLogueado);
+		
 		return res.render("profile", {
 			user: req.session.usuarioLogueado
-		});
+			
+		} );
+		
 	},
 
 	formEdit: (req,res)=>{
@@ -145,14 +147,18 @@ const userController = {
 				
 	},
 
-	edit:(req,res)=>{
+	edit: async (req,res)=>{
 		 let img;
 		if (!req.file) {
-			img = null
+			img = ""
 		} else {
 			img = req.file.filename
 		} 
-		db.Usuario.update({
+		
+		console.log('%c⧭ BODY', 'color: #00ff03;', req.body)
+		console.log('%c⧭ FILE', 'color: #ff6c61;',req.file)
+		
+		await db.Usuario.update({
 			first_name: req.body.first_name,
 			last_name: req.body.last_name,
 			mail: req.body.email,
@@ -162,11 +168,13 @@ const userController = {
 			imagen: img
 		}, {
 			where: {
-				dni: req.params.id
+				id: req.params.id
 			}
 		});	
-
-		res.redirect("/user/" + req.params.id + "/profile")
+		console.log('%c⧭ ANTES', 'color: #00ff03;', req.session.usuarioLogueado)
+		req.session.usuarioLogueado =  await db.Usuario.findByPk(req.params.id)
+		console.log('%c⧭ DESPUES', 'color: #00ff03;', req.session.usuarioLogueado)
+		await res.redirect("/user/" + req.params.id + "/profile")
 
 	},
 	
