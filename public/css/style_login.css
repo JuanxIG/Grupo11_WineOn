@@ -205,6 +205,15 @@ h2{
     display: block;
 }
 
+div.errores {
+    color: red;
+}
+
+.errores ul {
+    margin: 0 auto;
+    width: 300px;
+}
+
 section input[type="password"],
 section input[type="email"]{
     margin-left: auto;
@@ -352,7 +361,11 @@ footer p{
 
     /* MAIN*/
 
-    
+    .errores ul {
+        margin: 0 auto;
+        width: 300px;
+        font-size: 15px;
+    }
 
     /* FOOTER */
 

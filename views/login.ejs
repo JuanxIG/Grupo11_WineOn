@@ -17,9 +17,13 @@
             <h1>INGRESAR</h1>
                  <section class= "form">
                     <div class="form-left">
-                        <form action="/user/login" method="POST"  class="login-form">
+                        <div class="errores">
+                            <ul></ul>
+                        </div>
+                        <form action="/user/login" method="POST" class="login-form" id="reservation">
                             <h2>INGRESÁ CON TU CUENTA</h2>
-                                <input class="main-input" id="usuario"     type="email" name="email"     placeholder="Ingresá tu e-mail">
+                                
+                                <input class="main-input" id="usuario" type="email" name="email" placeholder="Ingresá tu e-mail">
                                 <% if (locals.errors && errors.email) { %>
                                     <div>
                                     <%= errors.email.msg %>
@@ -43,7 +47,7 @@
         </main>
 
         <%- include ("./partials/footer") %>
-        
+        <script src="/js/loginV.js"></script>
     </body>
 </html>
 

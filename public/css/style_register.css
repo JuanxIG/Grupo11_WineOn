@@ -185,6 +185,15 @@ main {
     
 }
 
+div.errores {
+    color: red;
+}
+
+.errores ul {
+    width: 321px;
+    margin: 0 auto;
+}
+
 .form1-div {
 padding: 10px 0px;
 font-size: 20px;
@@ -352,6 +361,11 @@ footer p{
         border:solid  0.5px #E3D4C5;
         background-color: #14192d;
         width: 55vw;
+    }
+
+    .errores ul {
+        width: 470px;
+        margin: 0 auto;
     }
 
      /* FOOTER */
