@@ -45,17 +45,14 @@ const productController = {
     showAdd: async function(req, res) {
 		let cepas = await db.Cepa.findAll();
 		let bodegas = await db.Bodega.findAll();
-
-
-		console.log(cepas.dataValues)
-				
-		await res.render("addProduct", {cepas, bodegas})
-				
+		await console.log(db.Cepa.findAll());
+		res.render("addProduct", {cepas:cepas, bodegas:bodegas})
+			
     },
     	
 	addProduct: (req, res) => {
 		const resultadoValidacion = validationResult(req);
-		
+
 		//validacion de campos del registro del producto (si estan o no completos)
 		if (resultadoValidacion.errors.length > 0){
 			return res.render("addProduct", {
@@ -64,13 +61,13 @@ const productController = {
 			});
 		}
 		 //validacion de producto existente
-		 db.Vino.findOne({
+		/* db.Vino.findOne({
 			where: {
-				nombre: req.body.name
+				id: req.body.id
 			}
 		})
 			.then(function(nombreVino) {
-				if (nombreVino) {
+				if (nombreVino.nombre) {
 					return res.render("addProduct", {
 						errors: {
 							name: {
@@ -87,7 +84,8 @@ const productController = {
 		} else {
 			img = req.file.filename
 		} 
-
+		
+*/
 		db.Vino.create({
 			nombre: req.body.name,
 			precio: req.body.price,
@@ -99,13 +97,13 @@ const productController = {
 			cepaid: req.body.cepa,
 			stock: req.body.unidades
 		});
-	  }
+	// }
 		     res.redirect("/productos");
-		 })
+		// })
 	},
-
     //se muestra el formulario para edicion de productos
-    formProduct: function (req, res){
+
+    formProduct:  (req, res) => {
 		let elVino = db.Vino.findByPk(req.params.id, {
 			include: [{association: "unaBodega"}, {association: "unaCepa"}, {association: "muchospedidos"}]
 		})

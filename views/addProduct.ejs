@@ -68,11 +68,9 @@
 							<div class="col-12 col-md-6">
 								<label for="cepa" class="form-label">Cepas:</label>
 								<select name="cepa" class="form-input">
-									<% for (let i=0; i < cepas.length; i++) { %>
-									<option value="<%= cepas[i].id %>">
-										<%= cepas[i].nombre %>
-									</option>
-									<%  } %>
+									<% cepas.forEach(cepa => { %>
+										<option value="<%= cepa.id %>"><%= cepa.nombre %></option>
+										<% }); %>
 								</select>
 							</div>
 
