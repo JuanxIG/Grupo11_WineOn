@@ -7,14 +7,14 @@ const userController = require("../controllers/userController")
 
 // ************ Middlewares ************ 
 const upload = require("../middlewares/multerUsersMiddleware")
-const validaciones = require ("../middlewares/validacionesMiddleware");
+const validacionesUsuario = require ("../middlewares/validacionesMiddleware");
 const guestMiddleware = require ("../middlewares/guestMiddleware");
 const authMiddleware = require ("../middlewares/authMiddleware");
 
 //ruta que muestra el register y procesar el registro
 //router.get("/register", guestMiddleware, userController.formularioRegistro);
 router.get("/register", userController.formularioRegistro);
-router.post('/register', upload.single("imagen"), validaciones, userController.procesoRegistro); 
+router.post('/register', upload.single("imagen"), validacionesUsuario, userController.procesoRegistro); 
 
 //formulario de login
 router.get("/login",  guestMiddleware, userController.login);
@@ -27,7 +27,7 @@ router.get("/:id/profile", userController.profile);
 router.get("/list", userController.list);
 
 router.get("/:id/profile/edit", authMiddleware, userController.formEdit);
-router.put("/:id/profile/edit", upload.single("imagen"), userController.edit);
+router.put("/:id/profile/edit", userController.edit);
 
 //editar imagen
 router.get("/:id/profile/edit/imagen", authMiddleware, userController.formularioImagen);

@@ -1,7 +1,8 @@
 const path = require('path')
 const {body} = require ("express-validator");
 
-const validaciones = [
+
+const validacionesUsuario = [
     body("first_name").notEmpty().withMessage("Ingresá tu nombre").bail()
                       .isLength({ min: 2 }).withMessage("El nombre debe tener al menos 2 caracteres").bail()
                       .isAlpha().withMessage("Solo se permiten caracteres alfabéticos"),
@@ -37,9 +38,13 @@ const validaciones = [
             if (!extensionesAceptadas.includes(path.extname(req.file.originalname))) {
                 throw new Error("Las extensiones del archivo permitidas son '.jpeg', '.jpg', '.png' y '.gif'");
             } 
+            
+
          }
         return true;
     }) 
 ];
 
-module.exports = validaciones;
+
+
+module.exports = validacionesUsuario;
