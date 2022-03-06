@@ -29,6 +29,10 @@ router.get("/list", userController.list);
 router.get("/:id/profile/edit", authMiddleware, userController.formEdit);
 router.put("/:id/profile/edit", upload.single("imagen"), userController.edit);
 
+//editar imagen
+router.get("/:id/profile/edit/imagen", authMiddleware, userController.formularioImagen);
+router.put("/:id/profile/edit/imagen", upload.single("imagen"), userController.editarImagen);
+
 router.get("/logout", userController.logout);
 
 module.exports = router;

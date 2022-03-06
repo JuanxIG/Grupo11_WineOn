@@ -142,21 +142,20 @@ const userController = {
 		db.Usuario.findByPk(req.params.id)
 			.then(function(usuario){
 				res.render("user_edit", {usuario: usuario})
-			})
-	 	
-				
+			})			
 	},
 
+
 	edit: async (req,res)=>{
-		 let img;
+		/*  let img;
 		if (!req.file) {
 			img = ""
 		} else {
 			img = req.file.filename
-		} 
+		}  */
 		
-		console.log('%c⧭ BODY', 'color: #00ff03;', req.body)
-		console.log('%c⧭ FILE', 'color: #ff6c61;',req.file)
+		/* console.log('%c⧭ BODY', 'color: #00ff03;', req.body)
+		   console.log('%c⧭ FILE', 'color: #ff6c61;',req.file) */
 		
 		await db.Usuario.update({
 			first_name: req.body.first_name,
@@ -165,7 +164,6 @@ const userController = {
 			nacimiento: req.body.nacimiento,
 			domicilio: req.body.domicilio,
 			dni: req.body.dni,
-			imagen: img
 		}, {
 			where: {
 				id: req.params.id
@@ -174,6 +172,38 @@ const userController = {
 		console.log('%c⧭ ANTES', 'color: #00ff03;', req.session.usuarioLogueado)
 		req.session.usuarioLogueado =  await db.Usuario.findByPk(req.params.id)
 		console.log('%c⧭ DESPUES', 'color: #00ff03;', req.session.usuarioLogueado)
+		await res.redirect("/user/" + req.params.id + "/profile")
+
+	},
+
+	formularioImagen: (req,res)=>{
+		db.Usuario.findByPk(req.params.id)
+			.then(function(usuario){
+				res.render("editar-imagen", {usuario: usuario})
+			})			
+	},
+
+	editarImagen: async (req,res)=>{
+		/*  let img;
+		if (!req.file) {
+			img = ""
+		} else {
+			img = req.file.filename
+		}  */
+		
+		/* console.log('%c⧭ BODY', 'color: #00ff03;', req.body)
+		   console.log('%c⧭ FILE', 'color: #ff6c61;',req.file) */
+		
+		await db.Usuario.update({
+			imagen: req.file.filename
+		}, {
+			where: {
+				id: req.params.id
+			}
+		});	
+		
+		req.session.usuarioLogueado =  await db.Usuario.findByPk(req.params.id)
+		
 		await res.redirect("/user/" + req.params.id + "/profile")
 
 	},
