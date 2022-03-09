@@ -82,6 +82,13 @@ const userController = {
     },
 
 	procesoLogin: (req,res) =>{
+		const resultadoValidacion = validationResult(req)
+		if (resultadoValidacion.errors.length > 0){
+			return res.render("login", {
+				errors: resultadoValidacion.mapped(), //mapped toma un array y lo convierte en objeto literal
+				oldData: req.body
+			});
+		}
 		//validacion de email existente
 		db.Usuario.findOne({
 			where: {
@@ -108,7 +115,7 @@ const userController = {
 									}
 								}
 							});
-				}
+				} 
 
 					return res.render("login", {
 						errors: {
@@ -118,6 +125,7 @@ const userController = {
 						}
 					});
 
+					
 
 
 			})

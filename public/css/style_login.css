@@ -209,6 +209,11 @@ div.errores {
     color: red;
 }
 
+.red-text {
+    color: red;
+    font-size: 15px;
+}
+
 .errores ul {
     margin: 0 auto;
     width: 300px;

@@ -180,6 +180,20 @@ header{
 
 /* MAIN */ 
 
+.boton_listado{
+    font-family: Arial,sans-serif; 
+    margin: 5px;
+    padding: 5px;
+    width: 8.375rem;
+    height: 2.175rem;
+    font-size: 0.775rem;
+    background-color:#E22692;
+    color: white;
+    text-decoration: none;
+    border: 2px solid #E22692;
+    border-radius: 6px;
+}
+
 main {
     margin-top: 140px;
 }

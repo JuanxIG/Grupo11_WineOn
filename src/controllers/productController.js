@@ -52,19 +52,19 @@ const productController = {
 		}
 		 //validacion de producto existente
 		  db.Vino.findOne({
-			where: {
-				nombre: req.body.name
-			}, include: [{association: "unaBodega"}, {association: "unaCepa"}]
-		})
-			.then(function(nombreVino) {
+				where: {
+					nombre: req.body.name
+				}, include: [{association: "unaBodega"}, {association: "unaCepa"}]
+		   })
+		  .then(function(nombreVino) {
 				if (nombreVino) {
-					return res.render("addProduct", {cepas, bodegas}, {
+					return res.render("addProduct",  {
 						errors: {
 							name: {
 								msg: "El producto con ese nombre ya está registrado"
 							}
 						},
-						oldData: req.body
+						oldData: req.body, cepas, bodegas,
 					})
 				
 				} else {
@@ -125,6 +125,38 @@ const productController = {
 	
 		res.redirect("/productos/detail/" + req.params.id);
     },
+
+	formularioImagen: (req,res)=>{
+		db.Vino.findByPk(req.params.id)
+			.then(function(vino){
+				res.render("editar-imagenProducto", {vino: vino})
+			})			
+	},
+
+	editarImagen: async (req,res)=>{
+		/*  let img;
+		if (!req.file) {
+			img = ""
+		} else {
+			img = req.file.filename
+		}  */
+		
+		/* console.log('%c⧭ BODY', 'color: #00ff03;', req.body)
+		   console.log('%c⧭ FILE', 'color: #ff6c61;',req.file) */
+		
+		await db.Vino.update({
+			imagen: req.file.filename
+		}, {
+			where: {
+				id: req.params.id
+			}
+		});	
+		
+		
+		await res.redirect("/productos/detail/" + req.params.id);
+
+	},
+
 
     //se elimina un producto
     deleteProduct: function (req, res){

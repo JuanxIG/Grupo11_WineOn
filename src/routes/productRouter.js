@@ -23,6 +23,10 @@ router.get("/detail/:id", productController.detail);
 router.get("/detail/:id/editar", authMiddleware,productController.formProduct);
 router.put("/detail/:id/editar", upload.any(), productController.editProduct);
 
+//editar imagen
+router.get("/detail/:id/editar/imagen", authMiddleware,productController.formularioImagen);
+router.put("/detail/:id/editar/imagen", upload.any(), productController.editarImagen);
+
 //ruta que elimina un producto
 router.delete("/detail/:id/editar/eliminar", productController.deleteProduct);
 

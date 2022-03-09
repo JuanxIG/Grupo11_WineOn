@@ -10,6 +10,7 @@ const upload = require("../middlewares/multerUsersMiddleware")
 const validacionesUsuario = require ("../middlewares/validacionesMiddleware");
 const guestMiddleware = require ("../middlewares/guestMiddleware");
 const authMiddleware = require ("../middlewares/authMiddleware");
+const validacionLogin = require ("../middlewares/validacionLogin");
 
 //ruta que muestra el register y procesar el registro
 //router.get("/register", guestMiddleware, userController.formularioRegistro);
@@ -19,7 +20,7 @@ router.post('/register', upload.single("imagen"), validacionesUsuario, userContr
 //formulario de login
 router.get("/login",  guestMiddleware, userController.login);
 //procesar el login
-router.post("/login", userController.procesoLogin);
+router.post("/login", validacionLogin, userController.procesoLogin);
 
 router.get("/profile", authMiddleware, userController.profile);
 router.get("/:id/profile", userController.profile);

@@ -23,14 +23,19 @@
                         <form action="/user/login" method="POST" class="login-form" id="reservation">
                             <h2>INGRESÁ CON TU CUENTA</h2>
                                 
-                                <input class="main-input" id="usuario" type="email" name="email" placeholder="Ingresá tu e-mail">
+                                <input class="main-input" id="usuario"  name="email" placeholder="Ingresá tu e-mail" value="<%= locals.oldData ? oldData.email : null %>">
                                 <% if (locals.errors && errors.email) { %>
-                                    <div>
+                                    <div class="red-text">
                                     <%= errors.email.msg %>
                                     </div>
                 
                                 <% } %>
                                 <input class="main-input" id="password"    type="password"    placeholder="Ingresá tu contraseña" name="password">
+                                <% if (locals.errors && errors.password) { %>
+                                    <div class="red-text"> 
+                                    <%= errors.password.msg %>
+                                    </div>
+                                    <% } %>
                                 <a href="">¿Olvidaste tu contraseña?</a>
                                 <label for="remember_me">
                                 <input type="checkbox"  name="remember_me"   value="remember_me">Recordarme
