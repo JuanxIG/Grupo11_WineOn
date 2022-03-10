@@ -1,7 +1,6 @@
 window.addEventListener("load", function () {
     let form = document.querySelector("form#reservation")
     form.addEventListener("submit", function (e) {
-        console.log("dsadafs");
         let errores = []
         let campoEmail =  document.getElementById("usuario")
         let campoPassword =  document.getElementById("password")
@@ -15,7 +14,7 @@ window.addEventListener("load", function () {
             e.preventDefault()
             let ulErrores = document.querySelector("div.errores ul")
             for (let index = 0; index < errores.length; index++) {
-                ulErrores.innerHTML += "<li>" + errores[index] + "</li>"
+                ulErrores.innerHTML = "<li>" + errores[index] + "</li>"
             }
         }
     })

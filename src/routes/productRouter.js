@@ -21,7 +21,7 @@ router.get("/detail/:id", productController.detail);
 
 //ruta que muestra el formulario de edicion de un producto y procesar el formulario
 router.get("/detail/:id/editar", authMiddleware,productController.formProduct);
-router.put("/detail/:id/editar", upload.any(), productController.editProduct);
+router.post("/detail/:id/editar", upload.any(), productController.editProduct);
 
 //editar imagen
 router.get("/detail/:id/editar/imagen", authMiddleware,productController.formularioImagen);

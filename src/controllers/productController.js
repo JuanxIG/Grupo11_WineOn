@@ -38,9 +38,9 @@ const productController = {
 		let cepas = await db.Cepa.findAll();
 		let bodegas = await db.Bodega.findAll();
 		
-
-		//validacion de campos del registro del producto (si estan o no completos)
-		if (resultadoValidacion.errors.length > 0){
+		
+		//validacion de campos del registro del producto (si estan o no completos) Me daba error de invalid value
+		/*if (resultadoValidacion.errors.length > 0){
 			
 			
 			return res.render("addProduct", {
@@ -49,7 +49,8 @@ const productController = {
 				cepas, 
 				bodegas
 			}  );
-		}
+		}*/
+		
 		 //validacion de producto existente
 		  db.Vino.findOne({
 				where: {
@@ -74,14 +75,13 @@ const productController = {
 		} else {
 			img = req.file.filename
 		} 
-
 		 db.Vino.create({
 			nombre: req.body.name,
 			precio: req.body.price,
 			cuotas: req.body.cuotas,
 			descuento: req.body.discount,
 			descripcion: req.body.description,
-			imagen: img,
+			imagen: req.file.filename,
 			bodegaid: req.body.bodega,
 			cepaid: req.body.cepa,
 			stock: req.body.unidades
@@ -107,14 +107,14 @@ const productController = {
     },
 
     //se edita el producto
-    editProduct: function (req, res) {
+    editProduct: async function (req, res) {
 		db.Vino.update({
 			nombre: req.body.name,
 			precio: req.body.price,
 			cuotas: req.body.cuotas,
 			descuento: req.body.discount,
 			descripcion: req.body.description,
-			imagen: req.file.filename,
+			imagen: req.files.fieldname,
 			bodegaid: req.body.bodega,
 			cepaid: req.body.cepa,
 			stock: req.body.unidades
@@ -143,9 +143,8 @@ const productController = {
 		
 		/* console.log('%c⧭ BODY', 'color: #00ff03;', req.body)
 		   console.log('%c⧭ FILE', 'color: #ff6c61;',req.file) */
-		
 		await db.Vino.update({
-			imagen: req.file.filename
+			imagen: req.files.filename
 		}, {
 			where: {
 				id: req.params.id
