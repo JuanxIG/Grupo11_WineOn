@@ -108,13 +108,13 @@ const productController = {
 
     //se edita el producto
     editProduct: async function (req, res) {
-		db.Vino.update({
+		await db.Vino.update({
 			nombre: req.body.name,
 			precio: req.body.price,
 			cuotas: req.body.cuotas,
 			descuento: req.body.discount,
 			descripcion: req.body.description,
-			imagen: req.files.fieldname,
+			imagen: req.files[0].filename,
 			bodegaid: req.body.bodega,
 			cepaid: req.body.cepa,
 			stock: req.body.unidades
