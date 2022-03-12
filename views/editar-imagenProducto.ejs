@@ -21,9 +21,12 @@
                 
                 <label for="imagen" class="form-label"> </label><br>
                 <input type="file" name="imagen" id="imagen" class="form-input" >
-               <!--  <div >
-                    <a href="/editar-imagenProducto" class="boton_listado">Editar imagen</a>
-                </div> -->
+                <% if (locals.errors && errors.imagen) { %>
+                    <div class="red-text">
+                    <%= errors.imagen.msg %>
+                    </div>
+
+                <% } %>
                 
             </div>
 

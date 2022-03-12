@@ -108,13 +108,28 @@ const productController = {
 
     //se edita el producto
     editProduct: async function (req, res) {
+		const resultadoValidacion = validationResult(req);
+		let vino = await db.Vino.findByPk(req.params.id);
+		let cepas = await db.Cepa.findAll();
+		let bodegas = await db.Bodega.findAll();
+		
+		//validacion de campos del registro del producto (si estan o no completos) Me daba error de invalid value
+		if (resultadoValidacion.errors.length > 0){
+			
+			return res.render("editProduct", {
+				errors: resultadoValidacion.mapped(), //mapped toma un array y lo convierte en objeto literal
+				oldData: req.body,
+				vino,
+				cepas, 
+				bodegas
+			}  );
+		}
 		await db.Vino.update({
 			nombre: req.body.name,
 			precio: req.body.price,
 			cuotas: req.body.cuotas,
 			descuento: req.body.discount,
 			descripcion: req.body.description,
-			imagen: req.files[0].filename,
 			bodegaid: req.body.bodega,
 			cepaid: req.body.cepa,
 			stock: req.body.unidades
@@ -134,22 +149,24 @@ const productController = {
 	},
 
 	editarImagen: async (req,res)=>{
-		/*  let img;
-		if (!req.file) {
-			img = ""
-		} else {
-			img = req.file.filename
-		}  */
+		let vino = await db.Vino.findByPk(req.params.id);
+		const resultadoValidacion = validationResult(req);
 		
-		/* console.log('%c⧭ BODY', 'color: #00ff03;', req.body)
-		   console.log('%c⧭ FILE', 'color: #ff6c61;',req.file) */
-		await db.Vino.update({
-			imagen: req.files.filename
-		}, {
+		//validacion de campos del registro del producto (si estan o no completos) Me daba error de invalid value
+		if (resultadoValidacion.errors.length > 0){
+			return res.render("editar-imagenProducto", {
+				errors: resultadoValidacion.mapped(), //mapped toma un array y lo convierte en objeto literal
+				vino
+			});
+		}
+
+			await db.Vino.update({
+			imagen: req.file.filename
+			}, {
 			where: {
 				id: req.params.id
 			}
-		});	
+			});	
 		
 		
 		await res.redirect("/productos/detail/" + req.params.id);

@@ -11,10 +11,10 @@ const validacionesProducto = [
     body("cuotas").notEmpty().withMessage("Ingresá las cuotas del producto"),
     body("description").notEmpty().withMessage("Ingresá una descripcion del producto").bail()
                       .isLength({ min: 20 }).withMessage("La descripción debe tener al menos 20 caracteres"),
-    body("image").custom((value, {req}) => {
+    body("imagen").custom((value, {req}) => {
         let file = req.file
         if (!file) {
-            throw new Error("Tenés elegir una imagen para el producto");
+            throw new Error("No elegiste ninguna imagen");
         } else  { 
             let extensionesAceptadas = [".jpeg", ".png", ".jpg", ".gif"]
         

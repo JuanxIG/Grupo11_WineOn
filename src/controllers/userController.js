@@ -155,15 +155,17 @@ const userController = {
 
 
 	edit: async (req,res)=>{
-		/*  let img;
-		if (!req.file) {
-			img = ""
-		} else {
-			img = req.file.filename
-		}  */
-		
-		/* console.log('%c⧭ BODY', 'color: #00ff03;', req.body)
-		   console.log('%c⧭ FILE', 'color: #ff6c61;',req.file) */
+
+		let usuario =  await db.Usuario.findByPk(req.params.id)
+		const resultadoValidacion = validationResult(req)
+
+		if (resultadoValidacion.errors.length > 0){
+			return res.render("user_edit", {
+				errors: resultadoValidacion.mapped(), //mapped toma un array y lo convierte en objeto literal
+				oldData: req.body,
+				usuario: usuario
+			});
+		}
 		
 		await db.Usuario.update({
 			first_name: req.body.first_name,
@@ -192,15 +194,15 @@ const userController = {
 	},
 
 	editarImagen: async (req,res)=>{
-		/*  let img;
-		if (!req.file) {
-			img = ""
-		} else {
-			img = req.file.filename
-		}  */
-		
-		/* console.log('%c⧭ BODY', 'color: #00ff03;', req.body)
-		   console.log('%c⧭ FILE', 'color: #ff6c61;',req.file) */
+		let usuario =  await db.Usuario.findByPk(req.params.id);
+		const resultadoValidacion = validationResult(req)
+
+		if (resultadoValidacion.errors.length > 0){
+			return res.render("editar-imagen", {
+				errors: resultadoValidacion.mapped(), //mapped toma un array y lo convierte en objeto literal
+				usuario: usuario
+			});
+		}
 		
 		await db.Usuario.update({
 			imagen: req.file.filename

@@ -21,9 +21,12 @@
                 
                 <label for="imagen" class="form-label"> </label><br>
                 <input type="file" name="imagen" id="imagen" class="form-input" >
-                <!-- <div >
-                    <a href="/editar-imagen" class="boton_listado">Editar imagen</a>
-                </div> -->
+                <% if (locals.errors && errors.imagen) { %>
+                    <div class="red-text">
+                    <%= errors.imagen.msg %>
+                    </div>
+
+                <% } %>
                 
             </div>
 
@@ -31,6 +34,10 @@
             
             <div >
                 <button type="submit" class="boton_listado">Guardar cambios</button>
+            </div>
+
+            <div >
+                <a href="/user/<%= usuario.id%> /profile" class="boton_listado">Volver</a>
             </div>
         </form>
     </main>

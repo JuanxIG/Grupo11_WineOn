@@ -223,6 +223,11 @@ main {
     margin-top: 10px;
 }
 
+.red-text {
+    color: red;
+    font-size: 15px;
+}
+
 /* seccion FOOTER */
 
 footer{

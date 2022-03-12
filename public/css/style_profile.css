@@ -402,7 +402,10 @@ label.form-label{
 }
 
 
-
+.red-text {
+    color: red;
+    font-size: 15px;
+}
     
 /* seccion FOOTER */
 
