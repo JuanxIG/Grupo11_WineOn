@@ -40,7 +40,7 @@ const productController = {
 		
 		
 		//validacion de campos del registro del producto (si estan o no completos) Me daba error de invalid value
-		/*if (resultadoValidacion.errors.length > 0){
+		if (resultadoValidacion.errors.length > 0){
 			
 			
 			return res.render("addProduct", {
@@ -49,7 +49,7 @@ const productController = {
 				cepas, 
 				bodegas
 			}  );
-		}*/
+		}
 		
 		 //validacion de producto existente
 		  db.Vino.findOne({

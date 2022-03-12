@@ -24,7 +24,7 @@ const validacionesProducto = [
             
 
          }
-      
+      return true
     })
 ];
 
