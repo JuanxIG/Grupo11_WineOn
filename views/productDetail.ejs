@@ -18,9 +18,8 @@
         <section class="bloqueProducto-padre">
             <article >
                 <div class="vip_item">
-                    <h3><%= vino.nombre %></h3>
-                    <img src="/images/products/<%= vino.imagen %>" alt="" width="350" height="350">
-                    
+                    <h3 id="vinoNombre"><%= vino.nombre %></h3>
+                    <img src="/images/products/<%= vino.imagen %>" alt="" width="350" height="350" class="imagenProducto">
                 </div>
             </article>
 
@@ -30,12 +29,13 @@
                     <p><%= vino.descripcion %></p><br>
                 </div>
                 <div class="price">
-                    <p>$ <%= vino.precio%></p>
+                    <p id="vinoPrecio">$ <%= vino.precio%></p>
+                    <p id="vinoDescuento">Descuento: %<%=vino.descuento%></p>
                 </div>
                 <div class="quantity">
                     <label for="cantidad">Cantidad: </label>
                     <form  lass="checkout" action="/detalle" method="POST">
-                        <select name="OS">
+                        <select name="OS" id="vinoCantidad">
                             <option value="1">1</option> 
                             <option value="2">2 Unidades</option> 
                             <option value="3">3 Unidades</option>
@@ -43,8 +43,8 @@
                             <option value="5">5 Unidades</option>
                         </select>
                     </form>
-                    <form action="/carrito" method="GET">
-                        <button class="boton" type="submit" value="agregar_carrito" style=cursor:pointer>Agregar al carrito</button>
+                    <form action="/productos" method="GET">
+                        <button class="boton" id="botonAgregar" type="submit" value="agregar_carrito" style=cursor:pointer>Agregar al carrito</button>
                     </form>
                 </div>
                 
@@ -65,6 +65,7 @@
     </main>
 
     <%- include ("./partials/footer") %>
+    <script src="/js/addproduct.js"></script>
     
 </body>
 </html>
