@@ -23,11 +23,26 @@ window.addEventListener("load", function (){
             let carrito = []
             carrito.push(producto)
             localStorage.setItem("carrito", JSON.stringify(carrito))
-            localStorage.setItem("totalCarrito", producto.precio * producto.inputCantidad)
+            localStorage.setItem("totalCarrito", producto.precio * producto.cantidad)
         } else {
             let carrito = JSON.parse(localStorage.carrito)
             let arrayProductos = carrito.filter(function(producto){
                 return producto.idProducto == id
-            })}
-    })
-})
+            })
+            if(arrayProductos.length == 0){
+                carrito.push(producto)
+                localStorage.setItem("carrito", JSON.stringify(carrito))
+            } else {
+                arrayProductos[0].cantidad == parseInt(arrayProductos[0].cantidad)+1;
+                localStorage.setItem("carrito", JSON.stringify(carrito))
+            }
+            let totalCarrito = 0
+            for (let i=0; i<carrito.length; i++) {
+               let carro = carrito[i].precio * carrito[i].cantidad;
+               totalCarrito += carro 
+            }
+            localStorage.setItem("totalCarrito", totalCarrito)
+        }
+        alert("Agregaste " + tituloProducto + " al carrito")
+        }
+)})
