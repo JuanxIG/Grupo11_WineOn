@@ -22,6 +22,7 @@
                                 
                                 <input class="main-input" id="usuario"  name="email" placeholder="Ingresá tu e-mail" value="<%= locals.oldData ? oldData.email : null %>">
                                 <p id="error-email"></p>
+                            
                                 <% if (locals.errors && errors.email) { %>
                                    
                                     <div class="red-text">

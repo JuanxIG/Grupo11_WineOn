@@ -234,6 +234,12 @@ text-align: center;
     font-size: 15px;
 }
 
+#error-email, #error-name, #error-pass, #error-lastname {
+    color: red;
+    font-size: 15px;
+}
+
+
 /*seccion FOOTER*/
 
 footer{

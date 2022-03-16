@@ -566,6 +566,14 @@ header{
         width: 90%;
     }
 
+    .agrupar {
+        justify-content: space-between;
+    }
+
+    #vacio {
+        width: 900px;
+    }
+
     #BloqueCompra-padre {
         margin: 20px 0px auto 0px;
     }

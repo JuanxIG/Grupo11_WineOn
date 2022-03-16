@@ -7,7 +7,7 @@ const userController = require("../controllers/userController")
 
 // ************ Middlewares ************ 
 const upload = require("../middlewares/multerUsersMiddleware")
-const validacionesUsuario = require ("../middlewares/validacionesMiddleware");
+const validacionesUsuario = require ("../middlewares/validacionesUsuario");
 const guestMiddleware = require ("../middlewares/guestMiddleware");
 const authMiddleware = require ("../middlewares/authMiddleware");
 const validacionLogin = require ("../middlewares/validacionLogin");

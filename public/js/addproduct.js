@@ -1,10 +1,9 @@
 window.addEventListener("load", function (){
-    
     let agregarProducto = document.getElementById("botonAgregar")
     agregarProducto.addEventListener("click", function(e){
         let url = window.location.href.split("/");
         let id = url [url.length -1]
-        let imagen = document.querySelector(".vip img").getAttribute("src")
+        let imagen = document.querySelector("#imagen").getAttribute("src")
         let tituloProducto = document.querySelector("#vinoNombre").innerText
         let precio = document.querySelector("#vinoPrecio").innerText
         let descuento = document.querySelector("#vinoDescuento").innerText
@@ -14,11 +13,11 @@ window.addEventListener("load", function (){
             idProducto: id, 
             imagen: imagen,
             tituloProducto: tituloProducto,
-            precio: parseFloat(precio),
-            descuento: parseFloat(descuento),
+            precio: parseInt(precio),
+            descuento: descuento,
             cantidad: parseFloat(cantidad)
         }
-
+        
         if(localStorage.length == 0) {
             let carrito = []
             carrito.push(producto)

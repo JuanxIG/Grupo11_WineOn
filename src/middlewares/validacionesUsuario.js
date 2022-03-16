@@ -1,7 +1,4 @@
-const path = require('path')
 const {body} = require ("express-validator");
-
-
 const validacionesUsuario = [
     body("first_name").notEmpty().withMessage("Ingresá tu nombre").bail()
                       .isLength({ min: 2 }).withMessage("El nombre debe tener al menos 2 caracteres").bail()
@@ -22,6 +19,7 @@ const validacionesUsuario = [
     body("confirma_contraseña").notEmpty().withMessage("Confirmá tu contraseña")
                                
     .custom((confirma_contraseña, {req}) => {
+      
         const password = req.body.contraseña
         // Verifico que las contraseñas sean las mismas
         if(password != confirma_contraseña){
@@ -47,7 +45,4 @@ const validacionesUsuario = [
     })
  
 ];
-
-
-
 module.exports = validacionesUsuario;

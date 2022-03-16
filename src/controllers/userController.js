@@ -22,7 +22,8 @@ const userController = {
     },
 
 
-	procesoRegistro: (req, res) => {
+	procesoRegistro: function(req, res) {
+		console.log(321);
 		const resultadoValidacion = validationResult(req);
 		//console.log(req.file.filename);
 		//validacion de campos de registro (si estan o no completos)
@@ -57,7 +58,6 @@ const userController = {
 						} else {
 							img = req.file.filename
 						}
-						console.log(img)
 						db.Usuario.create({
 							first_name: req.body.first_name,
 							last_name: req.body.last_name,

@@ -20,15 +20,13 @@
                 <h2 id="h2">Creá tu cuenta</h2>
             </div>
             <br/>
-            <div class="errores">
-                <ul></ul>
-            </div>
             <div class="form1-div">
                 <p>Nombre</p>
                 <input type="text" id="name" placeholder="Ej.: Martín" name="first_name" value= "<%= locals.oldData ? oldData.first_name : null %>" class="main-input <%= locals.errors && errors.first_name ? 'is-invalid' : null %>" > <!-- probar la clase "is ivalid" -->
+                <p id="error-name"></p>
                 <% if (locals.errors && errors.first_name) { %>
                     <div class="red-text">
-                    <%= errors.first_name.msg %>
+                        <%= errors.first_name.msg %>
                     </div>
 
                 <% } %>
@@ -37,6 +35,7 @@
             <div class="form1-div">
                 <p>Apellido</p>
                 <input class="main-input" id="lastName" type="text" placeholder="Ej.: Perez" name="last_name" value= "<%= locals.oldData ? oldData.last_name : null %>">
+                <p id="error-lastname"></p>
                 <% if (locals.errors && errors.last_name) { %>
                     <div class="red-text"> 
                     <%= errors.last_name.msg %>
@@ -48,6 +47,7 @@
             <div class="form1-div"> 
                 <p>Email</p>
                 <input class="main-input" id="email" type="text" placeholder="Ej.: tunombre@email.com" name="email" value= "<%= locals.oldData ? oldData.email : null %>">
+                <p id="error-email"></p>
                 <% if (locals.errors && errors.email) { %>
                     <div class="red-text">
                     <%= errors.email.msg %>
@@ -97,6 +97,7 @@
             <div class="form1-div">
                 <p>Contraseña</p>
                 <input class="main-input" id="password" type="password" placeholder ="********" name="contraseña" > 
+                <p id="error-pass"></p>
                 <% if (locals.errors && errors.contraseña) { %>
                     <div class="red-text">
                     <%= errors.contraseña.msg %>
