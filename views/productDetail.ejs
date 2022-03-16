@@ -29,8 +29,15 @@
                     <p><%= vino.descripcion %></p><br>
                 </div>
                 <div class="price">
-                    <p id="vinoPrecio">$ <%= vino.precio%></p>
-                    <p id="vinoDescuento">Descuento: %<%=vino.descuento%></p>
+                    <div class="precio">
+                        <p>$</p>
+                        <p id="vinoPrecio"><%= vino.precio%></p>
+                    </div>
+                    <div class="descuento">
+                        <p>Descuento:%</p>
+                        <p id="vinoDescuento"><%=vino.descuento%></p>
+                    </div>
+                    
                 </div>
                 <div class="quantity">
                     <label for="cantidad">Cantidad: </label>

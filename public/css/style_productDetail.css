@@ -243,6 +243,16 @@ main {
 
 }
 
+.precio {
+    display: flex;
+    margin-left: 45%;
+}
+
+.descuento {
+    display: flex;
+    margin-left: 30%;
+}
+
 .quantity{
     font-size: 18px;
     display: flex;
