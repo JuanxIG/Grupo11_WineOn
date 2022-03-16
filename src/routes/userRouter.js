@@ -12,6 +12,7 @@ const guestMiddleware = require ("../middlewares/guestMiddleware");
 const authMiddleware = require ("../middlewares/authMiddleware");
 const validacionLogin = require ("../middlewares/validacionLogin");
 const validacionesEditUser = require ("../middlewares/validacionesEditUser");
+const validacionesEditarImagenUser = require ("../middlewares/validacionesEditarImagenUser")
 
 //ruta que muestra el register y procesar el registro
 //router.get("/register", guestMiddleware, userController.formularioRegistro);
@@ -33,7 +34,7 @@ router.put("/:id/profile/edit", validacionesEditUser, userController.edit);
 
 //editar imagen
 router.get("/:id/profile/edit/imagen", authMiddleware, userController.formularioImagen);
-router.put("/:id/profile/edit/imagen", upload.single("imagen"), validacionesEditUser, userController.editarImagen);
+router.put("/:id/profile/edit/imagen", upload.single("imagen"), validacionesEditarImagenUser, userController.editarImagen);
 
 router.get("/logout", userController.logout);
 

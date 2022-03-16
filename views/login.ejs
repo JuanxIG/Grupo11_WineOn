@@ -16,21 +16,21 @@
         <main>
             <h1>INGRESAR</h1>
                  <section class= "form">
-                    <div class="form-left">
-                        <div class="errores">
-                            <ul></ul>
-                        </div>
+                
                         <form action="/user/login" method="POST" class="login-form" id="reservation">
                             <h2>INGRESÁ CON TU CUENTA</h2>
                                 
                                 <input class="main-input" id="usuario"  name="email" placeholder="Ingresá tu e-mail" value="<%= locals.oldData ? oldData.email : null %>">
+                                <p id="error-email"></p>
                                 <% if (locals.errors && errors.email) { %>
+                                   
                                     <div class="red-text">
                                     <%= errors.email.msg %>
                                     </div>
                 
                                 <% } %>
                                 <input class="main-input" id="password"    type="password"    placeholder="Ingresá tu contraseña" name="password">
+                                <p id="error-pass"></p>
                                 <% if (locals.errors && errors.password) { %>
                                     <div class="red-text"> 
                                     <%= errors.password.msg %>

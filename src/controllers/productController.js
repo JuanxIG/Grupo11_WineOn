@@ -80,7 +80,7 @@ const productController = {
 			precio: req.body.price,
 			cuotas: req.body.cuotas,
 			descuento: req.body.discount,
-			descripcion: req.body.description,
+			descripcion: req.body.descripcion,
 			imagen: req.file.filename,
 			bodegaid: req.body.bodega,
 			cepaid: req.body.cepa,
@@ -129,7 +129,7 @@ const productController = {
 			precio: req.body.price,
 			cuotas: req.body.cuotas,
 			descuento: req.body.discount,
-			descripcion: req.body.description,
+			descripcion: req.body.descripcion,
 			bodegaid: req.body.bodega,
 			cepaid: req.body.cepa,
 			stock: req.body.unidades

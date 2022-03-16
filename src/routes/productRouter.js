@@ -6,6 +6,8 @@ const productController = require("../controllers/productController")
 const upload = require("../middlewares/multerProductsMiddleware");
 const authMiddleware = require ("../middlewares/authMiddleware");
 const validacionesProducto = require ("../middlewares/validacionesProducto");
+const validacionImagenProducto = require("../middlewares/validacionImagenProducto")
+const validacionesEditarDatosProducto = require("../middlewares/validacionesEditarDatosProducto")
 
 
 
@@ -22,11 +24,11 @@ router.get("/detail/:id", productController.detail);
 
 //ruta que muestra el formulario de edicion de un producto y procesar el formulario
 router.get("/detail/:id/editar", authMiddleware,productController.formProduct);
-router.post("/detail/:id/editar", validacionesProducto, productController.editProduct);
+router.put("/detail/:id/editar", validacionesEditarDatosProducto, productController.editProduct);
 
 //editar imagen
 router.get("/detail/:id/editar/imagen", authMiddleware,productController.formularioImagen);
-router.put("/detail/:id/editar/imagen", upload.single("imagen"),  productController.editarImagen);
+router.put("/detail/:id/editar/imagen", upload.single("imagen"), validacionImagenProducto, productController.editarImagen);
 
 //ruta que elimina un producto
 router.delete("/detail/:id/editar/eliminar", productController.deleteProduct);

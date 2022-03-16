@@ -106,21 +106,20 @@
 							</div>
 							<div class="col-12" id="Dcol-12">
 								<label for="description" class="form-label">Descipción:</label>
-								<textarea name="description" id="description" value= "<%= locals.oldData ? oldData.description : null %>" class="form-input"></textarea>
-								<% if (locals.errors && errors.description) { %>
+								<textarea name="descripcion" id="description" value= "<%= locals.oldData ? oldData.description : null %>" class="form-input"></textarea>
+								<% if (locals.errors && errors.descripcion) { %>
 									<div class="red-text">
-									<%= errors.description.msg %>
+									<%= errors.descripcion.msg %>
 									</div>
 				
 								<% } %>
 							</div>
 							<div class="col-12">
 								<label for="image" class="form-label">Imagen:</label>
-								<input type="file" name="image" id="image" value= "<%= locals.oldData ? oldData.image : null %>" class="form-input">
-								<% if (locals.errors && errors.image) { %>
+								<input type="file" name="imagen" id="image" value= "<%= locals.oldData ? oldData.image : null %>" class="form-input">
+								<% if (locals.errors && errors.imagen) { %>
 									<div class="red-text">
-									<%= errors.image.msg %>
-									<%= console.log(errors) %>
+									<%= errors.imagen.msg %>
 									</div>
 				
 								<% } %>

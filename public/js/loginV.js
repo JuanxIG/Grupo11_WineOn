@@ -1,21 +1,22 @@
 window.addEventListener("load", function () {
     let form = document.querySelector("form#reservation")
     form.addEventListener("submit", function (e) {
-        let errores = []
+        
         let campoEmail =  document.getElementById("usuario")
         let campoPassword =  document.getElementById("password")
+       
         if (campoEmail.value == "")  {
-            errores.push("Campo Email OBLIGATORIO")
+            e.preventDefault()
+            document.getElementById("error-email").innerText = "Tenes que ingresar un email"
+        } else if (campoEmail.value != ""){
+            document.getElementById("error-email").innerText = ""
         }
         if (campoPassword.value == ""){
-            errores.push("Campo Contraseña OBLIGATORIO")
-        }
-        if (errores.length > 0) {
             e.preventDefault()
-            let ulErrores = document.querySelector("div.errores ul")
-            for (let index = 0; index < errores.length; index++) {
-                ulErrores.innerHTML = "<li>" + errores[index] + "</li>"
-            }
+            document.getElementById("error-pass").innerText = "Tenes que ingresar una contraseña"
+        } else if (campoPassword.value != ""){
+            document.getElementById("error-pass").innerText = ""
         }
+        
     })
 })

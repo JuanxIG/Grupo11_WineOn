@@ -250,6 +250,15 @@ section input[type="email"]{
     border: 0;
 }
 
+#error-email {
+    color: red;
+    font-size: 15px;
+}
+
+#error-pass {
+    color: red;
+    font-size: 15px;
+}
 
 
 /* seccion FOOTER */

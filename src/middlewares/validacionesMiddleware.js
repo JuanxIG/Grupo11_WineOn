@@ -13,8 +13,7 @@ const validacionesUsuario = [
     body("email").notEmpty().withMessage("Ingresá tu email").bail()
                  .isEmail().withMessage("ingresá un formato de correo válido. Ej.: tucorreo@email.com"),
     body("nacimiento").notEmpty().withMessage("Seleccioná tu fecha de nacimiento"),
-    body("domicilio").notEmpty().withMessage("Ingresá tu domicilio").bail()
-                     .isAlphanumeric().withMessage("Solo se permiten caracteres alfanuméricos"),
+    body("domicilio").notEmpty().withMessage("Ingresá tu domicilio"),
     body("dni").notEmpty().withMessage("Ingresá tu DNI").bail()
                .isNumeric().withMessage("Solo se permiten valores numéricos"),
     body("contraseña").notEmpty().withMessage("Ingresá una contraseña").bail()
@@ -31,18 +30,22 @@ const validacionesUsuario = [
             return true
         }
       }),
-     body("imagen").custom((value, {req}) => {
-         if(req.file) { 
-            let extensionesAceptadas = [".jpeg", ".png", ".jpg", ".gif"]
+      body("imagen").custom((value, {req}) => {
+        let file = req.file
+        if (!file) {
+            throw new Error("No elegiste ninguna imagen");
+           
+        } 
+        let extensionesAceptadas = [".jpeg", ".png", ".jpg", ".gif"]
+         if (!extensionesAceptadas.includes(path.extname(req.file.originalname))){ 
         
-            if (!extensionesAceptadas.includes(path.extname(req.file.originalname))) {
+              {
                 throw new Error("Las extensiones del archivo permitidas son '.jpeg', '.jpg', '.png' y '.gif'");
             } 
-            
-
          }
-        return true;
-    }) 
+      return true
+    })
+ 
 ];
 
 
