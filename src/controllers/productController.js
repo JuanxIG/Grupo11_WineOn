@@ -176,13 +176,11 @@ const productController = {
 
     //se elimina un producto
     deleteProduct: function (req, res){
-		
 		db.Vino.destroy({
 			where: {
 				id: req.params.id
 			}
 		})
-
 		res.redirect("/productos")
     },
 

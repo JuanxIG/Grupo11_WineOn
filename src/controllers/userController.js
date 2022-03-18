@@ -23,7 +23,6 @@ const userController = {
 
 
 	procesoRegistro: function(req, res) {
-		console.log(321);
 		const resultadoValidacion = validationResult(req);
 		//console.log(req.file.filename);
 		//validacion de campos de registro (si estan o no completos)

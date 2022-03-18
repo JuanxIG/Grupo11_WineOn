@@ -28,6 +28,7 @@
 							<div class="col-12 col-md-6">
 								<label for="name" class="form-label">Nombre del producto:</label>
 								<input type="text" id="name" name="name" placeholder="Ej: Cosecha tardía" value= "<%= locals.oldData ? oldData.name : null %>"class="form-input">
+								<p id="error-name"></p>
 								<% if (locals.errors && errors.name) { %>
 									<div class="red-text">
 									<%= errors.name.msg %>
@@ -107,6 +108,7 @@
 							<div class="col-12" id="Dcol-12">
 								<label for="description" class="form-label">Descipción:</label>
 								<textarea name="descripcion" id="description" value= "<%= locals.oldData ? oldData.description : null %>" class="form-input"></textarea>
+								<p id="error-description"></p>
 								<% if (locals.errors && errors.descripcion) { %>
 									<div class="red-text">
 									<%= errors.descripcion.msg %>
@@ -132,12 +134,12 @@
 						<div class="col-12">
 							<button type="submit" class="buy-now-button">Guardar producto</button>
 						</div>
-						<div class="col-12">
-							<a href="/productos"><button  class="buy-now-button">Cancelar</button></a>
-						</div>
 					</div>
 				</div>
 			</form>
+			<div class="col-12" id="cancelar">
+				<a href="/"><button  class="buy-now-button">Cancelar</button></a>
+			</div>
 		</div>
 
 	</div>
@@ -145,7 +147,7 @@
 	
 	</main>
    
-
+	<script src="/js/validacionCrear.js"></script>
 
 </body>
 </html>

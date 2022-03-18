@@ -72,6 +72,12 @@ img{
     height: auto;
 }
 
+#error-name, #error-description {
+    color: red;
+    font-size: 13px;
+    margin-top: 0px;
+}
+
 
 /* seccion HEADER */
 
@@ -219,6 +225,10 @@ main {
 .col-12 {
     margin-bottom: 30px;
     text-align: left;
+}
+
+#cancelar {
+    text-align: center;
 }
 
 #description {
