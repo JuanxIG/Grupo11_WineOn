@@ -12,7 +12,10 @@ const validacionesEditarDatosProducto = require("../middlewares/validacionesEdit
 
 
 // ruta que muestra todos los productos
-router.get("/", productController.products)
+router.get("/", productController.products);
+
+router.get("/tintos", productController.vinosTintos);
+router.get("/blancos", productController.vinosBlancos);
 
 //ruta que muestra el formulario para agregar un producto y procesar el formulario
 router.get("/agregar",authMiddleware,productController.showAdd)

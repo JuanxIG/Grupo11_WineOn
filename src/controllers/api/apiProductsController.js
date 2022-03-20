@@ -1,7 +1,7 @@
 const db = require('../../../database/models');
-const sequelize = db.sequelize;
+//const sequelize = db.sequelize;
 
-const productsApiController = {
+const apiProductsController = {
     list:(req,res)=>{
        db.Vino.findAll({
             include: [{association: "unaBodega"}, {association: "unaCepa"}]
@@ -66,26 +66,32 @@ const productsApiController = {
         })
     },
 
-    /* ultimo: (req, res) => {
-        db.Products.findAll({order:[["id", "DESC"]], limit:1})
-        .then(function (product) {
-            product[0].setDataValue("endpoint", "/api/products/lastProduct/" + product.length)
-
-            let apiResponse= {
-                meta: {
-                    status: 200,
-                    url:"/api/products/lastProduct",
-                    total: product.length
+    ultimo: (req, res) => {
+        db.Vino.findAll({order:[["id", "DESC"]], limit:1 }, {include: [{association: "unaBodega"}, {association: "unaCepa"}]})
+        
+        
+        .then(function (vino) {
+            //product[0].setDataValue("endpoint", "/api/products/lastProduct/" + vino.length)
+            return res.json({
+                wine: {
+                    id: vino.id,
+                    name: vino.nombre,
+                    price: vino.price,
+                    fee: vino.cuotas,
+                    discount: vino.descuento,
+                    description: vino.descripcion,
+                    image: "/images/products" + vino.imagen,
+                    stock: vino.stock,
+                    cepa: vino.unaCepa.nombre,
+                    bodega: vino.unaBodega.nombre
                 },
-                data: product
-            }
-            res.json(apiResponse)
+                url: "/api/products/lastProduct"
+            })
         })
-        .catch(function(error){
-            res.json({status:500})
-        })
-    } */
+        
+    }
+
 
 }
 
-module.exports = productsApiController;
+module.exports = apiProductsController;

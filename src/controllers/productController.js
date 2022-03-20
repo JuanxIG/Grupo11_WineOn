@@ -1,5 +1,6 @@
 const db = require("../../database/models");
 const {validationResult} = require("express-validator");
+const { Op } = require("sequelize");
 
 //const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
@@ -10,7 +11,35 @@ const productController = {
 			.then(function(vinos) {
 				 res.render("products", {vinos: vinos})
 			})
+
+			
     },
+
+	//Muestra los vinos tintos
+	vinosTintos: (req, res) => {
+		db.Vino.findAll({ 
+			where: {
+				cepaid: [1, 2]
+			}, include: [{association: "unaBodega"}, {association: "unaCepa"}]
+	    })
+	   .then(tintos=>{
+		   
+		   res.render("tintos", {tintos})
+	   } )
+	},
+
+	//Muestra los vinos blancos
+	vinosBlancos: (req, res) => {
+		db.Vino.findAll({ 
+			where: {
+				cepaid: [3, 4]
+			}, include: [{association: "unaBodega"}, {association: "unaCepa"}]
+	    })
+	   .then(blancos=>{
+		   
+		   res.render("blancos", {blancos})
+	   } )
+	},
 
     //muestra el detalle de producto
     detail:  (req, res) =>{

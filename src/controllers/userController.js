@@ -5,15 +5,6 @@ const {validationResult} = require("express-validator");
 const db = require('../../database/models');
 
 
-
-const userFilePath = path.join(__dirname, '../data/users.json');
-const users = JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
-
-
-//const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
-
-const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-
 const userController = {
 //Se muestra el formulario de registro
     

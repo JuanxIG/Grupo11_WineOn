@@ -1,39 +1,40 @@
-const fs = require('fs');
-const path = require('path'); 
 const db = require("../../database/models");
-
-//index de productos productJSON
-const productsFilePath = path.join(__dirname, '../data/productsData.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const { Op } = require("sequelize");
 
 
-/* const visited = products.filter(function(product){
-	return product.category == 'visited'
-})
-const inSale = products.filter(function(product){
-	return product.category == 'in-sale'
-}) */
-
-
+//Muestra en el home los ultimos agregados y los productos con descuento
 const mainController = {
-    index: function (req, res) {
-		db.Vino.findAll()
-			.then(function(vinos) {
-				 res.render("products", {vinos: vinos})
-			})
+    index: async function (req, res) {
+		    
+            let ultimosAgregados = await db.Vino.findAll({order:[["id", "DESC"]], limit:9 })
+            let conDescuento = await db.Vino.findAll({where: {descuento: {[Op.gt]: 0}}, limit:9 })
+
+           
+            
+            
+            await res.render("index", {ultimosAgregados, conDescuento})
+            
     },
 
+    //Buscador de productos
     buscador: function (req, res) {
         db.Vino.findAll({
             where: {
-                nombre: req.body.buscador
-        }
-            .then(function(vinos){
-                res.render("products", {vinos: vinos})
+                [Op.or]: [ 
+                    {nombre: {[Op.like]: "%" + req.query.buscador + "%"} },
+                    {precio: {[Op.like]: "%" + req.query.buscador + "%"} },
+                ]
+            }
+        }).then(vinos => {
+            let search = req.query.buscador
+            res.render('busqueda',{
+                search,
+                vinos:vinos
             })
-    })
+        })
         
     },
+
 
     carrito: function (req, res) {
         res.render("productCart")

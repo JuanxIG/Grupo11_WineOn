@@ -30,8 +30,8 @@
         
         </div>
         <div class="header-div-two">
-            <form action="">
-                <input class="header-input" type="search" name="buscador" id="" placeholder="¿Qué estás buscando?">
+            <form action="/buscar" method="GET">
+                <input class="header-input" type="text" name="buscador" id="" placeholder="¿Qué estás buscando?">
                 
                 <button id="posicion-btn" type="submit"><i id="posicion-i" class="fas fa-search"></i></button>
             </form>
@@ -39,8 +39,8 @@
         <nav class="nav-bar"> 
             <a href="/">INICIO</a></li>
             <a href="/productos">PRODUCTOS</a></li>
-            <a href="#">VINO TINTO</a></li>
-            <a href="#">VINO BLANCO</a></li>
+            <a href="/productos/tintos">VINO TINTO</a></li>
+            <a href="/productos/blancos">VINO BLANCO</a></li>
             <a href="/contacto">CONTACTO</a></li>
             <a href="/nosotros">NOSOTROS</a></li>
         </nav>

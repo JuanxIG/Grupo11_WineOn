@@ -17,56 +17,71 @@
         <div class="banner">
             <img src="/images/banner-vinos.jpg" alt="banner-vinos">
         </div>
-
+        <% if (locals.estaLogueado && locals.usuarioLogueado.admin == 1) { %>
+        <p>Productos:</p>
+        <form action="/productos/agregar"  method="GET">
+            <button class="boton_crear" type="submit" value="editar_item" style=cursor:pointer>Crear Producto</button>
+        </form>
+        <form action="/productos"  method="GET">
+            <button class="boton_crear" type="submit" value="editar_item" style=cursor:pointer>Listado de productos</button>
+        </form>
+        <p>Usuarios:</p>
+        <form action="/user/register"  method="GET">
+            <button class="boton_crear" type="submit" value="editar_item" style=cursor:pointer>Crear Usuario</button>
+        </form>
+        <form action="/user/list"  method="GET">
+            <button class="boton_crear" type="submit" value="editar_item" style=cursor:pointer>Listado de usuarios</button>
+        </form>
+        <% } %>
         <ul class="info">
             <li><i class="fas fa-shuttle-van"></i> Envios a todo el pais</li>
             <li><i class="fas fa-credit-card"></i> Ver medios de pago</li>
             <li><i class="fas fa-comment-alt"></i></i> Consultá por whatsapp</li>
         </ul>
-        <div class="col-12">
-            <h2 class="products-title">Basado en tu última visita</h2>
-        </div>
+        
+        <h2>Ultimos Agregados</h2>
+        <section class="section-index">  
+              
+            <!-- Ultimos productos agregados -->
+			<% for (let i=0; i < ultimosAgregados.length; i++) { %>
+                <a href="/productos/detail/<%= ultimosAgregados[i].id %>"></a>
+                    <article class="article-index">
+                        <img src="/images/products/<%= ultimosAgregados[i].imagen%>" alt="<%= ultimosAgregados[i].nombre %>" >
+                        <p><%= ultimosAgregados[i].nombre %></p>
+                        <p>$<%= ultimosAgregados[i].precio %></p>
+                        <p>Hasta en <%= ultimosAgregados[i].cuotas %> cuotas sin interés</p>
+                        <div class="button-position">
+                            <a href="/productos/detail/<%= ultimosAgregados[i].id %>">
+                                <button class="main-button" type="submit" value="ENVIAR">COMPRAR</button>
+                            </a>
+                        </div>
+                    </article>
+                </a>
+            <% } %>
+        </section>
+
+        <h2>Con descuento</h2>
 
         <section class="section-index">    
-            <!-- Show all products -->
-			<% visited.forEach(function(product){ %>
-                <a href="/productos/detail/<%= product.id %>"></a>
+            <!-- Productos con descuento-->
+			<% for (let i=0; i < conDescuento.length; i++) { %>
+                <a href="/productos/detail/<%= conDescuento[i].id %>"></a>
                     <article class="article-index">
-                        <img src="/images/products/<%= product.image%>" alt="<%= product.name %>" >
-                        <p><%= product.name %></p>
-                        <p>$<%= product.price %></p>
-                        <p>Hasta en <%= product.cuotas %> cuotas sin interés</p>
+                        <img src="/images/products/<%= conDescuento[i].imagen%>" alt="<%= conDescuento[i].nombre %>" >
+                        <p><%= conDescuento[i].nombre %></p>
+                        <p>$<%= conDescuento[i].precio %></p>
+                        <p>Hasta en <%= conDescuento[i].cuotas %> cuotas sin interés</p>
                         <div class="button-position">
-                            <a href="/productos/detail/<%= product.id %>">
+                            <a href="/productos/detail/<%= conDescuento[i].id %>">
                                 <button class="main-button" type="submit" value="ENVIAR">COMPRAR</button>
                             </a>
                         </div>
                     </article>
                 </a>
-            <% }) %>
+            <% } %>
         </section>
-
-        <div class="col-12">
-            <h2 class="products-title">Ofertas</h2>
-        </div>
-        <section class="section-index">
-            <!-- Show all products -->
-			<% inSale.forEach(function(product){ %>
-                <a href="/productos/detail/<%= product.id %>"></a>
-                    <article class="article-index">
-                        <img src="/images/products/<%= product.image%>" alt="<%= product.name %>" >
-                        <p><%= product.name %></p>
-                        <p>$<%= product.price %></p>
-                        <p>Hasta en <%= product.cuotas %> cuotas sin interés</p>
-                        <div class="button-position">    
-                            <a href="/productos/detail/<%= product.id %>">
-                                <button class="main-button" type="submit" value="ENVIAR">COMPRAR</button>
-                            </a>
-                        </div>
-                    </article>
-                </a>
-            <% }) %>
-        </section>
+        
+       
 
     </main>
 
