@@ -5,20 +5,22 @@ window.addEventListener("load", function (){
     let tituloProducto = document.querySelector("#vinoNombre").innerText
     let precio = document.querySelector("#vinoPrecio").innerText
     let descuento = document.querySelector("#vinoDescuento").innerText
-    let cantidad = document.querySelector("#vinoCantidad").value
-
+    
     let agregarProducto = document.getElementById("botonAgregar")
     agregarProducto.addEventListener("click", function(e){
 
+        let cantidad = document.querySelector("#vinoCantidad").value
         let producto = {
             idProducto: id, 
             imagen,
             desc: id,
             tituloProducto,
+            precioTotal: parseFloat(precio * cantidad),
             precio: parseFloat(precio),
             descuento: parseFloat(descuento),
             cantidad: parseFloat(cantidad),
         }
+
         if(localStorage.length == 0) {
             let carrito = []
             carrito.push(producto)
@@ -29,15 +31,26 @@ window.addEventListener("load", function (){
             carrito.push(producto)
             localStorage.setItem("carrito", JSON.stringify(carrito))
             } 
+
         let totalCarrito = 0
+        let subTotalCarrito = 0
         let carrito = JSON.parse(localStorage.carrito)
+
         for (let i=0; i<carrito.length; i++) {
             let carro = carrito[i].precio * carrito[i].cantidad;
             totalCarrito += carro 
         }
-        console.log(localStorage.carrito);
-        console.log(totalCarrito);
+
+        for (let i=0; i<carrito.length; i++) {
+            let totalPrecio = carrito[i].precio * carrito[i].cantidad;
+            let totalDesc = carrito[i].descuento * carrito[i].cantidad
+            let desc = (totalPrecio / 100 * totalDesc)
+            let carro = totalPrecio - desc
+            subTotalCarrito += carro 
+        }
+
         localStorage.setItem("totalCarrito", totalCarrito)
+        localStorage.setItem("subTotalCarrito", subTotalCarrito)
             
         alert("Agregaste " + tituloProducto + " al carrito")
 })})

@@ -401,6 +401,10 @@ footer p{
 
     /* MAIN */
 
+    main {
+        margin-top: 30px;
+    }
+
     section {
         display: flex;
         justify-content: space-around;

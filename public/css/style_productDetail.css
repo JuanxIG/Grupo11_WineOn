@@ -245,12 +245,14 @@ main {
 
 .precio {
     display: flex;
-    margin-left: 45%;
+    margin: auto;
+    width: 100px;
 }
 
 .descuento {
     display: flex;
-    margin-left: 30%;
+    margin: auto;
+    width: 200px;
 }
 
 .quantity{
@@ -261,12 +263,10 @@ main {
     justify-content: center;
     width: 23.375rem;
     height: 8.375rem;
-    border: 1px solid white;
     border-radius: 6px;
-    padding: 5px 25px 5px;
     display: block;
-    margin: -15px 25px 15px;
-
+    text-align: center;
+    margin: auto;
 }
 
 .quantity select{
@@ -287,7 +287,6 @@ main {
 
 .boton {
     font-family: Arial,sans-serif; 
-    margin: 5px;
     padding: 5px;
     width: 23.375rem;
     height: 2.375rem;
@@ -299,12 +298,22 @@ main {
     border-radius: 6px;
     text-align: center;
 }
+
+
+#botonAgregar {
+    margin-left: 0px;
+}
+
 .acciones{
     padding-top: 10px;
     display: inline-block;;
     justify-content: space-around;
     align-items: center;
     transition: all 0.7s;
+}
+
+#acciones form {
+    text-align: center;
 }
 
 .boton_editar {
@@ -528,8 +537,8 @@ footer p{
         border-radius: 6px;
         background-color:#f0f0f0;
         padding: 25px 0px;
-        margin: 130px 10px;
-    
+        margin-left: 10px;
+        padding-left: 10px;
     }
 
     .quantity select{
@@ -546,6 +555,10 @@ footer p{
         display: block;
         margin: 6px 0 0;
     }
+
+    .precio {
+        height: 60px;
+    }
     
     .boton {
         font-family: Arial,sans-serif; 
@@ -560,6 +573,11 @@ footer p{
         border: 2px solid #000050;
         border-radius: 6px;
         text-align: center;
+    }
+
+    #acciones {
+        display: flex;
+        margin-left: 15%;
     }
 
     /* FOOTER */
@@ -708,8 +726,8 @@ footer p{
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: flex-star;
-        margin: 20px 180px -35px;
+        margin: auto;
+        width: 721px;
     }
 
     .quantity select{

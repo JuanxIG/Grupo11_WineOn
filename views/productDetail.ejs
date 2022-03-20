@@ -19,7 +19,9 @@
             <article >
                 <div class="vip_item">
                     <h3 id="vinoNombre"><%= vino.nombre %></h3>
-                    <img src="/images/products/<%= vino.imagen %>" alt="" width="350" height="350" class="imagenProducto" id="imagen">
+                    <figure>
+                        <img src="/images/products/<%= vino.imagen %>" alt="" width="350" height="350" class="imagenProducto" id="imagen">
+                    </figure>
                 </div>
             </article>
 
@@ -44,15 +46,17 @@
                     <form  lass="checkout" action="/detalle" method="POST">
                         <select name="OS" id="vinoCantidad">
                             <option value="1">1</option> 
-                            <option value="2">2 Unidades</option> 
-                            <option value="3">3 Unidades</option>
-                            <option value="4">4 Unidades</option>
-                            <option value="5">5 Unidades</option>
+                            <option value="2">2</option> 
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
                         </select>
                     </form>
-                    <form action="/productos" method="GET">
-                        <button class="boton" id="botonAgregar" type="submit" value="agregar_carrito" style=cursor:pointer>Agregar al carrito</button>
-                    </form>
+                    <% if (locals.estaLogueado) { %>
+                        <form action="/productos" method="GET">
+                            <button class="boton" id="botonAgregar" type="submit" value="agregar_carrito" style=cursor:pointer>Agregar al carrito</button>
+                        </form>
+                    <% } %>
                 </div>
                 
 
