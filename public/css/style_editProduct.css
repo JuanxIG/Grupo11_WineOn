@@ -187,10 +187,10 @@ header{
     width: 8.375rem;
     height: 2.175rem;
     font-size: 0.775rem;
-    background-color:#E22692;
-    color: white;
+    background-color:var(--first-color);
+    color: var(--white-color);
     text-decoration: none;
-    border: 2px solid #E22692;
+    border: 2px solid var(--first-color);
     border-radius: 6px;
 }
 

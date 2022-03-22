@@ -1,4 +1,5 @@
 const {body} = require ("express-validator");
+const path = require('path'); 
 const validacionesUsuario = [
     body("first_name").notEmpty().withMessage("Ingresá tu nombre").bail()
                       .isLength({ min: 2 }).withMessage("El nombre debe tener al menos 2 caracteres").bail()

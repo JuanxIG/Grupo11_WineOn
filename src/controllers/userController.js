@@ -122,8 +122,9 @@ const userController = {
     },
 
 	list:(req,res) =>{
-		res.render('user_list', {
-			users
+		db.Usuario.findAll()
+		.then(function (usuarios){
+			res.render('user_list', {usuarios: usuarios})
 		})
 	},
 	

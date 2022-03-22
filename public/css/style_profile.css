@@ -148,6 +148,10 @@ header{
     color: var(--first-color);
 }
 
+.goBack{
+    text-align: center;
+}
+
 
 .nav-bar {
    display: none;
@@ -369,7 +373,7 @@ label.form-label{
     flex-direction: column;
     justify-content: center;
     padding-top: 10px;
-    padding-left: 50px;
+    /* padding-left: 50px; */
     align-items: center;
     transition: all 0.7s;
 }

@@ -75,6 +75,9 @@ img{
     text-align: center;
     width: 20%;
     margin: 0px;
+    background-color: var(--second-color);
+    border: 0;
+    cursor: pointer;
 }
 
 .container{
@@ -111,6 +114,10 @@ header{
     z-index: 999;
 }
 
+header div form input{
+    position: relative;
+}
+
 .header-div-one{
     display:flex;
     justify-content: space-around;
@@ -131,8 +138,20 @@ header{
     margin-left: 1.56rem;
 }
 
+.inputForm{
+    display:flex;  
+}
+
+.lens{
+        text-align: center;
+        background-color: var(--second-color);
+        border: 0;
+        cursor: pointer;
+}
+
 .login-button{
     display: none;
+    justify-content: space-between;
 }
 
 .logo {
@@ -143,17 +162,47 @@ header{
     color: var(--first-color);
 }
 
-
-.nav-bar {
-   display: none;
-    /* display: flex;
-    justify-content: space-around;
-    list-style: none;
-    align-items: center;
+.logo {
+    font-size: 40px;
     font-weight: bold;
-    border: thin white solid;
-    margin-top: 0.5rem; */
+    text-decoration: none;
+    margin-left: 10px;
+    color: var(--first-color);
+}
+
+.menu {
+    position: fixed;
+    left: 0;
+    bottom: 6.438rem;/* alineacion desde abajo justamente lo que mide el header */
+    width: 100%;/* al darle position, pierde su tamaño por ende hay que redefinirlo */
+    display: flex;
+    flex-direction: column;
+    background-color: var(--second-color);
+    opacity: 0;/* el menu no se ve pero se activa la manito porque está, entonces se usa pointer-events */
+    pointer-events: none; /* para no tener ativos elementos, en este caso, por tener opacity 0 */
+    transition: opacity 0.5s ease;
     
+}
+
+.menu-active{
+    opacity: 1;/* el menu no se ve pero se activa la manito porque está, entonces se usa pointer-events */
+    pointer-events: auto; /* para no tener ativos elementos, en este caso, por tener opacity 0 */
+   
+}
+
+nav a{
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    color: var(--first-color);
+    text-decoration: none;
+
+}
+
+nav a:hover{
+    color: var(--white-color);
+    background-color: var(--first-color);
 }
 
 .main-input{
@@ -164,21 +213,29 @@ header{
     margin-left: 25px;
 }
 
-#posicion-i {
+.posicion-i {
+    margin-right: 1rem;
+} 
+
+#posicion-btn {
     position:relative;
-    right: 1.875rem;
+    background-color: var(--white-color);
+    right: 2rem;
     top: 5px;
 }
 
 .product-cart{
-    text-align: right;
     width: 20%;
     margin: 0px;
+    background-color: var(--second-color);
+    border: 0;
+    cursor: pointer;
 }
 
-
 /* seccion MAIN */
-
+h2{
+    text-align: center;
+}
 .article-main {
     padding-top: 3px;
     padding-bottom: 3px;
@@ -188,7 +245,7 @@ header{
     height: 40px;
     width: 90%;
     border-radius: 5px;
-    border:solid  0.5px #E3D4C5;
+    border:solid  0.5px var(--gray-light-color);
 }
 
 main {
@@ -222,7 +279,7 @@ main {
 #main div{
     font-size: 15px;
     font-weight: 700;
-    color: black;
+    color: var(--second-color);
 }
 
 .sub-main {
@@ -262,7 +319,7 @@ main {
 
 .sub-main,
 .detalles {
-    color: black;
+    color: var(--second-color);
 }
 
 .center-precio {
@@ -281,7 +338,7 @@ main {
 }
 
 .linea {
-    border-top: 1px solid black;
+    border-top: 1px solid var(--second-color);
     width: 70%;
     margin: 3% auto 3% auto;
   }
@@ -293,19 +350,19 @@ main {
 
 #BloqueCompra-hijo {
     margin-top: 20px;
-    border: solid 1px black;
+    border: solid 1px var(--second-color);
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 10px;
     border-radius: 5px;
-    background-color: rgb(190, 190, 190);
+    background-color: var(--gray-light-color);
     width: 90%;
 }
 
 #Resumen{
     font-family: 'Open Sans', sans-serif;
-    background-color: black;
-    color: whitesmoke;
+    background-color: var(--second-color);
+    color:var(--white-color);
     font-size: 22px;
     padding-left: 5px;
     padding-bottom: 3px;
@@ -317,7 +374,7 @@ main {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--second-color);
 }
 
 #precio-subtotal {
@@ -329,7 +386,7 @@ main {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--second-color);
 }
 
 #total {
@@ -337,7 +394,7 @@ main {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--second-color);
 }
 
 .finalizar {
@@ -351,18 +408,19 @@ main {
 
 .finalizar a:hover {
     background-color: white;
-    color: black;
+    color: var(--second-color);
 }
 
 .boton {
     font-family: 'Open Sans', sans-serif;
     padding: 5px;
     font-size: 15px;
-    color: white;
-    background-color: black;
+    color: var(--white-color);
+    background-color: var(--third-color);
     text-decoration: none;
-    border: solid 1px black;
+    border: solid 1px var(--third-color);
     border-radius: 5px;
+    cursor: pointer;
 }
 
 #novedades {
@@ -445,62 +503,33 @@ footer p{
 
 /* HEADER*/
     
-.burger{
-    display: none;
-}
-
 header{
+    background-color: var(--second-color);
+    padding-bottom: 0.5rem;
     position: sticky;
     top: 0;
-}
-
-.header-div-one{
-    justify-content: space-between;
-}
-
-.login-button{
-    height: 40px;
-    border-radius: 5px;
-    background-color:var(--first-color);
-    width: 140px;
-    color: var(--white-color);
-    font-size: 1rem;
-    display: block;
-    margin-right: 6px;
-    cursor: pointer;
-}
-
-.nav-bar{
-    display: flex;
-    justify-content: space-around;
-    text-decoration: none;
-    font-weight: bold;
-    color: var(--first-color);
-    margin-top: 0.5rem;
-}
-
-.nav-bar a{
-    text-decoration: none;
-    font-weight: bold;
-    color: var(--first-color);
-    margin-top: 0.5rem;
+    left: 0;
+    width: 100%;
+    z-index: 999;
 }
 
 .header-input{
     height: 40px;
-    width: 85%;
+    width: 90%;
     border-radius: 5px;
     border:solid  0.5px var(--white-color);
     margin-left: 25px;
+}
+
+.menu{
+    top: 6.438rem;
+    bottom: 0.438rem;
 }
 
 .product-cart{
     text-align: right;
     width: 20%;
     margin: 0px;
-    position: relative;
-    right: -152px;
-    bottom: 8px;
 }
 
 /* MAIN*/
@@ -544,14 +573,58 @@ header{
 
     /* HEADER */ 
 
-    .product-cart {
-        text-align: right;
-        width: 20%;
-        margin: 0px;
-        position: relative;
-        right: -256px;
-        bottom: 8px;
+    .burger{
+        display: none;
     }
+
+    header{
+       position: sticky;
+       top: 0;
+   }
+
+   .header-div-one{
+       justify-content: space-between;
+   }
+
+   .login-button{
+       height: 40px;
+       border-radius: 5px;
+       background-color:var(--first-color);
+       width: 140px;
+       color: var(--white-color);
+       font-size: 1rem;
+       display: block;
+       margin-right: 6px;
+       cursor: pointer;
+       border: 0;
+   }
+
+    nav a:last-child{
+        display: none;
+    }
+
+    .menu{
+       position:static;
+       width: auto;
+       flex-direction: row;
+       opacity: 1;
+       pointer-events: auto;/* le devuelvo todo lo que le saque en mobile */
+       justify-content: center;
+   }
+
+   .menu a{
+       font-size: 1.5rem;
+   }
+
+
+    .product-cart {
+       text-align: right;
+       width: 20%;
+       margin: 0px;
+       position: relative;
+       right: -256px;
+       bottom: 8px;
+   }
 
     /* MAIN */
 
@@ -574,6 +647,30 @@ header{
     #BloqueCompra-padre {
         margin: 20px 0px auto 0px;
     }
+
+    /* icono whatsapp */
+
+    .fab {
+        padding: 10px;
+        font-size: 30px;
+        /* width: 30px; */
+        text-align: center;
+        text-decoration: none;
+        margin: 5px 2px;
+        border-radius: 50%;
+           }
+    
+        .fab:hover {
+        opacity: 0.7;
+        }
+    
+        .fa-whatsapp {
+        background: #13fc59;
+        color: white;
+        position: fixed;
+        bottom: 20px;
+        right: 40px;
+        } 
 
     /* FOOTER */
     

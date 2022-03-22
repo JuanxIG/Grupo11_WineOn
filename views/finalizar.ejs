@@ -13,20 +13,23 @@
     <%- include ("./partials/header") %>
 
     <main>
-        <div class="div-tilde">
-            <figure>
-                <img src="/images/tilde.png" alt="" class="imagen">
-            </figure>
-            
-        </div>  
-        <div class="div-button">
-            <form action="/" method="GET" class="back-home">
-                <button type="submit"   title="back-home"  name="back-home">VOLVER</button>
-            </form>
+        <div class="contenedor">
+            <div class="div-tilde">
+                <figure>
+                    <img src="/images/tilde.png" alt="" class="imagen">
+                </figure>
+                
+            </div>  
+            <div class="div-button">
+                <form action="/" method="GET" class="back-home">
+                    <button class="boton" type="submit"   title="back-home"  name="back-home">VOLVER</button>
+                </form>
+            </div> 
         </div>
     </main>
 
     <%- include ("./partials/footer") %>
+    <script src="/js/menuBtn.js"></script>
 
 </body>
 </html>

@@ -18,20 +18,23 @@
             <img src="/images/banner-vinos.jpg" alt="banner-vinos">
         </div>
         <% if (locals.estaLogueado && locals.usuarioLogueado.admin == 1) { %>
-        <p>Productos:</p>
-        <form action="/productos/agregar"  method="GET">
-            <button class="boton_crear" type="submit" value="editar_item" style=cursor:pointer>Crear Producto</button>
-        </form>
-        <form action="/productos"  method="GET">
-            <button class="boton_crear" type="submit" value="editar_item" style=cursor:pointer>Listado de productos</button>
-        </form>
-        <p>Usuarios:</p>
-        <form action="/user/register"  method="GET">
-            <button class="boton_crear" type="submit" value="editar_item" style=cursor:pointer>Crear Usuario</button>
-        </form>
-        <form action="/user/list"  method="GET">
-            <button class="boton_crear" type="submit" value="editar_item" style=cursor:pointer>Listado de usuarios</button>
-        </form>
+        <div class="adminForm">
+            <p>Productos:</p>
+            <form action="/productos/agregar"  method="GET">
+                <button class="boton_crear" type="submit" value="editar_item" style=cursor:pointer>Crear Producto</button>
+            </form>
+            <form action="/productos"  method="GET">
+                <button class="boton_crear" type="submit" value="editar_item" style=cursor:pointer>Listado de productos</button>
+            </form>
+            <p>Usuarios:</p>
+            <form action="/user/register"  method="GET">
+                <button class="boton_crear" type="submit" value="editar_item" style=cursor:pointer>Crear Usuario</button>
+            </form>
+            <form action="/user/list"  method="GET">
+                <button class="boton_crear" type="submit" value="editar_item" style=cursor:pointer>Listado de usuarios</button>
+            </form>
+        </div>
+        
         <% } %>
         <ul class="info">
             <li><i class="fas fa-shuttle-van"></i> Envios a todo el pais</li>
@@ -80,12 +83,13 @@
                 </a>
             <% } %>
         </section>
-        
+        <a class="fab fa-whatsapp" href="https://wa.me/3794888888/?text=tu%20texto%20personalizado" target="_blank"></a>
        
 
     </main>
 
     <%- include ("./partials/footer") %>
+    <script src="/js/menuBtn.js"></script>
 
 </body>
 </html>

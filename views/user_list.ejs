@@ -10,7 +10,6 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     </head>
 <body>
-    <%- include ("./partials/header") %>
 
     <main>
 
@@ -29,12 +28,12 @@
                   <td><h4>Editar </h4></td>
                 </tr>
 
-                <% users.forEach(function(usuario){ %>
+                <% usuarios.forEach(function(usuario){ %>
                     <tr>
                         <td><%= usuario.first_name %></td>
                         <td><%= usuario.last_name %></td>         
                         <td><%= usuario.email %></td>
-                        <td><%= usuario.admin %></td>
+                        <td><%= usuario.admin == 1 ?  "Administrador" : "Invitado" %></td>
                         <td>
                             <form action="/user/<%= usuario.id%>/profile/edit"  method="GET">
                                 <button class="editar" type="submit" value="editar_item" style=cursor:pointer>Editar</button>
@@ -49,6 +48,9 @@
             <form action="/user/register"  method="GET">
                 <button class="add_user" type="submit" value="editar_item" style=cursor:pointer>Agregar usuario</button>
             </form>
+            <a href="/">
+                <button class="boton_listado">HOME</button>
+            </a>
         </div>
 
     </main>

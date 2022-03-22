@@ -10,7 +10,7 @@ const methodOverride =  require('method-override'); // Pasar poder usar los mét
 const session = require("express-session");
 const cookies = require("cookie-parser")
 const userLoggedMiddleware = require("./src/middlewares/userLoggedMiddleware");
-
+const cors = require("cors");
 
 app.use(session({
     secret: "secreto...",
@@ -28,6 +28,16 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 //app.use(cookieParser());
 app.use(methodOverride('_method')); 
+
+app.use(cors())
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Headers', 'Authorization, X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Allow-Request-Method');
+    res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
+    res.header('Allow', 'GET, POST, OPTIONS, PUT, DELETE');
+    next();
+});
+
 
 // ************ Template Engine - (don't touch) ************
 app.set('view engine', 'ejs');
