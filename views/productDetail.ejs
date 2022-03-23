@@ -56,7 +56,14 @@
                         <form action="/productos" method="GET">
                             <button class="boton" id="botonAgregar" type="submit" value="agregar_carrito" style=cursor:pointer>Agregar al carrito</button>
                         </form>
-                    <% } %>
+
+                    <% } else {%>
+
+                        <form action="/user/login" method="GET">
+                            <button class="boton" id="botonAgregar" type="submit" value="agregar_carrito" style=cursor:pointer>Agregar al carrito</button>
+                        </form>
+
+                        <% } %>  
                 </div>
                 
 

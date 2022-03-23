@@ -1,7 +1,7 @@
 window.addEventListener("load",function (){
   if (typeof localStorage.carrito == "undefined" || typeof localStorage.carrito == "[]") {
       let div = document.getElementById("vacio");
-      div.innerHTML += "<h2>No hay productos agregados </h2>";
+      div.innerHTML += "<h2> No hay productos agregados </h2>";
   } else {
       let carrito = JSON.parse(localStorage.carrito);
       for (let i = 0; i < carrito.length; i++) {

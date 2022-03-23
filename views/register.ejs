@@ -56,12 +56,13 @@
 
             <div class="form1-div"> 
                 <p>Fecha de nacimiento</p>
-                <input class="main-input" type="date" name="nacimiento" value= "<%= locals.oldData ? oldData.nacimiento : null %>">
+                <input class="main-input" type="date" name="nacimiento" id="nacimiento" value= "<%= locals.oldData ? oldData.nacimiento : null %>">
             </div>
             
             <div class="form1-div">
                 <p>Domicilio</p>
                 <input class="main-input" id="domicilio" type="text" placeholder="Ej.: Av. Independencia 2324" name="domicilio" value= "<%= locals.oldData ? oldData.domicilio : null %>">
+                <p id="error-dom"></p>
                 <% if (locals.errors && errors.domicilio) { %>
                     <div class="red-text">
                     <%= errors.domicilio.msg %>
@@ -73,6 +74,7 @@
             <div class="form1-div"> 
                 <p>Documento de identidad</p>
                 <input class="main-input" id="dni" type="number" placeholder="Ej.: 22333444" name="dni" value= "<%= locals.oldData ? oldData.dni : null %>">
+                <p id="error-dni"></p>
                 <% if (locals.errors && errors.dni) { %>
                     <div class="red-text">
                     <%= errors.dni.msg %>
@@ -107,6 +109,7 @@
             <div class="form1-div">
                 <p>Confirmá tu contraseña</p>
                 <input class="main-input" id="repassword" type="password" placeholder="*********" name="confirma_contraseña" >
+                <p id="error-repass"></p>
                 <% if (locals.errors && errors.confirma_contraseña) { %>
                     <div class="red-text">
                     <%= errors.confirma_contraseña.msg %>

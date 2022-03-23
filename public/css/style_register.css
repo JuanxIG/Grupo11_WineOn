@@ -234,7 +234,7 @@ text-align: center;
     font-size: 15px;
 }
 
-#error-email, #error-name, #error-pass, #error-lastname {
+#error-email, #error-name, #error-pass, #error-lastname, #error-dom, #error-dni, #error-repass, #error-date{
     color: red;
     font-size: 15px;
 }
