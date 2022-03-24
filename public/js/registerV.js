@@ -27,15 +27,23 @@ window.addEventListener("load", function () {
             document.getElementById("error-email").innerText = ""
         } 
         
-        /* if (campoNacimiento.value == "")  {
-            console.log(campoNacimiento.value)
+        let d = campoNacimiento.value;
+        let inDate = new Date(d);
+        let anio = inDate.getFullYear();
+        let fec_actual = new Date() ; 
+        let fec_anio = fec_actual.getFullYear() ;
+        let edad   =  fec_anio - anio ;
+        console.log(edad);
+        if (edad < 18) {
             e.preventDefault()
-            document.getElementById("error-date").innerText = "Tenes que ingresar un email"
-        } else if (campoEmail.value != ""){
-            document.getElementById("error-date").innerText = ""
-        }   */
-
-        console.log(campoNacimiento.inputdateObject.value);
+            document.getElementById("error-date").innerHTML = "debés ser mayor de 18 años para registrarte";
+        } else if(campoNacimiento.value == "")  {
+            e.preventDefault()
+            document.getElementById("error-date").innerText = "Tenes que ingresar tu fecha de nacimiento"
+        }else{
+            document.getElementById("error-date").innerHTML = "";
+        } 
+           
         
         if (campoDomicilio.value == "")  {
             e.preventDefault()
@@ -47,10 +55,8 @@ window.addEventListener("load", function () {
         if (campoDNI.value == "")  {
             e.preventDefault()
             document.getElementById("error-dni").innerText = "Tenes que ingresar un DNI"
-        } else if (campoDNI.value<8){
-            document.getElementById("error-dni").innerText = "Ingresá un DNI válido"
-        } else if (campoDNI.value = ""){
-                document.getElementById("error-dni").innerText = ""
+        } else if (campoDNI.value != ""){
+            document.getElementById("error-dni").innerText = ""
         }
         
         if (campoPassword.value == ""){

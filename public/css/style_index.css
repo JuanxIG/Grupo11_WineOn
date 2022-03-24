@@ -74,6 +74,50 @@ img{
     height: auto;
 }
 
+/* emergente de edad 18 años */
+
+#container{
+    opacity:.3;
+    }
+
+    .emergente{
+        width:400px;
+        height:200px;
+        position:fixed;
+        background-color:var(--second-color);
+        top:50%;
+        left:50%;
+        margin-left:-200px;
+        margin-top:-100px;
+        border:1px solid var(--second-color);
+        border-radius:10px;
+        padding:20px;
+        text-align:center;
+        box-shadow: 10px 10px 10px #ccc;
+        z-index: 9999;
+    }
+    
+    .emergente p{
+        font-size:24px;
+        color:var(--white-color)
+    }
+    
+    .emergente .boton{
+        font-size:18px;
+        padding:10px;
+        border:1px solid var(--second-color);
+        border-radius:5px;
+        display:inline-block;
+        width:150px;
+        margin-top:32px;
+        box-shadow:5px 5px 5px #ccc;
+        cursor: pointer;
+    }
+    .menor{background-color:#FAF0E6;}
+    .mayor{background-color:#F5F5DC;}
+    .menor:hover{background-color:#ff0000;}
+    .mayor:hover{background-color:#00ff00;}
+
 /* seccion HEADER */
 
 .burger{
@@ -232,6 +276,23 @@ nav a:hover{
 
 /* seccion MAIN */
 
+.administration{
+    display: flex;
+    justify-content: center;
+}
+
+.administration1{
+    margin-right: 0.5rem;
+}
+
+.administration2{
+    margin-left: 0.5rem;
+}
+
+.botonArriba{
+    margin-bottom: 0.5rem;
+}
+
 .adminForm{
     text-align: center;
 }
@@ -272,6 +333,28 @@ nav a:hover{
 .article-index img{
     width: 70%;
 }
+
+.fab {
+    padding: 10px;
+    font-size: 30px;
+    /* width: 30px; */
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+       }
+
+    .fab:hover {
+    opacity: 0.7;
+    }
+
+    .fa-whatsapp {
+    background: #13fc59;
+    color: white;
+    position: fixed;
+    bottom: 20px;
+    right: 40px;
+    } 
 
 main h2{
     text-align: center;

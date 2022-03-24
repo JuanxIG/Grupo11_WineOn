@@ -11,28 +11,41 @@
     </head>
 <body>
     <%- include ("./partials/header") %>
-
+        <!-- <div class="emergente">
+            <p>Debes ser mayor de edad para poder visitar este sitio web</p>
+            <div class="boton menor">Tengo menos de 18 años</div>
+            <div class="boton mayor">Soy mayor de edad</div>
+        </div> -->
     <main>
+ 
+        
         
         <div class="banner">
             <img src="/images/banner-vinos.jpg" alt="banner-vinos">
         </div>
         <% if (locals.estaLogueado && locals.usuarioLogueado.admin == 1) { %>
         <div class="adminForm">
-            <p>Productos:</p>
-            <form action="/productos/agregar"  method="GET">
-                <button class="boton_crear" type="submit" value="editar_item" style=cursor:pointer>Crear Producto</button>
-            </form>
-            <form action="/productos"  method="GET">
-                <button class="boton_crear" type="submit" value="editar_item" style=cursor:pointer>Listado de productos</button>
-            </form>
-            <p>Usuarios:</p>
-            <form action="/user/register"  method="GET">
-                <button class="boton_crear" type="submit" value="editar_item" style=cursor:pointer>Crear Usuario</button>
-            </form>
-            <form action="/user/list"  method="GET">
-                <button class="boton_crear" type="submit" value="editar_item" style=cursor:pointer>Listado de usuarios</button>
-            </form>
+            <h2>Opciones de Administrador</h2>
+            <div class="administration">
+                <div class="administration1">
+                    <p>Productos:</p>
+                    <form action="/productos/agregar"  method="GET">
+                        <button class="boton_crear botonArriba" type="submit" value="editar_item" style=cursor:pointer>Crear Producto</button>
+                    </form>
+                    <form action="/productos"  method="GET">
+                    <button class="boton_crear" type="submit" value="editar_item" style=cursor:pointer>Listado de productos</button>
+                    </form>
+                </div>
+                <div class="administration2">
+                    <p>Usuarios:</p>
+                    <form action="/user/register"  method="GET">
+                        <button class="boton_crear botonArriba" type="submit" value="editar_item" style=cursor:pointer>Crear Usuario</button>
+                    </form>
+                    <form action="/user/list"  method="GET">
+                            <button class="boton_crear" type="submit" value="editar_item" style=cursor:pointer>Listado de usuarios</button>
+                    </form>
+                </div>    
+            </div>  
         </div>
         
         <% } %>
@@ -91,6 +104,7 @@
     <%- include ("./partials/footer") %>
     <script src="/js/menuBtn.js"></script>
     <script src="/js/underAge.js"></script>
+    
 
 </body>
 </html>

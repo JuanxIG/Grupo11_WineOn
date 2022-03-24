@@ -385,10 +385,10 @@ label.form-label{
     width: 8.375rem;
     height: 2.175rem;
     font-size: 0.775rem;
-    background-color: #858B8F;
-    color: white;
+    background-color: var(--gray-dark-color);
+    color: var(--white-color);
     text-decoration: none;
-    border: 2px solid #858B8F;
+    border: 2px solid var(--gray-dark-color);
     border-radius: 6px;
 }
 .boton_listado{
@@ -398,10 +398,10 @@ label.form-label{
     width: 8.375rem;
     height: 2.175rem;
     font-size: 0.775rem;
-    background-color:#E22692;
-    color: white;
+    background-color:var(--first-color);
+    color: var(--white-color);
     text-decoration: none;
-    border: 2px solid #E22692;
+    border: 2px solid var(--first-color);
     border-radius: 6px;
 }
 

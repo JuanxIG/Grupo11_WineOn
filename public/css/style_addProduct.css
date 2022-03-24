@@ -93,7 +93,7 @@ img{
     margin-left: auto;
     margin-right: auto;
     max-width: var(--max-width);
-    border-color:var(--first-alpha-color);
+    border-color:var(--second-color);
     border-style: solid;
 }
 
@@ -191,6 +191,35 @@ header{
 }
 
 /* MAIN */
+
+
+.boton_editar {
+    font-family: Arial,sans-serif; 
+    margin: 5px;
+    padding-right: 5px;
+    width: 8.375rem;
+    height: 2.175rem;
+    font-size: 0.775rem;
+    background-color: var(--gray-dark-color);
+    color: var(--white-color);
+    text-decoration: none;
+    border: 2px solid var(--gray-dark-color);
+    border-radius: 6px;
+}
+
+.boton_listado{
+    font-family: Arial,sans-serif; 
+    margin: 5px;
+    padding: 5px;
+    width: 8.375rem;
+    height: 2.175rem;
+    font-size: 0.775rem;
+    background-color:var(--first-color);
+    color: var(--white-color);
+    text-decoration: none;
+    border: 2px solid var(--first-color);
+    border-radius: 6px;
+}
 
 .form-input {
     height: 2.5rem;

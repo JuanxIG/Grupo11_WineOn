@@ -200,7 +200,7 @@ main {
 
 .container {
     text-align: center;
-    border: 1px solid black;
+    border: 1px solid var(--second-color);
     margin: auto;
     width: 350px;
 }
