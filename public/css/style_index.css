@@ -276,6 +276,10 @@ nav a:hover{
 
 /* seccion MAIN */
 
+#descuento {
+    color:rgb(17, 172, 43);
+    
+}
 .administration{
     display: flex;
     justify-content: center;

@@ -54,7 +54,9 @@
             <li><i class="fas fa-credit-card"></i> Ver medios de pago</li>
             <li><i class="fas fa-comment-alt"></i></i> Consultá por whatsapp</li>
         </ul>
-        
+        <br>
+    <br>
+    
         <h2>Ultimos Agregados</h2>
         <section class="section-index">  
               
@@ -75,7 +77,9 @@
                 </a>
             <% } %>
         </section>
-
+    <br>
+    <br>
+    <br>
         <h2>Con descuento</h2>
 
         <section class="section-index">    
@@ -86,7 +90,7 @@
                         <img src="/images/products/<%= conDescuento[i].imagen%>" alt="<%= conDescuento[i].nombre %>" >
                         <p><%= conDescuento[i].nombre %></p>
                         <p>$<%= conDescuento[i].precio %></p>
-                        <p>Hasta en <%= conDescuento[i].cuotas %> cuotas sin interés</p>
+                        <p id="descuento"> <%= conDescuento[i].descuento %> % OFF</p>
                         <div class="button-position">
                             <a href="/productos/detail/<%= conDescuento[i].id %>">
                                 <button class="main-button" type="submit" value="ENVIAR">COMPRAR</button>

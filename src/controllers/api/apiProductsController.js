@@ -11,20 +11,30 @@ const apiProductsController = {
                     return {
                         id: vino.id,
                         name: vino.nombre,
-                        description: vino.descripcion  
+                        price: vino.precio,
+                        fee: vino.cuotas,
+                        discount: vino.descuento,
+                        description: vino.descripcion,
+                        urlImage: "http://localhost:3500/images/products/" + vino.imagen,
+                        stock: vino.stock,
+                        cepa: vino.unaCepa.nombre,
+                        bodega: vino.unaBodega.nombre  
                     }
                 })
                 let santaJulia = vinos.filter(vino =>{ return vino.bodegaid == 1});
                 let norton = vinos.filter(vino =>{ return vino.bodegaid == 2});
                 let rutini = vinos.filter(vino =>{ return vino.bodegaid == 3});
+                let tintos = vinos.filter(vino =>{ return vino.cepaid == 1 || vino.cepaid == 2});
+                let blancos = vinos.filter(vino =>{ return vino.cepaid == 3 || vino.cepaid == 4});
                
                 return res.json({
                     totalWines: vinos.length,
-                    countByCategory: [
-                        {santaJulia: santaJulia.length},
-                        {norton: norton.length},
-                        {rutini: rutini.length} 
-                    ],
+                        santaJulia: santaJulia.length,
+                        norton: norton.length,
+                        rutini: rutini.length ,
+                        tintos: tintos.length,
+                        blancos: blancos.length
+                    ,
                     wines: arrayVinos,
                     detail: "/api/products" 
                 })
