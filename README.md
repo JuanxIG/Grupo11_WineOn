@@ -1,25 +1,15 @@
-# Grupo11_WineOn
-Trabajo Practico Integrador
-
-TABLERO https://trello.com/invite/b/Cf49vO3v/018c114ab901e4073a9c92b45a654eb6/dh-sprint-1
-
+WineOn
 -------------------------------------------------------------------------
-DASHBOARD WINE_ON: https://github.com/DamO1103/wineOn-dashboard
+DASHBOARD WINE_ON: 
 
 URL REPOSITORIO https://github.com/JuanxIG/Grupo11_WineOn.git
+
+USUARIO ADMIN: MAIL; admin@gmail.com  CONTRASEÑA; admin1234
 -------------------------------------------------------------------------
 
 
 WineOn es una vinoteca online dedicada a la venta de vinos, licores y bebidas en general.
 Se define como mercado de referencia a "clientes jóvenes pertenecientes al mercado de consumo final, que buscan abastecerse de vinos, licores y bebidas en general, por medio de web desde la comodidad de su hogar, de una forma sencilla y rápida". 
-
-INTEGRANTES
-
--Mendieta, Juan Ignacio: Tengo 18 años, soy studiante de la carrera Licenciatura en Sistemas, estoy aprendiendo a programar y quiero volverme profesional en este rubro. Juego al basket y entreno de forma personal (saliendo a correr, etc.)
--Del Valle, Sol: Tengo 26 años, soy Lic. en Sistemas pero nunca trabaje en desarrollo. Trabajo en sistemas como analista de gestion de incidentes. Me gusta entrenar y soy fan de los michis.
--Odriozola, Damian: Tengo 31 años, soy Analista Programador Universitario y actualmente trabajo en el Poder Judicial de la Provincia de Corrientes. Me encanta el futbol, mi pasión por este deporte me llevó a estudiar la carrera de Director Técnico Nacional de Futbol en 2016. Soy baterista y en mis tiempos libres hago ejercicio y me dedico a mi jardín.
--Odriozola, Fernando: tengo 32 años, soy ingeniero en alimentos, DT en una planta de panificados, master en marketing y futuro Full Stack Developer =D. Soy un lector impulsivo y panadero de hobby. Hago crossfit y a veces salgo a correr. 
-
 
 INSPIRACIONES.
 espacio vino: https://www.espaciovino.com.ar/. Primero en posicionamiento orgánico en google (SEO) al buscar "vinoteca online". El sitio web posee una estética visual clara y de facil navegación. La navbar contiene todas las categorías de bebidas, además de promociones y noticias. Es posible llegar a un producto solo con dos clics y al carrito de compras en tres clics. Todos los productos tienen su descripción y dan la posibilidad a los clientes de calificar la bebida y dejar comentarios.
